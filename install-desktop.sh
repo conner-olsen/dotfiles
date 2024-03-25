@@ -151,11 +151,13 @@ skhd --start-service
 brew services start sketchybar
 brew services start borders
 
-csrutil status
+
 
 echo "Adding yabai to sudoers..."
 echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
 echo "Installation complete...\n"
+
+csrutil status
 echo "Important!: To gain full functionality, you must disable SIP."
 echo -n "Press Enter to open guide..."
 read
