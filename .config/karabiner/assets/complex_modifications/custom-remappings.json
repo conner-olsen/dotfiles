@@ -209,21 +209,21 @@
         {
           "from": {
             "key_code": "spacebar",
-            "modifiers": [
-              "left_command"
-            ]
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ]
+            }
           },
           "to": [
             {
               "key_code": "spacebar",
-              "modifiers": {
-                "mandatory": [
-                  "left_shift",
-                  "left_command",
-                  "left_control",
-                  "left_option"
-                ]
-              }
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
           "type": "basic"

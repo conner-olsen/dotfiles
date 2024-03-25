@@ -120,8 +120,7 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/lates
 mkdir -p $HOME/.config/sketchybar/plugins
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/latest/icon_map.sh -o $HOME/.config/sketchybar/plugins/icon_map.sh
 
-curl -o ~/Downloads/custom-remappings.json -L https://github.com/ARealConner/dotfiles/raw/main/.config/karabiner/assets/complex_modifications/custom-remappings.json
-curl -o ~/Downloads/custom-remappings.json https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json
+curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
 
 # Start Services
 echo "Starting Services (grant permissions)..."
