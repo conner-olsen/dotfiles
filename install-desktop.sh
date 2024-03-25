@@ -6,9 +6,11 @@
 
 # Homebrew
 ## Install
-echo "Installing Brew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew analytics off
+if ! command -v brew &> /dev/null; then
+    echo "Installing Brew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    brew analytics off
+fi
 
 ## Add homebrew to path if not already added:
 if ! command -v brew &> /dev/null; then
@@ -34,14 +36,16 @@ brew install borders
 brew install raycast
 echo "Open Raycast and follow the setup instructions"
 open /Applications/Raycast.app/ 
-read -p "Press Enter to continue..."
+echo -n "Press Enter to continue..."
+read
 
 ### Set up keybindings
 brew install karabiner-elements
 open /Applications/Karabiner-Elements.app
 echo "Open Karabiner-Elements, go to 'Complex Modifications' and click 'Add Predefined Rule' to install the keybindings"
 
-read -p "Press Enter to continue..."
+echo -n "Press Enter to continue..."
+read
 
 ### Fonts
 brew install --cask sf-symbols
@@ -146,8 +150,9 @@ csrutil status
 echo "Adding yabai to sudoers..."
 echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
 echo "Installation complete...\n"
-echo "Important!: To gain full functionality, you must disable SIP. Press Enter to open the instructions on how to do so."
-read -p "Press Enter to open the link..."
+echo "Important!: To gain full functionality, you must disable SIP."
+echo -n "Press Enter to open guide..."
+read
 open "https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection"
 
 echo "Notice: "every time you update yabai, you must run the following command to update the sha256 in the sudoers file: suyabai"
