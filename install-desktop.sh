@@ -109,7 +109,8 @@ defaults write -g NSWindowShouldDragOnGesture YES
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
 echo "Cloning Config"
-git clone https://github.com/ARealConner/dotfiles.git /tmp-dotfiles
+git clone https://github.com/ARealConner/dotfiles.git "$HOME/temp-dotfiles"
+
 mkdir -p $HOME/.config/backups
 timestamp=$(date +%Y%m%d%H%M%S)
 mkdir -p $HOME/.config/backups/$timestamp
@@ -118,12 +119,12 @@ mv $HOME/.config/yabai $HOME/.config/backups/$timestamp/yabai
 mv $HOME/.config/skhd $HOME/.config/backups/$timestamp/skhd
 mv $HOME/.config/karabiner $HOME/.config/backups/$timestamp/karabiner
 mv $HOME/.config/borders $HOME/.config/backups/$timestamp/borders
-mv /tmp-dotfiles/.config/sketchybar $HOME/.config/sketchybar
-mv /tmp-dotfiles/.config/yabai $HOME/.config/yabai
-mv /tmp-dotfiles/.config/skhd $HOME/.config/skhd
-mv /tmp-dotfiles/.config/karabiner $HOME/.config/karabiner
-mv /tmp-dotfiles/.config/borders $HOME/.config/borders
-rm -rf /tmp-dotfiles
+mv /temp-dotfiles/.config/sketchybar $HOME/.config/sketchybar
+mv /temp-dotfiles/.config/yabai $HOME/.config/yabai
+mv /temp-dotfiles/.config/skhd $HOME/.config/skhd
+mv /temp-dotfiles/.config/karabiner $HOME/.config/karabiner
+mv /temp-dotfiles/.config/borders $HOME/.config/borders
+rm -rf "$HOME/tmp-dotfiles"
 
 # Installing Fonts
 # git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono_Nerd_Font
@@ -135,7 +136,7 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/lates
 mkdir -p $HOME/.config/sketchybar/plugins
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/latest/icon_map.sh -o $HOME/.config/sketchybar/plugins/icon_map.sh
 
-curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
+# curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
 
 # Start Services
 echo "Starting Services (grant permissions)..."
