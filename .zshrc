@@ -20,19 +20,6 @@ source $ZSH/oh-my-zsh.sh
 ENABLE_CORRECTION="true" # Enable command correction
 COMPLETION_WAITING_DOTS="true" # Display red dots whilst waiting for completion
 
-# Aliases
-alias ls="exa"
-
-# Custom Functions
-function suyabai () {
-    SHA256=$(shasum -a 256 /opt/homebrew/bin/yabai | awk "{print \$1;}")
-    if [ -f "/private/etc/sudoers.d/yabai" ]; then
-        sudo sed -i '' -e 's/sha256:[[:alnum:]]*/sha256:'${SHA256}'/' /private/etc/sudoers.d/yabai
-    else
-        echo "sudoers file does not exist yet"
-    fi
-}
-
 # Plugin and Theme Configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -40,8 +27,7 @@ source $HOME/.config/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
 [ -d "/opt/homebrew/share/zsh-autosuggestions/" ] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh || source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -d "/opt/homebrew/share/zsh-syntax-highlighting/" ] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Starship Prompt
-eval "$(starship init zsh)"
+
 
 # Sketchybar interactivity overloads
 function brew() {

@@ -22,3 +22,5 @@ brew install neovim
 brew install btop
 brew install lazygit
 brew install eza
+brew install nnn
+brew install gh

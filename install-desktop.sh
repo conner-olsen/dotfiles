@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-# Install xCode cli tools
-# echo "Installing commandline tools..."
-# xcode-select --install
-
 # Homebrew
 ## Install
 if ! command -v brew &> /dev/null; then
@@ -24,37 +20,39 @@ brew tap homebrew/cask-fonts
 brew tap FelixKratz/formulae
 brew tap koekeishiya/formulae
 
-### Essentials
+## Essentials
 brew install yabai
-brew install wget
-brew install gh
 brew install skhd
 brew install sketchybar
 brew install borders
+brew install lua
+brew install switchaudio-osx
+brew install nowplaying-cli
 
-### Nice to have
-brew install raycast
-echo "Open Raycast and follow the setup instructions"
-open /Applications/Raycast.app/ 
-echo -n "Press Enter to continue..."
-read
+## Nice to have
+# Karabiner-Elements & Custom Bindings
+if ! brew list karabiner-elements &> /dev/null; then
+    brew install karabiner-elements
+    curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
+    open /Applications/Karabiner-Elements.app
+    echo "Open Karabiner-Elements, go to 'Complex Modifications' and click 'Add Predefined Rule' to install the keybindings"
+    read
+fi
 
-### Set up keybindings
-brew install karabiner-elements
-open /Applications/Karabiner-Elements.app
-echo "Open Karabiner-Elements, go to 'Complex Modifications' and click 'Add Predefined Rule' to install the keybindings"
+# Raycast
+if ! brew list raycast &> /dev/null; then
+    brew install raycast
+    echo "Open Raycast and follow the setup instructions"
+    open /Applications/Raycast.app/ 
+    echo -n "Press Enter to continue..."
+    read
+fi
 
-echo -n "Press Enter to continue..."
-read
-
-### Fonts
+## Fonts
 brew install --cask sf-symbols
-# brew install --cask font-hack-nerd-font
-# brew install --cask font-jetbrains-mono
-# brew install --cask font-fira-code
-brew install front-meslo-for-powerlevel10k
+brew install font-meslo-for-powerlevel10k
 
-# macOS Settings
+## macOS Settings
 echo "Changing macOS defaults..."
 # Disable writing .DS_Store files on network and external volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -70,6 +68,8 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Disable natural scrolling direction
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# disable press-and-hold for keys in favor of key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
 # Set the key repeat rate to the fastest setting
 defaults write NSGlobalDomain KeyRepeat -int 1
 # Disable automatic spelling correction
@@ -106,6 +106,12 @@ defaults write com.apple.finder ShowStatusBar -bool false
 # Enable dragging windows with gesture
 defaults write -g NSWindowShouldDragOnGesture YES
 
+
+# Installing Fonts
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/latest/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+mkdir -p $HOME/.config/sketchybar/plugins
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/latest/icon_map.sh -o $HOME/.config/sketchybar/plugins/icon_map.sh
+
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
 rm -rf "$HOME/temp-dotfiles"
@@ -116,14 +122,14 @@ timestamp=$(date +%Y%m%d%H%M%S)
 mkdir -p "$HOME/.config/backups/$timestamp"
 
 # Backup existing configuration directories if they exist
-for dir in sketchybar yabai skhd karabiner borders; do
+for dir in yabai skhd sketchybar borders; do
     if [ -d "$HOME/.config/$dir" ]; then
         mv "$HOME/.config/$dir" "$HOME/.config/backups/$timestamp/$dir"
     fi
 done
 
 # Move configuration directories from the cloned repository if they exist
-for dir in sketchybar yabai skhd karabiner borders; do
+for dir in yabai skhd borders; do
     if [ -d "$HOME/temp-dotfiles/.config/$dir" ]; then
         mv "$HOME/temp-dotfiles/.config/$dir" "$HOME/.config/$dir"
     fi
@@ -131,17 +137,29 @@ done
 
 rm -rf "$HOME/temp-dotfiles"
 
-# Installing Fonts
-# git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono_Nerd_Font
-# mv /tmp/SFMono_Nerd_Font/* $HOME/Library/Fonts
-# rm -rf /tmp/SFMono_Nerd_Font/
+## Start with FelixKratz setup as a base. 
+# Install SbarLua Plugin to use lua scripts in sketchybar
+(git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/)
 
+# Clone FelixKratz dotfiles
+echo "Cloning Config"
+git clone https://github.com/FelixKratz/dotfiles.git /tmp/dotfiles
+mv /tmp/dotfiles/.config/sketchybar $HOME/.config/sketchybar
+rm -rf /tmp/dotfiles
 
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/latest/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
-mkdir -p $HOME/.config/sketchybar/plugins
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/latest/icon_map.sh -o $HOME/.config/sketchybar/plugins/icon_map.sh
-
-# curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
+## Add custom configuration to sketchybar:
+# Change apple icon to the arch linux icon
+sed -i '' 's/apple = "􀣺"/apple = "󰣇"/g' $HOME/.config/sketchybar/icons.lua
+# Charge bar settings
+if ! grep -q "margin=10," bar.lua; then
+  sed -i '' '/sbar.bar({/,/})/{/})/i\
+  margin=10,\
+  shadow=on,\
+  border_color=colors.white,\
+  corner_radius=9,\
+  border_width=2,
+}' $HOME/.config/sketchybar/bar.lua
+fi
 
 # Start Services
 echo "Starting Services (grant permissions)..."
@@ -150,8 +168,6 @@ yabai --start-service
 skhd --start-service
 brew services start sketchybar
 brew services start borders
-
-
 
 echo "Adding yabai to sudoers..."
 echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
