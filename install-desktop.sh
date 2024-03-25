@@ -43,10 +43,6 @@ echo "Open Karabiner-Elements, go to 'Complex Modifications' and click 'Add Pred
 
 read -p "Press Enter to continue..."
 
-
-## Casks
-echo "Installing Brew Casks..."
-
 ### Fonts
 brew install --cask sf-symbols
 # brew install --cask font-hack-nerd-font
@@ -108,13 +104,28 @@ defaults write -g NSWindowShouldDragOnGesture YES
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
-[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:FelixKratz/dotfiles.git $HOME/dotfiles
-git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout master
+echo "Cloning Config"
+git clone https://github.com/ARealConner/dotfiles.git /tmp-dotfiles
+mkdir -p $HOME/.config/backups
+timestamp=$(date +%Y%m%d%H%M%S)
+mkdir -p $HOME/.config/backups/$timestamp
+mv $HOME/.config/sketchybar $HOME/.config/backups/$timestamp/sketchybar
+mv $HOME/.config/yabai $HOME/.config/backups/$timestamp/yabai
+mv $HOME/.config/skhd $HOME/.config/backups/$timestamp/skhd
+mv $HOME/.config/karabiner $HOME/.config/backups/$timestamp/karabiner
+mv $HOME/.config/borders $HOME/.config/backups/$timestamp/borders
+mv /tmp-dotfiles/.config/sketchybar $HOME/.config/sketchybar
+mv /tmp-dotfiles/.config/yabai $HOME/.config/yabai
+mv /tmp-dotfiles/.config/skhd $HOME/.config/skhd
+mv /tmp-dotfiles/.config/karabiner $HOME/.config/karabiner
+mv /tmp-dotfiles/.config/borders $HOME/.config/borders
+rm -rf /tmp-dotfiles
 
 # Installing Fonts
-git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono_Nerd_Font
-mv /tmp/SFMono_Nerd_Font/* $HOME/Library/Fonts
-rm -rf /tmp/SFMono_Nerd_Font/
+# git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono_Nerd_Font
+# mv /tmp/SFMono_Nerd_Font/* $HOME/Library/Fonts
+# rm -rf /tmp/SFMono_Nerd_Font/
+
 
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/latest/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
 mkdir -p $HOME/.config/sketchybar/plugins
@@ -128,9 +139,15 @@ echo "Starting Services (grant permissions)..."
 yabai --start-service
 skhd --start-service
 brew services start sketchybar
+brew services start borders
 
 csrutil status
-echo "Do not forget to disable SIP and reconfigure keyboard -> $HOME/.config/keyboard..."
-open "$HOME/.config/keyboard/KeyboardModifierKeySetup.png"
-echo "$(whoami) ALL = (root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | awk '{print $1;}') $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai > /dev/null
+
+echo "Adding yabai to sudoers..."
+echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
 echo "Installation complete...\n"
+echo "Important!: To gain full functionality, you must disable SIP. Press Enter to open the instructions on how to do so."
+read -p "Press Enter to open the link..."
+open "https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection"
+
+echo "Notice: "every time you update yabai, you must run the following command to update the sha256 in the sudoers file: suyabai"
