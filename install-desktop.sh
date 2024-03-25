@@ -111,19 +111,24 @@ echo "Planting Configuration Files..."
 echo "Cloning Config"
 git clone https://github.com/ARealConner/dotfiles.git "$HOME/temp-dotfiles"
 
-mkdir -p $HOME/.config/backups
+mkdir -p "$HOME/.config/backups"
 timestamp=$(date +%Y%m%d%H%M%S)
-mkdir -p $HOME/.config/backups/$timestamp
-mv $HOME/.config/sketchybar $HOME/.config/backups/$timestamp/sketchybar
-mv $HOME/.config/yabai $HOME/.config/backups/$timestamp/yabai
-mv $HOME/.config/skhd $HOME/.config/backups/$timestamp/skhd
-mv $HOME/.config/karabiner $HOME/.config/backups/$timestamp/karabiner
-mv $HOME/.config/borders $HOME/.config/backups/$timestamp/borders
-mv /temp-dotfiles/.config/sketchybar $HOME/.config/sketchybar
-mv /temp-dotfiles/.config/yabai $HOME/.config/yabai
-mv /temp-dotfiles/.config/skhd $HOME/.config/skhd
-mv /temp-dotfiles/.config/karabiner $HOME/.config/karabiner
-mv /temp-dotfiles/.config/borders $HOME/.config/borders
+mkdir -p "$HOME/.config/backups/$timestamp"
+
+# Backup existing configuration directories if they exist
+for dir in sketchybar yabai skhd karabiner borders; do
+    if [ -d "$HOME/.config/$dir" ]; then
+        mv "$HOME/.config/$dir" "$HOME/.config/backups/$timestamp/$dir"
+    fi
+done
+
+# Move configuration directories from the cloned repository if they exist
+for dir in sketchybar yabai skhd karabiner borders; do
+    if [ -d "$HOME/tmp-dotfiles/.config/$dir" ]; then
+        mv "$HOME/tmp-dotfiles/.config/$dir" "$HOME/.config/$dir"
+    fi
+done
+
 rm -rf "$HOME/tmp-dotfiles"
 
 # Installing Fonts
