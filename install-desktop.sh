@@ -124,12 +124,12 @@ done
 
 # Move configuration directories from the cloned repository if they exist
 for dir in sketchybar yabai skhd karabiner borders; do
-    if [ -d "$HOME/tmp-dotfiles/.config/$dir" ]; then
-        mv "$HOME/tmp-dotfiles/.config/$dir" "$HOME/.config/$dir"
+    if [ -d "$HOME/temp-dotfiles/.config/$dir" ]; then
+        mv "$HOME/temp-dotfiles/.config/$dir" "$HOME/.config/$dir"
     fi
 done
 
-rm -rf "$HOME/tmp-dotfiles"
+rm -rf "$HOME/temp-dotfiles"
 
 # Installing Fonts
 # git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono_Nerd_Font
