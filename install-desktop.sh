@@ -108,7 +108,7 @@ defaults write -g NSWindowShouldDragOnGesture YES
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
-echo "Cloning Config"
+rm -rf "$HOME/temp-dotfiles"
 git clone https://github.com/ARealConner/dotfiles.git "$HOME/temp-dotfiles"
 
 mkdir -p "$HOME/.config/backups"
