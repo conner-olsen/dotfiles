@@ -139,13 +139,14 @@ rm -rf "$HOME/temp-dotfiles"
 
 ## Start with FelixKratz setup as a base. 
 # Install SbarLua Plugin to use lua scripts in sketchybar
-(git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/)
+(git clone https://github.com/FelixKratz/SbarLua.git $HOME/tmp/SbarLua && cd $HOME/tmp/SbarLua/ && make install && rm -rf $HOME/tmp/SbarLua/)
 
 # Clone FelixKratz dotfiles
 echo "Cloning Config"
-git clone https://github.com/FelixKratz/dotfiles.git /tmp/dotfiles
-mv /tmp/dotfiles/.config/sketchybar $HOME/.config/sketchybar
-rm -rf /tmp/dotfiles
+mkdir -p $HOME/tmp/dotfiles
+git clone https://github.com/FelixKratz/dotfiles.git $HOME/tmp/dotfiles
+mv $HOME/tmp/dotfiles/.config/sketchybar $HOME/.config/sketchybar
+rm -rf $HOME/tmp/dotfiles
 
 ## Add custom configuration to sketchybar:
 # Change apple icon to the arch linux icon
@@ -160,6 +161,22 @@ if ! grep -q "margin=10," bar.lua; then
   border_width=2,
 }' $HOME/.config/sketchybar/bar.lua
 fi
+
+sed -i '' \
+    -e 's/\(black = \)0x[0-9a-fA-F]\{8\}/\10xff282828/' \
+    -e 's/\(white = \)0x[0-9a-fA-F]\{8\}/\10xffebdbb2/' \
+    -e 's/\(red = \)0x[0-9a-fA-F]\{8\}/\10xffcc241d/' \
+    -e 's/\(green = \)0x[0-9a-fA-F]\{8\}/\10xff98971a/' \
+    -e 's/\(blue = \)0x[0-9a-fA-F]\{8\}/\10xff458588/' \
+    -e 's/\(yellow = \)0x[0-9a-fA-F]\{8\}/\10xffd79921/' \
+    -e 's/\(orange = \)0x[0-9a-fA-F]\{8\}/\10xffd65d0e/' \
+    -e 's/\(magenta = \)0x[0-9a-fA-F]\{8\}/\10xffb16286/' \
+    -e 's/\(grey = \)0x[0-9a-fA-F]\{8\}/\10xff928374/' \
+    -e 's/\(transparent = \)0x[0-9a-fA-F]\{8\}/\10x00000000/' \
+    -e 's/\(bg = \)0xf02c2e34/\10xff282828/' \
+    -e 's/\(bg1 = \)0x[0-9a-fA-F]\{8\}/\10xff3c3836/' \
+    -e 's/\(bg2 = \)0x[0-9a-fA-F]\{8\}/\10xff504945/' \
+    $HOME/.config/sketchybar/colors.lua
 
 # Start Services
 echo "Starting Services (grant permissions)..."
