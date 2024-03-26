@@ -24,3 +24,6 @@ brew install lazygit
 brew install eza
 brew install nnn
 brew install gh
+
+curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME/.zshrc >/dev/null 2>&1
+
