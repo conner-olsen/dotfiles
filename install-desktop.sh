@@ -266,6 +266,8 @@ sed -i '' \
     -e 's/\(bg1 = \)0x[0-9a-fA-F]\{8\}/\10xff3c3836/' \
     -e 's/\(bg2 = \)0x[0-9a-fA-F]\{8\}/\10xff504945/' \
     $HOME/.config/sketchybar/colors.lua
+
+sed -i '' 's/os.date("%H:%M")/os.date("%I:%M")/' $HOME/.config/sketchybar/items/calendar.lua
 success "SketchyBar configuration customized"
 
 # Start Services if not SketchyBar only installation
@@ -309,3 +311,5 @@ echo "- Copied configuration files: $([[ $installation_type != 2 ]] && echo "Yes
 echo "- Started services: $([[ $installation_type != 2 ]] && echo "Yes" || echo "No")"
 echo ""
 echo "Notice: Your previous .config files are backed up in $HOME/.config/backups/$timestamp"
+
+echo "Notice: You may need to restart your computer for all changes to take effect."
