@@ -2,6 +2,12 @@
 
 This repository contains my personal configuration files for various tools and applications that I use on my macOS system.
 
+## Screenshots
+
+![Single Window](screenshots/single-window.png)
+
+![Multiple Windows](screenshots/multiple-windows.png)
+
 ## Installation
 
 To install and set up the different components of the dotfiles, run the corresponding command for each component you wish to install. (you must have brew installed)
@@ -43,14 +49,6 @@ This is not recommended for anyone else as this will essentially install my enti
 ```bash
 curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install.sh | zsh
 ```
-
-## Screenshots
-
-![Single Window](screenshots/single-window.png)
-*Single Window*
-
-![Multiple Windows](screenshots/multiple-windows.png)
-*Multiple Windows*
 
 ## Disclaimer
 
