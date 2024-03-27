@@ -23,9 +23,6 @@ else
   echo -e "\\033[32mzsh4humans is already installed. Skipping installation.\\033[0m"
 fi
 
-# Rest of the script...
-
-
 ## CodeWhisperer
 echo "Installing CodeWhisperer"
 brew install codewhisperer
