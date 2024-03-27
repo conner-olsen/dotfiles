@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repository contains my personal configuration files for various tools and applications that I use on my macOS system.
+My personal configuration files for various tools and applications that I use on my macOS system.
 
 ## Screenshots
 
