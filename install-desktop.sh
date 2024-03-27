@@ -175,7 +175,7 @@ fi
 if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_user "Do you want to install SketchyBar?" ); then
     clear_screen
     progress "Installing SketchyBar..."
-    curl -s https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh | zsh
+    curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh | zsh
     success "SketchyBar installation complete"
 fi
 
