@@ -171,6 +171,14 @@ if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_us
     success "macOS default settings updated"
 fi
 
+# Install SketchyBar
+if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_user "Do you want to install SketchyBar?" ); then
+    clear_screen
+    progress "Installing SketchyBar..."
+    curl -s https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh | zsh
+    success "SketchyBar installation complete"
+fi
+
 # Copying and checking out configuration files
 clear_screen
 progress "Planting Configuration Files..."
@@ -223,6 +231,7 @@ clear_screen
 success "Installation Complete!"
 echo "Summary:"
 echo "- Installed essential packages: $([[ $installation_type == 1 || $installation_type == 2 ]] && echo "Yes" || echo "No")"
+echo "- Installed SketchyBar: $([[ $installation_type == 1 ]] && echo "Yes" || ([[ $installation_type == 2 ]] && prompt_user "Do you want to install SketchyBar?" && echo "Yes" || echo "No"))"
 echo "- Installed Karabiner-Elements and custom bindings: $([[ $installation_type == 1 ]] && echo "Yes" || ([[ $installation_type == 2 ]] && prompt_user "Do you want to install Karabiner-Elements and custom bindings?" && echo "Yes" || echo "No"))"
 echo "- Installed Raycast: $([[ $installation_type == 1 ]] && echo "Yes" || ([[ $installation_type == 2 ]] && prompt_user "Do you want to install Raycast?" && echo "Yes" || echo "No"))"
 echo "- Overridden macOS default settings: $([[ $installation_type == 1 ]] && echo "Yes" || ([[ $installation_type == 2 ]] && prompt_user "Do you want to override macOS default settings?" && echo "Yes" || echo "No"))"
