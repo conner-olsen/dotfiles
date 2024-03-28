@@ -1,7 +1,7 @@
-# Password Manager
+## Password Manager
 brew install 1password
 
-# Browsers
+## Browsers
 brew tap homebrew/cask-versions
 brew install google-chrome-beta
 
@@ -11,8 +11,13 @@ brew install visual-studio-code
 brew install cursor
 brew install zed
 
-# JetBrains
+# Web
 brew install webstorm
+brew install node
+brew install yarn
+yarn config set --home enableTelemetry 0
+
+# Rust
 brew install rustrover
 
 # Git
@@ -21,14 +26,14 @@ brew install gitkraken
 # Languages
 brew install rustup-init
 
-# Communication
+## Communication
 brew install discord
 brew install slack
 
-# Office
+## Office
 brew install microsoft-excel
 brew install microsoft-word
 brew install microsoft-powerpoint
 
-# Installations
+## Installations
 rustup-init
