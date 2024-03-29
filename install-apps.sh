@@ -17,11 +17,15 @@ brew install node
 brew install yarn
 yarn config set --home enableTelemetry 0
 
+brew install postgresql@16
 # Rust
 brew install rustrover
 
 # Git
 brew install gitkraken
+
+# Datascience
+brew install dataspell
 
 # Languages
 brew install rustup-init
