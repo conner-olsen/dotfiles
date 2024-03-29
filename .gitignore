@@ -7,3 +7,10 @@ log/
 # editor configs
 .vscode
 .idea
+
+# non-sharable .configs
+.config/gh/
+.config/gh-copilot/
+.config/raycast/
+
+.config/karabiner/karabiner.json

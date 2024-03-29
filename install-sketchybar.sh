@@ -32,16 +32,29 @@ success "Additional fonts installed"
 # Install SbarLua Plugin to use lua scripts in sketchybar
 clear_screen
 progress "Installing SbarLua Plugin..."
-(git clone https://github.com/FelixKratz/SbarLua.git $HOME/tmp/SbarLua >/dev/null 2>&1 && cd $HOME/tmp/SbarLua/ >/dev/null 2>&1 && make install >/dev/null 2>&1 && rm -rf $HOME/tmp/SbarLua/ >/dev/null 2>&1)
+(git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/) 2>&1
 success "SbarLua Plugin installed"
 
 # Clone FelixKratz dotfiles
 clear_screen
 progress "Cloning Config..."
-mkdir -p $HOME/tmp/dotfiles >/dev/null 2>&1
-git clone https://github.com/FelixKratz/dotfiles.git $HOME/tmp/dotfiles >/dev/null 2>&1
-mv $HOME/tmp/dotfiles/.config/sketchybar $HOME/.config/sketchybar >/dev/null 2>&1
-rm -rf $HOME/tmp/dotfiles >/dev/null 2>&1
+mkdir -p $HOME/tmp/dotfiles 
+git clone https://github.com/FelixKratz/dotfiles.git $HOME/tmp/dotfiles 2>&1
+
+# Backup existing configuration directories if they exist
+mkdir -p "$HOME/.config/backups" >/dev/null 2>&1
+timestamp=$(date +%Y%m%d%H%M%S)
+mkdir -p "$HOME/.config/backups/$timestamp" >/dev/null 2>&1
+
+# Backup existing configuration directories if they exist
+if [ -d "$HOME/.config/sketchybar" ]; then
+  mv "$HOME/.config/sketchybar" "$HOME/.config/backups/$timestamp/sketchybar" >/dev/null 2>&1
+fi
+
+
+# Move the new config to the home directory
+mv $HOME/tmp/dotfiles/.config/sketchybar $HOME/.config/sketchybar 2>&1
+rm -rf $HOME/tmp/dotfiles 2>&1
 success "Config cloned"
 
 # Add custom configuration to sketchybar

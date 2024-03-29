@@ -1,3 +1,4 @@
+#!/bin/zsh
 ## Password Manager
 brew install 1password
 

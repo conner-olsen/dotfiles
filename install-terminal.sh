@@ -1,3 +1,4 @@
+#!/bin/zsh
 ## Terminal
 brew install kitty
 echo "Select the theme you want to install"
