@@ -18,4 +18,3 @@ zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-desktop.sh)"
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh)"
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh)"
-
