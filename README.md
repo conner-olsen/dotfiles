@@ -16,38 +16,38 @@ To install and set up the different components of the dotfiles, run the correspo
 
 Installs and sets up the my desktop environment with tools like Yabai, SKHD, Karabiner-Elements with custom bindings, Raycast, and overrides macOS default settings. It includes a installer to allow for customization. 
 
-```bash
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-desktop.sh | zsh
+```zsh
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-desktop.sh)"
 ```
 
 ### SketchyBar
 
 Installs SketchyBar and my configuration. I used https://github.com/FelixKratz/dotfiles as a base so most of the credit goes to him.
 
-```bash
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh | zsh
+```zsh
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh)"
 ```
 
 ### Terminal Setup
 
 Sets up the terminal environment with tools like Kitty, zsh4humans, CodeWhisperer, neovim, and my .zshrc.
 
-```bash
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh | zsh
+```zsh
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh)"
 ```
 
 ### Application Installations
 
 This install all the applications I use on macOS. It is mainly just for me to have a quick way to install everything I need on new machines, so it's not really recommended for anyone else. 
 
-```bash
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-apps.sh | zsh
+```zsh
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-apps.sh)"
 ```
 
 ### Install All
 This is not recommended for anyone else as this will essentially install my entire setup. It's just a convenience script for me to install everything I need on a new machine.
-```bash
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install.sh | zsh
+```zsh
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install.sh)"
 ```
 
 ## Disclaimer

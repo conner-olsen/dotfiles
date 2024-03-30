@@ -15,7 +15,8 @@ if ! command -v brew &> /dev/null; then
 fi
 echo "press enter to continue"
 read
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-apps.sh | zsh
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-desktop.sh | zsh
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh | zsh
-curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh | zsh
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-apps.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-desktop.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh)"
+
