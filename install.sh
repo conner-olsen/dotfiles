@@ -1,8 +1,8 @@
 # Install Homebrew if not already installed
 if ! command -v brew &> /dev/null; then
     echo "Installing Brew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" >/dev/null 2>&1
-    brew analytics off >/dev/null 2>&1
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    brew analytics off
 else
     echo "Brew is already installed"
 fi

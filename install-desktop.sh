@@ -39,45 +39,29 @@ echo "1. Install everything"
 echo "2. Custom settings"
 read "installation_type?Enter your choice [1-2]: "
 
-# Install Homebrew if not already installed
-clear_screen
-if ! command -v brew &> /dev/null; then
-    progress "Installing Brew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" >/dev/null 2>&1
-    brew analytics off >/dev/null 2>&1
-else
-    success "Brew is already installed"
-fi
-
-# Add homebrew to path if not already added
-if ! command -v brew &> /dev/null; then
-    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/conner/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 # Install essentials based on installation type
 if [[ $installation_type == 1 || $installation_type == 2 ]]; then
     clear_screen
     progress "Tapping Brew..."
-    brew tap homebrew/cask-fonts >/dev/null 2>&1
-    brew tap FelixKratz/formulae >/dev/null 2>&1
-    brew tap koekeishiya/formulae >/dev/null 2>&1
+    brew tap homebrew/cask-fonts
+    brew tap FelixKratz/formulae
+    brew tap koekeishiya/formulae
 
     progress "Installing essential packages..."
-    brew install yabai >/dev/null 2>&1
-    brew install skhd >/dev/null 2>&1
-    brew install borders >/dev/null 2>&1
-    brew install lua >/dev/null 2>&1
-    brew install switchaudio-osx >/dev/null 2>&1
-    brew install nowplaying-cli >/dev/null 2>&1
+    brew install yabai
+    brew install skhd
+    brew install borders
+    brew install lua
+    brew install switchaudio-osx
+    brew install nowplaying-cli
     success "Essential packages installed"
 fi
 
 # Install fonts
 clear_screen
 progress "Installing fonts..."
-brew install --cask sf-symbols >/dev/null 2>&1
-brew install font-meslo-for-powerlevel10k >/dev/null 2>&1
+brew install --cask sf-symbols
+brew install font-meslo-for-powerlevel10k
 success "Fonts installed"
 
 # Install Karabiner-Elements and custom bindings
@@ -85,12 +69,12 @@ if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_us
     clear_screen
     if ! brew list karabiner-elements &> /dev/null; then
         progress "Installing Karabiner-Elements and custom bindings..."
-        brew install karabiner-elements >/dev/null 2>&1
+        brew install karabiner-elements
         success "Karabiner-Elements installed"
     else
         success "Karabiner-Elements is already installed"
     fi
-    curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json >/dev/null 2>&1
+    curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
     open /Applications/Karabiner-Elements.app
     echo "Open Karabiner-Elements, go to 'Complex Modifications' and click 'Add Predefined Rule' to install the keybindings"
     echo "INSTALL NOT YET COMPLETE: Press enter to continue"
@@ -102,7 +86,7 @@ if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_us
     clear_screen
     if ! brew list raycast &> /dev/null; then
         progress "Installing Raycast..."
-        brew install raycast >/dev/null 2>&1
+        brew install raycast
         echo "Open Raycast and follow the setup instructions"
         open /Applications/Raycast.app/ 
         echo -n "Press Enter to continue..."
@@ -182,40 +166,40 @@ fi
 # Copying and checking out configuration files
 clear_screen
 progress "Planting Configuration Files..."
-rm -rf "$HOME/temp-dotfiles" >/dev/null 2>&1
-git clone https://github.com/ARealConner/dotfiles.git "$HOME/temp-dotfiles" >/dev/null 2>&1
+rm -rf "$HOME/temp-dotfiles"
+git clone https://github.com/ARealConner/dotfiles.git "$HOME/temp-dotfiles"
 
-mkdir -p "$HOME/.config/backups" >/dev/null 2>&1
+mkdir -p "$HOME/.config/backups"
 timestamp=$(date +%Y%m%d%H%M%S)
-mkdir -p "$HOME/.config/backups/$timestamp" >/dev/null 2>&1
+mkdir -p "$HOME/.config/backups/$timestamp"
 
 # Backup existing configuration directories if they exist
 for dir in yabai skhd borders; do
     if [ -d "$HOME/.config/$dir" ]; then
-        mv "$HOME/.config/$dir" "$HOME/.config/backups/$timestamp/$dir" >/dev/null 2>&1
+        mv "$HOME/.config/$dir" "$HOME/.config/backups/$timestamp/$dir"
     fi
 done
 
 # Move configuration directories from the cloned repository if they exist
 for dir in yabai skhd borders; do
     if [ -d "$HOME/temp-dotfiles/.config/$dir" ]; then
-        mv "$HOME/temp-dotfiles/.config/$dir" "$HOME/.config/$dir" >/dev/null 2>&1
+        mv "$HOME/temp-dotfiles/.config/$dir" "$HOME/.config/$dir"
     fi
 done
 
-rm -rf "$HOME/temp-dotfiles" >/dev/null 2>&1
+rm -rf "$HOME/temp-dotfiles"
 success "Configuration files planted"
 
 # Start Services
 clear_screen
 progress "Starting Services (grant permissions)..."
 # start yabai
-yabai --start-service >/dev/null 2>&1
-skhd --start-service >/dev/null 2>&1
-brew services start borders >/dev/null 2>&1
+yabai --start-service
+skhd --start-service
+brew services start borders
 
 progress "Adding yabai to sudoers..."
-echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai >/dev/null 2>&1
+echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
 
 csrutil status
 error "Important!: To gain full functionality, you must disable SIP."

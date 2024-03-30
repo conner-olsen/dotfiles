@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 ## Terminal
 brew install kitty
 echo "Select the theme you want to install"
@@ -30,7 +31,6 @@ brew install codewhisperer
 cw integrations install input-method
 echo "Open CodeWhisperer and follow the setup instructions"
 open /Applications/CodeWhisperer.app
-
 echo "Press enter to continue..."
 read
 
@@ -43,8 +43,7 @@ brew install gh
 
 ## dotfiles
 echo "Installing dotfiles"
-curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME/.zshrc >/dev/null 2>&1
-
+curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME/.zshrc
 exec zsh
 z4h install
 
@@ -60,19 +59,15 @@ brew install fd
 # Remove existing backups and then move the current directories to backup locations
 rm -rf $HOME/.config/nvim.bak
 mv $HOME/.config/nvim $HOME/.config/nvim.bak
-
 rm -rf $HOME/.local/share/nvim.bak
 mv $HOME/.local/share/nvim $HOME/.local/share/nvim.bak
-
 rm -rf $HOME/.local/state/nvim.bak
 mv $HOME/.local/state/nvim $HOME/.local/state/nvim.bak
-
 rm -rf $HOME/.cache/nvim.bak
 mv $HOME/.cache/nvim $HOME/.cache/nvim.bak
 
 # Clone the LazyVim starter kit into the .config/nvim directory
 git clone https://github.com/LazyVim/starter $HOME/.config/nvim
-
 # Remove the .git directory to prevent it from being a git repository
 rm -rf $HOME/.config/nvim/.git
 
