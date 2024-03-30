@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+# Function to display instruction message
+instruction() {
+    echo "\033[1;333m$1\033[0m"
+}
+
 # Function to display progress message
 progress() {
     echo "\033[1m\033[32m[*]\033[0m $1"
@@ -74,10 +79,11 @@ if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_us
     else
         success "Karabiner-Elements is already installed"
     fi
+    mkdir -p $HOME/.config/karabiner/assets/complex_modifications
     curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
     open /Applications/Karabiner-Elements.app
-    echo "Open Karabiner-Elements, go to 'Complex Modifications' and click 'Add Predefined Rule' to install the keybindings"
-    echo "INSTALL NOT YET COMPLETE: Press enter to continue"
+    instruction "Open Karabiner-Elements, go to 'Complex Modifications' and click 'Add Predefined Rule' to install the keybindings"
+    instruction "INSTALL NOT YET COMPLETE: Press enter to continue"
     read
 fi
 
