@@ -40,5 +40,8 @@ brew install microsoft-excel
 brew install microsoft-word
 brew install microsoft-powerpoint
 
+## Hardware
+brew install logi-options-plus
+
 ## Installations
 rustup-init

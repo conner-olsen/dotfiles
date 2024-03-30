@@ -71,6 +71,7 @@ brew install btop
 brew install eza
 brew install nnn
 brew install gh
+brew install wget2
 
 ## dotfiles
 echo "Installing dotfiles"
@@ -106,12 +107,6 @@ echo "Launching nvim to finish the setup"
 echo "Press enter to continue..."
 read
 
-# z4h install
-nohup kitty z4h install > /dev/null 2>&1 &
-echo "Launching z4h install"
-echo "Press enter to continue..."
-read
 
 echo "setup complete"
-
 exec zsh
