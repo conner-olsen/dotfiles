@@ -1,9 +1,38 @@
 #!/bin/zsh
 
-## Terminal
-brew install kitty
-echo "Select the theme you want to install"
-kitten themes
+# install required font
+brew install font-meslo-for-powerlevel10k
+
+# install kitty
+if [[ -z "$KITTY_WINDOW_ID" ]]; then
+  brew install kitty
+fi
+
+# if kitty.conf does not exist, create it
+if [[ ! -f ~/.config/kitty/kitty.conf ]]; then
+    expect <<EOF
+      spawn kitty +edit-config
+      expect "kitty.conf"
+      send "\033:wq!\r"
+      expect eof
+EOF
+fi
+
+# set font to MesloLGS NF
+sed -i '' \
+    -e 's/# font_family      monospace/font_family      MesloLGS NF/' \
+    -e 's/font_family      .*/font_family      MesloLGS NF/' \
+    $HOME/.config/kitty/kitty.conf
+
+if [[ -z "$KITTY_WINDOW_ID" ]]; then
+  nohup kitty zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh)" > /dev/null 2>&1 &
+  echo "Script restarted in kitty"
+  exit 0
+fi
+
+nohup kitty kitten themes > /dev/null 2>&1 &
+echo "Select a theme then press enter to continue"
+read
 
 ## zsh4humans
 if ! grep -q "z4h" "$HOME/.zshrc"; then
