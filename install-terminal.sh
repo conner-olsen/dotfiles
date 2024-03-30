@@ -75,8 +75,6 @@ brew install gh
 ## dotfiles
 echo "Installing dotfiles"
 curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME/.zshrc
-exec zsh
-
 
 ## lazyvim install:
 echo "Installing lazyvim"
@@ -116,3 +114,4 @@ read
 
 echo "setup complete"
 
+exec zsh
