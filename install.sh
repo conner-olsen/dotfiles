@@ -10,9 +10,10 @@ fi
 
 # Add homebrew to path if not already added
 if ! command -v brew &> /dev/null; then
-    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/conner/.zprofile
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> $HOME/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
 echo "press enter to continue"
 read
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-apps.sh)"
