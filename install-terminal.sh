@@ -59,6 +59,8 @@ echo "Installing CodeWhisperer"
 brew install codewhisperer
 cw integrations install input-method
 echo "Open CodeWhisperer and follow the setup instructions"
+echo 'If "cw integrations install input-method" fails, run the following command in default mac terminal, it is copied to your clipboard'
+echo "cw integrations install input-method" | pbcopy
 open /Applications/CodeWhisperer.app
 echo "Press enter to continue..."
 read
@@ -74,7 +76,7 @@ brew install gh
 echo "Installing dotfiles"
 curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME/.zshrc
 exec zsh
-z4h install
+
 
 ## lazyvim install:
 echo "Installing lazyvim"
@@ -101,4 +103,16 @@ git clone https://github.com/LazyVim/starter $HOME/.config/nvim
 rm -rf $HOME/.config/nvim/.git
 
 # Open nvim to finish the setup
-nvim
+nohup kitty nvim > /dev/null 2>&1 &
+echo "Launching nvim to finish the setup"
+echo "Press enter to continue..."
+read
+
+# z4h install
+nohup kitty z4h install > /dev/null 2>&1 &
+echo "Launching z4h install"
+echo "Press enter to continue..."
+read
+
+echo "setup complete"
+
