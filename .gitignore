@@ -1,16 +1,32 @@
-# temp files directories
+# System files
+.DS_Store
+*.swp
+
+# Editor configurations
+.vscode/
+.idea/
+
+# SSH configurations
+.ssh/
+
+# Git tools and configurations
+.gitconfig
+.gh
+.gitkraken/
+.gk/
+
+# Installation scripts
+install-links.zsh
+
+# Temporary files and directories
 cache/
 log/
-*.swp
-.DS_Store
 
-# editor configs
-.vscode
-.idea
-
-# non-sharable .configs
+# Non-sharable configurations
 .config/gh/
 .config/gh-copilot/
 .config/raycast/
-
 .config/karabiner/karabiner.json
+.cursor
+
+Library/
