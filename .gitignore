@@ -30,3 +30,4 @@ log/
 .cursor
 
 Library/
+.config/jgit/config
