@@ -1,6 +1,6 @@
 # Dotfiles
 
-My personal configuration files for various tools and applications that I use on my macOS system.
+My personal configuration files for various tools and applications that I use on my MacOS system.
 
 ## Screenshots
 
@@ -14,7 +14,7 @@ To install and set up the different components of the dotfiles, run the correspo
 
 ### Desktop Setup
 
-Installs and sets up the my desktop environment with tools like Yabai, SKHD, Karabiner-Elements with custom bindings, Raycast, and overrides macOS default settings. It includes a installer to allow for customization. 
+Installs and sets up the my desktop environment with tools like Yabai, SKHD, Karabiner-Elements with custom bindings, Raycast, and overrides MacOS default settings. It includes a installer to allow for customization.
 
 ```zsh
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-desktop.sh)"
@@ -38,14 +38,16 @@ zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main
 
 ### Application Installations
 
-This install all the applications I use on macOS. It is mainly just for me to have a quick way to install everything I need on new machines, so it's not really recommended for anyone else. 
+This install all the applications I use on MacOS It is mainly just for me to have a quick way to install everything I need on new machines, so it's not really recommended for anyone else.
 
 ```zsh
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-apps.sh)"
 ```
 
 ### Install All
+
 This is not recommended for anyone else as this will essentially install my entire setup. It's just a convenience script for me to install everything I need on a new machine.
+
 ```zsh
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install.sh)"
 ```
