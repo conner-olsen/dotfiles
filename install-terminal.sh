@@ -81,6 +81,7 @@ curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME
 echo "Installing lazyvim"
 # for lazyvim
 brew install node
+brew install python
 brew install neovim
 brew install lazygit
 brew install ripgrep
