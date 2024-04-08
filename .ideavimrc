@@ -27,8 +27,13 @@ map Q gq
 " set <leader> to <space>
 let mapleader = " "
 
-"  --- NERDTree ---
+"" NERDTree
+let g:WhichKeyDesc_NERDTree = "<Space>e  NERDTreeToggle"
 map <leader>e :NERDTreeToggle<CR>
+
+"" Telescope (File Search)
+let g:WhichKeyDesc_Telescope = "<Space><Space>  Search Files"
+map <leader><leader> :action GotoFile<CR>
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
@@ -45,33 +50,50 @@ Plug 'preservim/nerdtree'
 "" Map \r to the Reformat Code action
 map \r <Action>(ReformatCode)
 
-"" Map <leader>d to start debug
+"" Debug
+let g:WhichKeyDesc_Debug = "<Space>d  Debug"
 map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
 map \b <Action>(ToggleLineBreakpoint)
 
 " Easymotion
-map s <Plug>(easymotion-s)
-map S <Plug>(easymotion-s2)
-map gs <Plug>(easymotion-sl)
+
+map s <Plug>(easymotion-s2)
 
 "" Buffer
+let g:WhichKeyDesc_buffer               = "<Space>b  +buffer"
+let g:WhichKeyDesc_buffer_switch        = "<Space>bb Switch to Other Buffer"
+let g:WhichKeyDesc_buffer_delete        = "<Space>bd Delete Buffer"
+let g:WhichKeyDesc_buffer_explorer      = "<Space>be Recent Files"
+let g:WhichKeyDesc_buffer_delete_left   = "<Space>bl Delete Buffers to the Left"
+let g:WhichKeyDesc_buffer_delete_others = "<Space>bo Delete Other Buffers"
+let g:WhichKeyDesc_buffer_delete_right  = "<Space>br Delete Buffers to the Right"
+
+" Buffer navigation using leader + b + letter
+nnoremap <leader>bd :action CloseEditor<CR>
+nnoremap <leader>be :action RecentFiles<CR>
+nnoremap <leader>bl :action CloseAllToTheLeft<CR>
+nnoremap <leader>bo :action CloseAllEditorsButActive<CR>
+nnoremap <leader>br :action CloseAllToTheRight<CR>
+
+" Buffer navigation using leader + b + number
 let g:WhichKeyDesc_buffer        = "<Space>b  +buffer"
-let g:WhichKeyDesc_buffer_1      = "<Space>b1 GoToTab1"
-let g:WhichKeyDesc_buffer_2      = "<Space>b2 GoToTab2"
-let g:WhichKeyDesc_buffer_3      = "<Space>b3 GoToTab3"
-let g:WhichKeyDesc_buffer_4      = "<Space>b4 GoToTab4"
-let g:WhichKeyDesc_buffer_5      = "<Space>b5 GoToTab5"
-let g:WhichKeyDesc_buffer_6      = "<Space>b6 GoToTab6"
-let g:WhichKeyDesc_buffer_7      = "<Space>b7 GoToTab7"
-let g:WhichKeyDesc_buffer_8      = "<Space>b8 GoToTab8"
-let g:WhichKeyDesc_buffer_9      = "<Space>b9 GoToTab9"
+let g:WhichKeyDesc_BufferNumber  = "<Space>b#  1..9 GoToTab"
+let g:WhichKeyDesc_buffer_1      = "<Space>b1"
+let g:WhichKeyDesc_buffer_2      = "<Space>b2"
+let g:WhichKeyDesc_buffer_3      = "<Space>b3"
+let g:WhichKeyDesc_buffer_4      = "<Space>b4"
+let g:WhichKeyDesc_buffer_5      = "<Space>b5"
+let g:WhichKeyDesc_buffer_6      = "<Space>b6"
+let g:WhichKeyDesc_buffer_7      = "<Space>b7"
+let g:WhichKeyDesc_buffer_8      = "<Space>b8"
+let g:WhichKeyDesc_buffer_9      = "<Space>b9"
 let g:WhichKeyDesc_buffer_next   = "<Space>bn NextTab"
 let g:WhichKeyDesc_buffer_prev   = "<Space>bp PreviousTab"
 let g:WhichKeyDesc_buffer_delete = "<Space>bd CloseEditor"
 
-" Buffer navigation using leader + b + number
+nnoremap <leader>b# :action GoToTab1<CR>
 nnoremap <leader>b1 :action GoToTab1<CR>
 nnoremap <leader>b2 :action GoToTab2<CR>
 nnoremap <leader>b3 :action GoToTab3<CR>
@@ -90,13 +112,13 @@ nnoremap <leader>bd :action CloseEditor<CR>
 "" Code
 let g:WhichKeyDesc_code           = "<Space>c  +code"
 let g:WhichKeyDesc_code_actions   = "<Space>ca CodeActions"
-let g:WhichKeyDesc_code_find      = "<Space>cf CodeFind"
+let g:WhichKeyDesc_code_find      = "<Space>cs CodeFind"
 let g:WhichKeyDesc_code_refactor  = "<Space>cr CodeRefactor"
 let g:WhichKeyDesc_code_reformat  = "<Space>cf CodeReformat"
-let g:WhichKeyDesc_code_structure = "<Space>cs CodeStructure"
+let g:WhichKeyDesc_code_structure = "<Space>cS CodeStructure"
 
 nnoremap <leader>ca :action ShowIntentionActions<CR>
-nnoremap <leader>cf :action FindInPath<CR>
+nnoremap <leader>cs :action FindInPath<CR>
 nnoremap <leader>cr :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>cf :action ReformatCode<CR>
-nnoremap <leader>cs :action FileStructurePopup<CR>
+nnoremap <leader>cS :action FileStructurePopup<CR>
