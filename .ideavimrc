@@ -58,6 +58,19 @@ map gs <Plug>(easymotion-sl)
 
 "" Buffer
 let g:WhichKeyDesc_buffer        = "<Space>b  +buffer"
+let g:WhichKeyDesc_buffer_1      = "<Space>b1 GoToTab1"
+let g:WhichKeyDesc_buffer_2      = "<Space>b2 GoToTab2"
+let g:WhichKeyDesc_buffer_3      = "<Space>b3 GoToTab3"
+let g:WhichKeyDesc_buffer_4      = "<Space>b4 GoToTab4"
+let g:WhichKeyDesc_buffer_5      = "<Space>b5 GoToTab5"
+let g:WhichKeyDesc_buffer_6      = "<Space>b6 GoToTab6"
+let g:WhichKeyDesc_buffer_7      = "<Space>b7 GoToTab7"
+let g:WhichKeyDesc_buffer_8      = "<Space>b8 GoToTab8"
+let g:WhichKeyDesc_buffer_9      = "<Space>b9 GoToTab9"
+let g:WhichKeyDesc_buffer_next   = "<Space>bn NextTab"
+let g:WhichKeyDesc_buffer_prev   = "<Space>bp PreviousTab"
+let g:WhichKeyDesc_buffer_delete = "<Space>bd CloseEditor"
+
 " Buffer navigation using leader + b + number
 nnoremap <leader>b1 :action GoToTab1<CR>
 nnoremap <leader>b2 :action GoToTab2<CR>
@@ -68,7 +81,22 @@ nnoremap <leader>b6 :action GoToTab6<CR>
 nnoremap <leader>b7 :action GoToTab7<CR>
 nnoremap <leader>b8 :action GoToTab8<CR>
 nnoremap <leader>b9 :action GoToTab9<CR>
+
 " Other buffer mappings
 nnoremap <leader>bn :action NextTab<CR>
 nnoremap <leader>bp :action PreviousTab<CR>
 nnoremap <leader>bd :action CloseEditor<CR>
+
+"" Code
+let g:WhichKeyDesc_code           = "<Space>c  +code"
+let g:WhichKeyDesc_code_actions   = "<Space>ca CodeActions"
+let g:WhichKeyDesc_code_find      = "<Space>cf CodeFind"
+let g:WhichKeyDesc_code_refactor  = "<Space>cr CodeRefactor"
+let g:WhichKeyDesc_code_reformat  = "<Space>cf CodeReformat"
+let g:WhichKeyDesc_code_structure = "<Space>cs CodeStructure"
+
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+nnoremap <leader>cf :action FindInPath<CR>
+nnoremap <leader>cr :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>cf :action ReformatCode<CR>
+nnoremap <leader>cs :action FileStructurePopup<CR>
