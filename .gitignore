@@ -25,3 +25,7 @@ log/
 .gk/repoMapping.json
 
 .gitkraken/profiles/d6e5a8ca26e14325a4275fc33b17e16f/repoSettings/
+
+.gitkraken/service/github/forks/
+
+.gitkraken/profiles/d6e5a8ca26e14325a4275fc33b17e16f/profile
