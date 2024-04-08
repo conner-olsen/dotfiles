@@ -121,14 +121,14 @@ compdef _directories md
 [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
 
 # Define aliases.
-alias tree='tree -a -I .git'
+alias ls="eza"
 alias wget="wget2"
 alias python="python3" 
 alias pip="pip3"
+alias ..="cd .."
 
 # Add flags to existing aliases.
-alias ls="eza"
-alias ..="cd .."
+alias tree='tree -a -I .git'
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
