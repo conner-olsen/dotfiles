@@ -12,6 +12,15 @@ set scrolloff=5
 " Do incremental searching.
 set incsearch
 
+" which-key
+set which-key
+
+" Show all vim actions
+let g:WhichKey_ShowVimActions = "true"
+
+" disable timout delay
+set notimeout
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
@@ -42,6 +51,24 @@ map <leader>d <Action>(Debug)
 "" Map \b to toggle the breakpoint on the current line
 map \b <Action>(ToggleLineBreakpoint)
 
+" Easymotion
 map s <Plug>(easymotion-s)
 map S <Plug>(easymotion-s2)
 map gs <Plug>(easymotion-sl)
+
+"" Buffer
+let g:WhichKeyDesc_buffer        = "<Space>b  +buffer"
+" Buffer navigation using leader + b + number
+nnoremap <leader>b1 :action GoToTab1<CR>
+nnoremap <leader>b2 :action GoToTab2<CR>
+nnoremap <leader>b3 :action GoToTab3<CR>
+nnoremap <leader>b4 :action GoToTab4<CR>
+nnoremap <leader>b5 :action GoToTab5<CR>
+nnoremap <leader>b6 :action GoToTab6<CR>
+nnoremap <leader>b7 :action GoToTab7<CR>
+nnoremap <leader>b8 :action GoToTab8<CR>
+nnoremap <leader>b9 :action GoToTab9<CR>
+" Other buffer mappings
+nnoremap <leader>bn :action NextTab<CR>
+nnoremap <leader>bp :action PreviousTab<CR>
+nnoremap <leader>bd :action CloseEditor<CR>
