@@ -1,0 +1,36 @@
+# System files
+.DS_Store
+*.swp
+
+# Editor configurations
+.vscode/
+.idea/
+
+# SSH configurations
+.ssh/
+
+# Git tools and configurations
+.gitconfig
+.gh
+.gitkraken/
+.gk/
+
+# Installation scripts
+install-links.zsh
+
+# Temporary files and directories
+cache/
+log/
+
+# Non-sharable configurations
+.config/gh/
+.config/gh-copilot/
+.config/github-copilot/
+.config/raycast/
+.config/karabiner/karabiner.json
+.cursor
+
+Library/
+.config/jgit/config
+
+.config/nnn/.selection
