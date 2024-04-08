@@ -22,4 +22,4 @@ link_file ".p10k.zsh"
 link_file ".zprofile"
 link_file ".zshenv"
 link_file ".zshrc"
-
+link_file ".ideavimrc"
