@@ -16,7 +16,7 @@
         "selectedProjectId": null
       }
     },
-    "selectedTabId": "e14d63b2-0055-44ea-bb30-47ab07a7c150",
+    "selectedTabId": "b0cdbd06-98ba-4c48-b9a5-aa931fa3420d",
     "tabs": [
       {
         "id": "6a3c9748-826d-43a9-a93c-662294c715ac",
@@ -26,7 +26,7 @@
         "skipWSLChecks": false
       },
       {
-        "id": "e14d63b2-0055-44ea-bb30-47ab07a7c150",
+        "id": "b0cdbd06-98ba-4c48-b9a5-aa931fa3420d",
         "type": "REPO",
         "repoName": "dotfiles",
         "repoPath": "/Users/conner/Documents/GitHub/dotfiles/",
