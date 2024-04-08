@@ -25,6 +25,7 @@ log/
 # Non-sharable configurations
 .config/gh/
 .config/gh-copilot/
+.config/github-copilot/
 .config/raycast/
 .config/karabiner/karabiner.json
 .cursor
