@@ -32,3 +32,5 @@ log/
 
 Library/
 .config/jgit/config
+
+.config/nnn/.selection
