@@ -90,6 +90,7 @@ path=(~/bin $path)
 
 # Export environment variables.
 export GPG_TTY=$TTY
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
@@ -119,6 +120,9 @@ compdef _directories md
 
 # Define named directories: ~w <=> Windows home directory on WSL.
 [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
+
+# initialize conda
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
 
 # Define aliases.
 alias ls="eza"
