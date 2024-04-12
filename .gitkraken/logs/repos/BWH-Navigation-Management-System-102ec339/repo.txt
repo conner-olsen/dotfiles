@@ -1,7 +1,0 @@
-[2024-03-29T17:40:49.903Z] Fetch remote origin: fatal: unable to access 'https://github.com/ARealConner/BWH-Navigation-Management-System.git/': Could not resolve host: github.com
-[2024-03-29T17:43:51.412Z] Fetch remote origin: fatal: unable to access 'https://github.com/ARealConner/BWH-Navigation-Management-System.git/': Could not resolve host: github.com
-[2024-03-29T20:25:01.556Z] Reset unstaged changes in apps/frontend/src/components/maps/IconPath.tsx: started.
-[2024-03-29T20:25:01.748Z] Reset unstaged changes in apps/frontend/src/components/maps/IconPath.tsx: finished.
-[2024-03-29T22:08:50.048Z] Pull main: started.
-[2024-03-29T22:08:50.261Z] Pull main: finished. gk-log://duration?t=213
-[2024-04-02T00:37:22.693Z] Fetch remote origin: spawnOpts.cwd is required

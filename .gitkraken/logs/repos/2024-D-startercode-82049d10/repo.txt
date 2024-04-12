@@ -1,2 +1,0 @@
-[2024-04-06T23:02:42.420Z] Fetch remote origin: fatal: unable to access 'https://github.com/CS37033-2024-TA-Repos/2024-D-startercode.git/': Could not resolve host: github.com
-[2024-04-06T23:06:43.720Z] Fetch remote origin: fatal: unable to access 'https://github.com/CS37033-2024-TA-Repos/2024-D-startercode.git/': Could not resolve host: github.com
