@@ -39,19 +39,19 @@ brew install pipenv
 brew install pyenv
 pyenv install 3.12.2
 pyenv global 3.12.2
+brew install jupyterlab
 brew install pycharm
 
 # Rust
 brew install rustrover
+brew install rustup-init
 
 # Git
+brew install git-lfs
 brew install gitkraken
 
 # Datascience
 brew install dataspell
-
-# Languages
-brew install rustup-init
 
 ## Installations
 rustup-init
