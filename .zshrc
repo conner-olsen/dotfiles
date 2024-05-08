@@ -1,5 +1,6 @@
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+# Q pre block. Keep at the top of this file.
 ## Functions
 function suyabai () {
     SHA256=$(shasum -a 256 /opt/homebrew/bin/yabai | awk "{print \$1;}")
@@ -139,5 +140,12 @@ setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+# Python:
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# Q post block. Keep at the bottom of this file.
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
