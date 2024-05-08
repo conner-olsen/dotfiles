@@ -1,0 +1,12 @@
+{
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.env.osx": {
+    "CW_NEW_SESSION": "1"
+  },
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
+  "VitestRunner.executionArg": "yarn",
+  "workbench.colorTheme": "Gruvboxical",
+  "security.promptForLocalFileProtocolHandling": false,
+  "explorer.confirmDelete": false
+}

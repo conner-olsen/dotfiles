@@ -1,0 +1,28 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDragAndDrop": false,
+    "editor.rulers": [
+        102
+    ],
+    "editor.formatOnPaste": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.inlineSuggest.enabled": true,
+    "security.workspace.trust.enabled": false,
+    "github.copilot.enable": {
+        "*": true
+    },
+    "editor.guides.bracketPairs": "active",
+    "workbench.colorTheme": "Monokai",
+    "cwtools.cache.hoi4": "c:\\Steam\\steamapps\\common\\Hearts of Iron IV",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.env.osx": {
+        "CW_NEW_SESSION": "1"
+    },
+    "git.confirmSync": false,
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "editor.fontFamily": "MesloLGS NF, SF-Symbols",
+    "editor.cursorBlinking": "smooth",
+}
