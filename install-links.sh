@@ -1,23 +1,31 @@
 #!/bin/zsh
 
 link_folder() {
-	rm -rf ~/$1
-	ln -s ~/Documents/GitHub/dotfiles/$1/ ~/$1
+    if [ -d ~/Documents/GitHub/dotfiles/$1/ ]; then
+        rm -rf ~/$1
+        ln -s ~/Documents/GitHub/dotfiles/$1/ ~/$1
+    else
+        echo "Source folder ~/Documents/GitHub/dotfiles/$1/ does not exist"
+    fi
+}
+
+link_file() {
+    if [ -f ~/Documents/GitHub/dotfiles/$1 ]; then
+        rm -f ~/$1
+        ln -s ~/Documents/GitHub/dotfiles/$1 ~/$1
+    else
+        echo "Source file ~/Documents/GitHub/dotfiles/$1 does not exist"
+    fi
 }
 
 link_config() {
 	link_folder ".config/$1"
 }
 
-link_file() {
-	rm -f ~/$1
-	ln -s ~/Documents/GitHub/dotfiles/$1 ~/$1
-}
-
 ## Folders
 link_folder ".ssh"
-link_folder "Library/Application\ Support/Code/User/profiles"
-link_folder "Library/Application\ Support/Cursor/User/profiles"
+link_folder "Library/Application Support/Code/User/profiles"
+link_folder "Library/Application Support/Cursor/User/profiles"
 
 ## Files
 link_file ".gitconfig"
@@ -26,8 +34,8 @@ link_file ".zprofile"
 link_file ".zshenv"
 link_file ".zshrc"
 link_file ".ideavimrc"
-link_file "Library/Application\ Support/Code/User/settings.json"
-link_file "Library/Application\ Support/Cursor/User/settings.json"
+link_file "Library/Application Support/Code/User/settings.json"
+link_file "Library/Application Support/Cursor/User/settings.json"
 
 ## Configs
 link_config "borders"
