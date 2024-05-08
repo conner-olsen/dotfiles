@@ -110,6 +110,7 @@ z4h bindkey z4h-cd-back    Shift+Left   # cd into the previous directory
 z4h bindkey z4h-cd-forward Shift+Right  # cd into the next directory
 z4h bindkey z4h-cd-up      Shift+Up     # cd into the parent directory
 z4h bindkey z4h-cd-down    Shift+Down   # cd into a child directory
+z4h bindkey z4h-accept-line Enter       # enable zsh-no-ps2 / disable ps2
 
 # Autoload functions.
 autoload -Uz zmv
