@@ -24,7 +24,6 @@ link_config() {
 
 ## Folders
 link_folder ".ssh"
-link_folder "Library/Application Support/Code/User/profiles"
 link_folder "Library/Application Support/Cursor/User/profiles"
 
 ## Files
@@ -34,7 +33,6 @@ link_file ".zprofile"
 link_file ".zshenv"
 link_file ".zshrc"
 link_file ".ideavimrc"
-link_file "Library/Application Support/Code/User/settings.json"
 link_file "Library/Application Support/Cursor/User/settings.json"
 
 ## Configs
