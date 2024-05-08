@@ -2,9 +2,3 @@
 .DS_Store
 *.swp
 
-# Editor configurations
-.vscode/
-.idea/
-
-# Temporary files and directories
-
