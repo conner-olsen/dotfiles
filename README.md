@@ -1,5 +1,7 @@
 # Dotfiles
 
+My personal configuration files for various tools and applications that I use on my MacOS system.
+
 <!--toc:start-->
 
 - [Dotfiles](#dotfiles)
@@ -12,8 +14,6 @@
     - [Install All](#install-all)
   - [Disclaimer](#disclaimer)
   <!--toc:end-->
-
-My personal configuration files for various tools and applications that I use on my MacOS system.
 
 ## Screenshots
 
