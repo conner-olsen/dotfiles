@@ -1,5 +1,18 @@
 # Dotfiles
 
+<!--toc:start-->
+
+- [Dotfiles](#dotfiles)
+  - [Screenshots](#screenshots)
+  - [Installation](#installation)
+    - [Desktop Setup](#desktop-setup)
+    - [SketchyBar](#sketchybar)
+    - [Terminal Setup](#terminal-setup)
+    - [Application Installations](#application-installations)
+    - [Install All](#install-all)
+  - [Disclaimer](#disclaimer)
+  <!--toc:end-->
+
 My personal configuration files for various tools and applications that I use on my MacOS system.
 
 ## Screenshots
@@ -30,7 +43,7 @@ zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main
 
 ### Terminal Setup
 
-Sets up the terminal environment with tools like Kitty, zsh4humans, CodeWhisperer, neovim, and my .zshrc.
+Sets up the terminal environment with tools like Kitty, zsh4humans, Amazon Q, neovim, and my .zshrc.
 
 ```zsh
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh)"
