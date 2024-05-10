@@ -20,6 +20,7 @@ wk.register({
   c = {
     p = {
       name = "+copilot",
+      a = { "<Cmd>CopilotChatOpen<CR>", "Ask about selected code" },
       e = { "<Cmd>CopilotChatExplain<CR>", "Explain the active selection" },
       r = { "<Cmd>CopilotChatReview<CR>", "Review the selected code" },
       f = { "<Cmd>CopilotChatFix<CR>", "Fix a problem in the code" },
