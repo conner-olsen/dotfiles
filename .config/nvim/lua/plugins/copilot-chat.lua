@@ -6,7 +6,7 @@ return {
     { "nvim-lua/plenary.nvim" },
   },
   opts = {
-    model = "gpt-4",
+    model = "gpt-4-turbo",
     prompts = {
       CommitStaged = {
         prompt = [[
