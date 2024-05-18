@@ -132,6 +132,9 @@ alias python="python3"
 alias pip="pip3"
 alias ..="cd .."
 
+# Add environment variables.
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
 # Add flags to existing aliases.
 alias tree='tree -a -I .git'
 
