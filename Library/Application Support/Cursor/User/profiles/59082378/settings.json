@@ -1,0 +1,5 @@
+{
+    "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace,  MesloLGS NF",
+    "plsqllint.javaHome": "/opt/homebrew/opt/openjdk@17/bin"
+}
