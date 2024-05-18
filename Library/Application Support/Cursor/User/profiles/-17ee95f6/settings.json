@@ -62,6 +62,5 @@
         "editor.action.outdentLines"
       ]
     }
-  ],
-  "workbench.colorTheme": "Gruvboxical"
+  ]
 }
