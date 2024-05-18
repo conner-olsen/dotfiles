@@ -1,8 +1,0 @@
-{
-    "workbench.colorTheme": "Gruvboxical",
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
-    "cSpell.userWords": [
-        "actix",
-        "reqwest"
-    ]
-}
