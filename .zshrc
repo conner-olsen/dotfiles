@@ -134,6 +134,7 @@ alias ..="cd .."
 
 # Add environment variables.
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 # Add flags to existing aliases.
 alias tree='tree -a -I .git'
