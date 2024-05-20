@@ -1,4 +1,5 @@
 {
     "editor.accessibilitySupport": "off",
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF"
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
+    "workbench.activityBar.orientation": "vertical"
 }
