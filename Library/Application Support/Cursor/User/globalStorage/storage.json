@@ -13,8 +13,8 @@
             "file:///Users/conner/Documents/GitHub/SoftEng/team-F-production": "-6b4e644b",
             "file:///Users/conner/Documents/GitHub/SoftEng/assignment_5_tests": "-6b4e644b",
             "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-17ee95f6",
-            "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6"
+            "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6",
+            "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-17ee95f6"
         },
         "emptyWindows": {}
     },
@@ -26,9 +26,6 @@
         "folders": [
             {
                 "folderUri": "file:///Users/conner/Documents/GitHub/college-salary-rankings-server"
-            },
-            {
-                "folderUri": "file:///Users/conner/Library/Application%20Support/Cursor"
             }
         ],
         "emptyWindows": []
@@ -77,6 +74,16 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/college-salary-rankings-server",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/college-salary-rankings-server"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "path": "/Users/conner/Library/Application Support/Cursor",
                                         "scheme": "file"
                                     },
@@ -92,16 +99,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Library"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/college-salary-rankings-server",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/college-salary-rankings-server"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -262,6 +259,13 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
+                                {
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Rust)..."
@@ -491,7 +495,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1129,8 +1134,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1242,6 +1246,10 @@
                                     "id": "workbench.profiles.actions.profileEntry.-17ee95f6",
                                     "label": "Rust",
                                     "checked": true
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.profileEntry.-64dd7ce9",
+                                    "label": "test"
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-6b4e644b",
@@ -1769,39 +1777,39 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#181818",
+    "themeBackground": "#101316",
     "windowSplash": {
         "zoomLevel": 0,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#d6d6dd",
-            "background": "#181818",
-            "editorBackground": "#181818",
-            "titleBarBackground": "#292929",
-            "activityBarBackground": "#181818",
-            "sideBarBackground": "#181818",
-            "statusBarBackground": "#181818",
-            "statusBarNoFolderBackground": "#181818"
+            "foreground": "rgba(168, 173, 179, 0.67)",
+            "background": "#101316",
+            "editorBackground": "#101316",
+            "titleBarBackground": "#0c0f11",
+            "activityBarBackground": "#0c0f11",
+            "sideBarBackground": "#0c0f11",
+            "statusBarBackground": "#0c0f11",
+            "statusBarNoFolderBackground": "#0c0f11"
         },
         "layoutInfo": {
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 539,
+            "sideBarWidth": 300,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///Users/conner/Library/Application%20Support/Cursor",
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/61f12d0a2a76fe1d7b158e9e0a209dc8",
+            "folder": "file:///Users/conner/Documents/GitHub/college-salary-rankings-server",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/31624339744fd201556df2639cd5bf0f",
             "uiState": {
                 "mode": 1,
                 "x": 8,
                 "y": 43,
-                "width": 852,
+                "width": 1712,
                 "height": 1066
             }
         },
@@ -1823,6 +1831,10 @@
         {
             "location": "-50604ecc",
             "name": "LaTeX"
+        },
+        {
+            "location": "-64dd7ce9",
+            "name": "test"
         }
     ]
 }

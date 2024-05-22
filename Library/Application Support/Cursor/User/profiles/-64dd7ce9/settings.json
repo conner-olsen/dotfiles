@@ -8,7 +8,7 @@
     "editor.accessibilitySupport": "off",
     "vim.targets.enable": true,
     "vim.useSystemClipboard": true,
-    "workbench.colorTheme": "Dekirisu's Rainbow",
+    "workbench.colorTheme": "Lunar-dark-theme",
     "rust-analyzer.diagnostics.styleLints.enable": true,
     "rust-analyzer.semanticHighlighting.punctuation.enable": true,
     "rust-analyzer.semanticHighlighting.operator.specialization.enable": true,
@@ -16,11 +16,5 @@
     "rust-analyzer.semanticHighlighting.punctuation.specialization.enable": true,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
-    },
-    "sqlfluff.dialect": "postgres",
-    "theme-by-language.themes": {
-        "*": "Lunar-dark-theme",
-        "rust": "Dekirisu's Rainbow",
-        "sql": "Solarized Dark"
     }
 }
