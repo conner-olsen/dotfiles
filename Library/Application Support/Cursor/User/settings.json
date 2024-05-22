@@ -27,7 +27,7 @@
     },
     {
       "before": [
-        "f"
+        "s"
       ],
       "after": [
         "<leader>", "<leader>", "2", "s"
