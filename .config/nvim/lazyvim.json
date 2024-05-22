@@ -17,6 +17,7 @@
     "lazyvim.plugins.extras.lang.python-semshi",
     "lazyvim.plugins.extras.lang.rust",
     "lazyvim.plugins.extras.lang.tex",
+    "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.yaml",
     "lazyvim.plugins.extras.linting.eslint",
@@ -26,10 +27,13 @@
     "lazyvim.plugins.extras.ui.treesitter-context",
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.mini-hipatterns",
-    "lazyvim.plugins.extras.util.project"
+    "lazyvim.plugins.extras.util.project",
+    "plugins.extras.copilot-chat",
+    "plugins.extras.rainbow-delimiters",
+    "plugins.extras.rainbow_csv"
   ],
   "news": {
-    "NEWS.md": "4944"
+    "NEWS.md": "4964"
   },
   "version": 4
 }
