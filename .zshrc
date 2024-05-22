@@ -122,9 +122,6 @@ compdef _directories md
 # Define named directories: ~w <=> Windows home directory on WSL.
 [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
 
-# initialize conda
-export PATH="/opt/homebrew/anaconda3/bin:$PATH"
-
 # Define aliases.
 alias ls="eza"
 alias wget="wget2"
@@ -133,8 +130,12 @@ alias pip="pip3"
 alias ..="cd .."
 
 # Add environment variables.
+export PATH="/opt/homebrew/anaconda3/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 
 # Add flags to existing aliases.
 alias tree='tree -a -I .git'
