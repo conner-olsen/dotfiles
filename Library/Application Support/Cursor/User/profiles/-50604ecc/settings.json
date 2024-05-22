@@ -1,6 +1,5 @@
 {
   "editor.accessibilitySupport": "off",
-  "security.promptForLocalFileProtocolHandling": false,
   "terminal.integrated.env.osx": {
     "CW_NEW_SESSION": "1"
   },
@@ -23,14 +22,6 @@
           "args": "m",
           "command": "whichkey.triggerKey"
         }
-      ]
-    },
-    {
-      "before": [
-        "f"
-      ],
-      "after": [
-        "<leader>", "<leader>", "2", "s"
       ]
     }
   ],
@@ -71,5 +62,7 @@
         "editor.action.outdentLines"
       ]
     }
-  ]
+  ],
+  "workbench.activityBar.orientation": "vertical",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF"
 }

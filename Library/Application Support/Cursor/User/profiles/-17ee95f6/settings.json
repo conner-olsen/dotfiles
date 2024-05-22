@@ -1,0 +1,12 @@
+{
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
+    "workbench.activityBar.orientation": "vertical",
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": true,
+    "vim.highlightedyank.enable": true,
+    "vim.smartRelativeLine": true,
+    "editor.accessibilitySupport": "off",
+    "vim.sneak": true,
+    "vim.targets.enable": true,
+    "vim.sneakReplacesF": true
+}
