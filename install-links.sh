@@ -34,6 +34,7 @@ link_file ".zshenv"
 link_file ".zshrc"
 link_file ".ideavimrc"
 link_file "Library/Application Support/Cursor/User/settings.json"
+link_file "Library/Application Support/Cursor/User/globalStorage/storage.json"
 
 ## Configs
 link_config "borders"
