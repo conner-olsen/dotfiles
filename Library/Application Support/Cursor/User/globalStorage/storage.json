@@ -5,16 +5,16 @@
             "file:///Users/conner/.cursor-tutor": "__default__profile__",
             "file:///Users/conner/.config/sketchybar": "__default__profile__",
             "file:///Users/conner/.config": "__default__profile__",
-            "file:///Users/conner/Documents/GitHub/dotfiles": "__default__profile__",
             "file:///Users/conner/Documents/GitHub/team-F-production": "-6b4e644b",
             "file:///Users/conner/Documents/GitHub/MA4635-Final-Project": "67e9f56e",
             "file:///Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System": "67e9f56e",
             "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "67e9f56e",
             "file:///Users/conner/Documents/GitHub/SoftEng/team-F-production": "-6b4e644b",
             "file:///Users/conner/Documents/GitHub/SoftEng/assignment_5_tests": "-6b4e644b",
-            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
             "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6",
-            "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-17ee95f6"
+            "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-50604ecc",
+            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
+            "file:///Users/conner/Documents/GitHub/dotfiles": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -25,7 +25,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///Users/conner/Documents/GitHub/college-salary-rankings-server"
+                "folderUri": "file:///Users/conner/Documents/GitHub/dotfiles"
             }
         ],
         "emptyWindows": []
@@ -65,10 +65,31 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/dotfiles"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/Reductions",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/Reductions"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -99,16 +120,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Library"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/Reductions",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/Reductions"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -159,16 +170,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/GitHub/MA4635-Final-Project"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/dotfiles",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/dotfiles"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -260,15 +261,8 @@
                         "submenu": {
                             "items": [
                                 {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
                                     "id": "workbench.profiles.actions.exportProfile",
-                                    "label": "Export Profile (Rust)..."
+                                    "label": "Export Profile (Default)..."
                                 },
                                 {
                                     "id": "workbench.profiles.actions.importProfile",
@@ -486,7 +480,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
-                                    "label": "Secondary Si&&de Bar"
+                                    "label": "Secondary Si&&de Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -797,7 +792,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -806,7 +802,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1227,12 +1224,13 @@
                 "items": [
                     {
                         "id": "submenuitem.Profiles",
-                        "label": "Profiles (Rust)",
+                        "label": "Profiles (Default)",
                         "submenu": {
                             "items": [
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.__default__profile__",
-                                    "label": "Default"
+                                    "label": "Default",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-50604ecc",
@@ -1244,8 +1242,7 @@
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-17ee95f6",
-                                    "label": "Rust",
-                                    "checked": true
+                                    "label": "Rust"
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-64dd7ce9",
@@ -1257,10 +1254,6 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.editCurrentProfile",
-                                    "label": "Edit Profile..."
                                 },
                                 {
                                     "id": "workbench.profiles.actions.showProfileContents",
@@ -1777,34 +1770,34 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#101316",
+    "themeBackground": "#181818",
     "windowSplash": {
         "zoomLevel": 0,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "rgba(168, 173, 179, 0.67)",
-            "background": "#101316",
-            "editorBackground": "#101316",
-            "titleBarBackground": "#0c0f11",
-            "activityBarBackground": "#0c0f11",
-            "sideBarBackground": "#0c0f11",
-            "statusBarBackground": "#0c0f11",
-            "statusBarNoFolderBackground": "#0c0f11"
+            "foreground": "#d6d6dd",
+            "background": "#181818",
+            "editorBackground": "#181818",
+            "titleBarBackground": "#292929",
+            "activityBarBackground": "#181818",
+            "sideBarBackground": "#181818",
+            "statusBarBackground": "#181818",
+            "statusBarNoFolderBackground": "#181818"
         },
         "layoutInfo": {
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
-            "activityBarWidth": 48,
-            "sideBarWidth": 300,
+            "activityBarWidth": 0,
+            "sideBarWidth": 170,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///Users/conner/Documents/GitHub/college-salary-rankings-server",
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/31624339744fd201556df2639cd5bf0f",
+            "folder": "file:///Users/conner/Documents/GitHub/dotfiles",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/45897a44dce1b5cea01b190c158ae143",
             "uiState": {
                 "mode": 1,
                 "x": 8,

@@ -26,11 +26,14 @@
       ]
     },
     {
-      "before": [
+      "after": [
+        "<leader>",
+        "<leader>",
+        "2",
         "s"
       ],
-      "after": [
-        "<leader>", "<leader>", "2", "s"
+      "before": [
+        "s"
       ]
     }
   ],
