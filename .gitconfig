@@ -2,9 +2,11 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Conner
-	email = 81334211+ARealConner@users.noreply.github.com
+	email = arealconner@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[init]
+	defaultBranch = main
