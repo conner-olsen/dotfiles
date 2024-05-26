@@ -65,6 +65,7 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^MacGPT$" manage=off
 yabai -m rule --add app="^ChatGPT$" manage=off
+yabai -m rule --add app="^1Password$" manage=off
 
 
 borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
