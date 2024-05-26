@@ -5,16 +5,12 @@
             "file:///Users/conner/.cursor-tutor": "__default__profile__",
             "file:///Users/conner/.config/sketchybar": "__default__profile__",
             "file:///Users/conner/.config": "__default__profile__",
-            "file:///Users/conner/Documents/GitHub/team-F-production": "-6b4e644b",
-            "file:///Users/conner/Documents/GitHub/MA4635-Final-Project": "67e9f56e",
-            "file:///Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System": "67e9f56e",
-            "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "67e9f56e",
-            "file:///Users/conner/Documents/GitHub/SoftEng/team-F-production": "-6b4e644b",
-            "file:///Users/conner/Documents/GitHub/SoftEng/assignment_5_tests": "-6b4e644b",
             "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6",
             "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-50604ecc",
             "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/dotfiles": "__default__profile__"
+            "file:///Users/conner/Documents/GitHub/dotfiles": "__default__profile__",
+            "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7"
         },
         "emptyWindows": {}
     },
@@ -25,10 +21,14 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///Users/conner/Documents/GitHub/dotfiles"
+                "folderUri": "file:///Users/conner/Documents/GitHub/svelte-demo"
             }
         ],
-        "emptyWindows": []
+        "emptyWindows": [
+            {
+                "backupFolder": "1716652005221"
+            }
+        ]
     },
     "windowControlHeight": 35,
     "lastKnownMenubarData": {
@@ -70,6 +70,26 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/svelte-demo",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/svelte-demo"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/college-salary-rankings",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/college-salary-rankings"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -152,27 +172,17 @@
                                     "label": "~/Documents/GitHub/acculynx-data-entry-tool"
                                 },
                                 {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/SoftEng/BWH-Navigation-Management-System"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/MA4635-Final-Project",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/MA4635-Final-Project"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/yabai/yabairc",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/dotfiles/.config/yabai/yabairc"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -262,7 +272,7 @@
                             "items": [
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
-                                    "label": "Export Profile (Default)..."
+                                    "label": "Export Profile (Svelte)..."
                                 },
                                 {
                                     "id": "workbench.profiles.actions.importProfile",
@@ -480,8 +490,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
-                                    "label": "Secondary Si&&de Bar",
-                                    "checked": true
+                                    "label": "Secondary Si&&de Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -490,8 +499,7 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel",
-                                    "checked": true
+                                    "label": "&&Panel"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -678,13 +686,6 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
-                                    "id": "workbench.action.splitEditorInGroup",
-                                    "label": "Split in &&Group"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -784,7 +785,8 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "enabled": false
                     }
                 ]
             },
@@ -792,8 +794,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1131,7 +1132,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1224,36 +1226,32 @@
                 "items": [
                     {
                         "id": "submenuitem.Profiles",
-                        "label": "Profiles (Default)",
+                        "label": "Profiles (Svelte)",
                         "submenu": {
                             "items": [
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.__default__profile__",
-                                    "label": "Default",
-                                    "checked": true
+                                    "label": "Default"
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-50604ecc",
                                     "label": "LaTeX"
                                 },
                                 {
-                                    "id": "workbench.profiles.actions.profileEntry.67e9f56e",
-                                    "label": "Python"
-                                },
-                                {
                                     "id": "workbench.profiles.actions.profileEntry.-17ee95f6",
                                     "label": "Rust"
                                 },
                                 {
-                                    "id": "workbench.profiles.actions.profileEntry.-64dd7ce9",
-                                    "label": "test"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.profileEntry.-6b4e644b",
-                                    "label": "Web"
+                                    "id": "workbench.profiles.actions.profileEntry.7bd2dca7",
+                                    "label": "Svelte",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.editCurrentProfile",
+                                    "label": "Edit Profile..."
                                 },
                                 {
                                     "id": "workbench.profiles.actions.showProfileContents",
@@ -1523,11 +1521,6 @@
                 "isNative": false,
                 "userSettingsLabel": "cmd+r cmd+\\"
             },
-            "workbench.action.splitEditorInGroup": {
-                "label": "⌘R ⇧⌘\\",
-                "isNative": false,
-                "userSettingsLabel": "cmd+r shift+cmd+\\"
-            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "⌘R O",
                 "isNative": false,
@@ -1788,16 +1781,16 @@
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
-            "activityBarWidth": 0,
-            "sideBarWidth": 170,
+            "activityBarWidth": 48,
+            "sideBarWidth": 300,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///Users/conner/Documents/GitHub/dotfiles",
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/45897a44dce1b5cea01b190c158ae143",
+            "folder": "file:///Users/conner/Documents/GitHub/svelte-demo",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/a7efe9890361fd3d6c319dcce60893d4",
             "uiState": {
                 "mode": 1,
                 "x": 8,
@@ -1810,24 +1803,19 @@
     },
     "userDataProfiles": [
         {
-            "location": "-6b4e644b",
-            "name": "Web"
-        },
-        {
-            "location": "67e9f56e",
-            "name": "Python"
-        },
-        {
             "location": "-17ee95f6",
-            "name": "Rust"
+            "name": "Rust",
+            "icon": "rocket"
         },
         {
             "location": "-50604ecc",
-            "name": "LaTeX"
+            "name": "LaTeX",
+            "icon": "mortar-board"
         },
         {
-            "location": "-64dd7ce9",
-            "name": "test"
+            "location": "7bd2dca7",
+            "name": "Svelte",
+            "icon": "coffee"
         }
     ]
 }
