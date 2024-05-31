@@ -128,7 +128,8 @@ alias wget="wget2"
 alias python="python3" 
 alias pip="pip3"
 alias ..="cd .."
-alias vim="nvim"
+# alias vim="nvim"
+alias vi="nvim"
 
 # Add environment variables.
 export PATH="/opt/homebrew/anaconda3/bin:$PATH"
