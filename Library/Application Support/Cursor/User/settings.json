@@ -75,5 +75,6 @@
       ]
     }
   ],
-  "workbench.activityBar.orientation": "vertical"
+  "workbench.activityBar.orientation": "vertical",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF"
 }

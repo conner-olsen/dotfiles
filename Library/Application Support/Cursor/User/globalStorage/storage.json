@@ -7,12 +7,11 @@
             "file:///Users/conner/.config": "__default__profile__",
             "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6",
             "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
-            "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/dotfiles": "__default__profile__",
-            "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "__default__profile__",
-            "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1716719881688/workspace.json": "3a3de5d2"
+            "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2",
+            "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc"
         },
         "emptyWindows": {}
     },
@@ -20,15 +19,10 @@
     "telemetry.sqmId": "",
     "telemetry.machineId": "890f5e900031a01603cea4989d7fd24dcc1d0ff10ce936e4f27c94facea419d4",
     "backupWorkspaces": {
-        "workspaces": [
-            {
-                "id": "331abce187b91f54a167b0204ed9ecc0",
-                "configURIPath": "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1716719881688/workspace.json"
-            }
-        ],
+        "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim"
+                "folderUri": "file:///Users/conner/Documents/GitHub/Reductions"
             }
         ],
         "emptyWindows": []
@@ -78,31 +72,11 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/nvim",
+                                        "path": "/Users/conner/Documents/GitHub/Reductions",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/dotfiles/.config/nvim"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/dotfiles",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/dotfiles"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/svelte-demo",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/svelte-demo"
+                                    "label": "~/Documents/GitHub/Reductions"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -118,11 +92,31 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/Reductions",
+                                        "path": "/Users/conner/Documents/GitHub/svelte-demo",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/Reductions"
+                                    "label": "~/Documents/GitHub/svelte-demo"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/nvim",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/dotfiles/.config/nvim"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/dotfiles"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -282,7 +276,7 @@
                                 },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
-                                    "label": "Export Profile (lua)..."
+                                    "label": "Export Profile (LaTeX)..."
                                 },
                                 {
                                     "id": "workbench.profiles.actions.importProfile",
@@ -311,7 +305,7 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Workspace"
+                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -510,7 +504,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -525,13 +520,17 @@
                                     "submenu": {
                                         "items": [
                                             {
-                                                "id": "workbench.action.activityBarLocation.side",
-                                                "label": "&&Side",
+                                                "id": "workbench.action.activityBarLocation.default",
+                                                "label": "&&Default",
                                                 "checked": true
                                             },
                                             {
                                                 "id": "workbench.action.activityBarLocation.top",
                                                 "label": "&&Top"
+                                            },
+                                            {
+                                                "id": "workbench.action.activityBarLocation.bottom",
+                                                "label": "&&Bottom"
                                             },
                                             {
                                                 "id": "workbench.action.activityBarLocation.hide",
@@ -637,12 +636,13 @@
                                 },
                                 {
                                     "id": "breadcrumbs.toggle",
-                                    "label": "&&Breadcrumbs",
+                                    "label": "Toggle &&Breadcrumbs",
                                     "checked": true
                                 },
                                 {
                                     "id": "editor.action.toggleStickyScroll",
-                                    "label": "&&Sticky Scroll"
+                                    "label": "&&Sticky Scroll",
+                                    "checked": true
                                 },
                                 {
                                     "id": "editor.action.toggleRenderWhitespace",
@@ -780,6 +780,10 @@
                         "label": "E&&xtensions"
                     },
                     {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -803,7 +807,8 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap"
+                        "label": "&&Word Wrap",
+                        "checked": true
                     }
                 ]
             },
@@ -820,7 +825,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -889,54 +895,45 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3",
-                                    "enabled": false
+                                    "label": "Group &&3"
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4",
-                                    "enabled": false
+                                    "label": "Group &&4"
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5",
-                                    "enabled": false
+                                    "label": "Group &&5"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group",
-                                    "enabled": false
+                                    "label": "&&Next Group"
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group",
-                                    "enabled": false
+                                    "label": "&&Previous Group"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left",
-                                    "enabled": false
+                                    "label": "Group &&Left"
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right",
-                                    "enabled": false
+                                    "label": "Group &&Right"
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above",
-                                    "enabled": false
+                                    "label": "Group &&Above"
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below",
-                                    "enabled": false
+                                    "label": "Group &&Below"
                                 }
                             ]
                         }
@@ -1148,8 +1145,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1242,7 +1238,7 @@
                 "items": [
                     {
                         "id": "submenuitem.Profiles",
-                        "label": "Profiles (lua)",
+                        "label": "Profiles (LaTeX)",
                         "submenu": {
                             "items": [
                                 {
@@ -1250,13 +1246,17 @@
                                     "label": "Default"
                                 },
                                 {
+                                    "id": "workbench.profiles.actions.profileEntry.39b0872a",
+                                    "label": "Fullstack"
+                                },
+                                {
                                     "id": "workbench.profiles.actions.profileEntry.-50604ecc",
-                                    "label": "LaTeX"
+                                    "label": "LaTeX",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.3a3de5d2",
-                                    "label": "lua",
-                                    "checked": true
+                                    "label": "lua"
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-17ee95f6",
@@ -1796,7 +1796,7 @@
             "foreground": "#d6d6dd",
             "background": "#181818",
             "editorBackground": "#181818",
-            "titleBarBackground": "#292929",
+            "titleBarBackground": "#181818",
             "activityBarBackground": "#181818",
             "sideBarBackground": "#181818",
             "statusBarBackground": "#181818",
@@ -1807,18 +1807,15 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 300,
+            "sideBarWidth": 457,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "workspaceIdentifier": {
-                "id": "331abce187b91f54a167b0204ed9ecc0",
-                "configURIPath": "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1716719881688/workspace.json"
-            },
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/331abce187b91f54a167b0204ed9ecc0",
+            "folder": "file:///Users/conner/Documents/GitHub/Reductions",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/b6c261a04de4dbdce370d3d772136ae6",
             "uiState": {
                 "mode": 1,
                 "x": 8,
@@ -1848,6 +1845,11 @@
         {
             "location": "3a3de5d2",
             "name": "lua"
+        },
+        {
+            "location": "39b0872a",
+            "name": "Fullstack",
+            "icon": "server"
         }
     ]
 }

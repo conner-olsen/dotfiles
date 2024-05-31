@@ -89,5 +89,11 @@
   "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
   "svelte.enable-ts-plugin": true,
-  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF"
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  }
 }
