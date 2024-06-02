@@ -11,7 +11,8 @@
             "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2",
             "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
-            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc"
+            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
+            "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1717187959858/workspace.json": "-50604ecc"
         },
         "emptyWindows": {}
     },
@@ -19,7 +20,12 @@
     "telemetry.sqmId": "",
     "telemetry.machineId": "890f5e900031a01603cea4989d7fd24dcc1d0ff10ce936e4f27c94facea419d4",
     "backupWorkspaces": {
-        "workspaces": [],
+        "workspaces": [
+            {
+                "id": "25d025550ddcc3fc4f6414952acbdfb7",
+                "configURIPath": "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1717187959858/workspace.json"
+            }
+        ],
         "folders": [
             {
                 "folderUri": "file:///Users/conner/Documents/GitHub/Reductions"
@@ -62,8 +68,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -305,7 +310,7 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder"
+                        "label": "Close &&Workspace"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -504,8 +509,7 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel",
-                                    "checked": true
+                                    "label": "&&Panel"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -825,8 +829,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -895,45 +898,54 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3"
+                                    "label": "Group &&3",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4"
+                                    "label": "Group &&4",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5"
+                                    "label": "Group &&5",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group"
+                                    "label": "&&Next Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group"
+                                    "label": "&&Previous Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left"
+                                    "label": "Group &&Left",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right"
+                                    "label": "Group &&Right",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above"
+                                    "label": "Group &&Above",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below"
+                                    "label": "Group &&Below",
+                                    "enabled": false
                                 }
                             ]
                         }
@@ -1807,15 +1819,18 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 457,
+            "sideBarWidth": 170,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///Users/conner/Documents/GitHub/Reductions",
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/b6c261a04de4dbdce370d3d772136ae6",
+            "workspaceIdentifier": {
+                "id": "25d025550ddcc3fc4f6414952acbdfb7",
+                "configURIPath": "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1717187959858/workspace.json"
+            },
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/25d025550ddcc3fc4f6414952acbdfb7",
             "uiState": {
                 "mode": 1,
                 "x": 8,

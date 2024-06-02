@@ -64,5 +64,12 @@
     }
   ],
   "workbench.activityBar.orientation": "vertical",
-  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF"
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
+  "explorer.confirmDragAndDrop": false,
+  "vim.smartRelativeLine": true,
+  "cursor.aipreview.enabled": true,
+  "cursor.general.enableShadowWorkspace": true,
+  "editor.lineNumbers": "relative",
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true
 }
