@@ -64,6 +64,15 @@ return {
           },
         },
       },
+      cssls = {
+        settings = {
+          css = {
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+        },
+      },
     },
     inlay_hints = {
       enabled = true,
