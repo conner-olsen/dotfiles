@@ -71,5 +71,10 @@
   "cursor.general.enableShadowWorkspace": true,
   "editor.lineNumbers": "relative",
   "vim.camelCaseMotion.enable": true,
-  "vim.easymotion": true
+  "vim.easymotion": true,
+  "jupyter.askForKernelRestart": false,
+  "cSpell.userWords": [
+    "fuzzywuzzy",
+    "openai"
+  ]
 }

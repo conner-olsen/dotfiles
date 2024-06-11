@@ -1,5 +1,6 @@
 {
   "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
   "security.promptForLocalFileProtocolHandling": false,
   "terminal.integrated.env.osx": {
     "CW_NEW_SESSION": "1"
@@ -75,6 +76,5 @@
       ]
     }
   ],
-  "workbench.activityBar.orientation": "vertical",
-  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF"
+  "workbench.activityBar.orientation": "vertical"
 }

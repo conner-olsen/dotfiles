@@ -11,8 +11,9 @@
             "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2",
             "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
-            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
-            "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1717187959858/workspace.json": "-50604ecc"
+            "file:///Users/conner/Documents/GitHub/Rbot": "-50604ecc",
+            "file:///Users/conner/Documents/GitHub/LLM-Reductions": "-50604ecc",
+            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc"
         },
         "emptyWindows": {}
     },
@@ -20,12 +21,7 @@
     "telemetry.sqmId": "",
     "telemetry.machineId": "890f5e900031a01603cea4989d7fd24dcc1d0ff10ce936e4f27c94facea419d4",
     "backupWorkspaces": {
-        "workspaces": [
-            {
-                "id": "25d025550ddcc3fc4f6414952acbdfb7",
-                "configURIPath": "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1717187959858/workspace.json"
-            }
-        ],
+        "workspaces": [],
         "folders": [
             {
                 "folderUri": "file:///Users/conner/Documents/GitHub/Reductions"
@@ -68,7 +64,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -82,6 +79,16 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/GitHub/Reductions"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/LLM-Reductions",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/LLM-Reductions"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -164,17 +171,57 @@
                                     "label": "~/Documents/GitHub/SoftEng/assignment_5_tests"
                                 },
                                 {
-                                    "id": "openRecentFolder",
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/SoftEng/team-F-production",
+                                        "path": "/Users/conner/Downloads/Gale's Book Of Spells And Trinkets-139-1-8-1691726150/info.json",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/SoftEng/team-F-production"
+                                    "label": "~/Downloads/Gale's Book Of Spells And Trinkets-139-1-8-1691726150/info.json"
                                 },
                                 {
-                                    "id": "vscode.menubar.separator"
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Downloads/CustomCharacterCreationStats - 2 abilities to 20./info.json",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Downloads/CustomCharacterCreationStats - 2 abilities to 20./info.json"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Downloads/XP Curve Adjustment Patch for UnlockLevelCurve-3581-1-00-1698091140/info.json",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Downloads/XP Curve Adjustment Patch for UnlockLevelCurve-3581-1-00-1698091140/info.json"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Downloads/Max Level Dummies - Level 13-1680-1-5-1703248630/info.json",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Downloads/Max Level Dummies - Level 13-1680-1-5-1703248630/info.json"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Downloads/Kylin's Piercings-9607-1-3-1717229672/info.json",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Downloads/Kylin's Piercings-9607-1-3-1717229672/info.json"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -310,7 +357,7 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Workspace"
+                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -509,7 +556,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -701,13 +749,6 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
-                                    "id": "workbench.action.splitEditorInGroup",
-                                    "label": "Split in &&Group"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -784,10 +825,6 @@
                         "label": "E&&xtensions"
                     },
                     {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
-                    },
-                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -812,7 +849,7 @@
                     {
                         "id": "editor.action.toggleWordWrap",
                         "label": "&&Word Wrap",
-                        "checked": true
+                        "enabled": false
                     }
                 ]
             },
@@ -829,7 +866,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1553,11 +1591,6 @@
                 "isNative": false,
                 "userSettingsLabel": "cmd+r cmd+\\"
             },
-            "workbench.action.splitEditorInGroup": {
-                "label": "⌘R ⇧⌘\\",
-                "isNative": false,
-                "userSettingsLabel": "cmd+r shift+cmd+\\"
-            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "⌘R O",
                 "isNative": false,
@@ -1819,18 +1852,15 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 170,
+            "sideBarWidth": 439,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "workspaceIdentifier": {
-                "id": "25d025550ddcc3fc4f6414952acbdfb7",
-                "configURIPath": "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1717187959858/workspace.json"
-            },
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/25d025550ddcc3fc4f6414952acbdfb7",
+            "folder": "file:///Users/conner/Documents/GitHub/Reductions",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/b6c261a04de4dbdce370d3d772136ae6",
             "uiState": {
                 "mode": 1,
                 "x": 8,
