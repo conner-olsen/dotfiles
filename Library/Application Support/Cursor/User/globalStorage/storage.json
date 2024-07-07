@@ -6,13 +6,16 @@
             "file:///Users/conner/.config/sketchybar": "__default__profile__",
             "file:///Users/conner/.config": "__default__profile__",
             "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6",
-            "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-50604ecc",
             "file:///Users/conner/Documents/GitHub/dotfiles": "__default__profile__",
             "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2",
             "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7",
-            "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/Rbot": "-50604ecc",
+            "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-17ee95f6",
             "file:///Users/conner/Documents/GitHub/LLM-Reductions": "-50604ecc",
+            "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "-4bdb001a",
+            "file:///Users/conner/Documents/GitHub/lyon-waste-management": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/clean-lyon": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc"
         },
         "emptyWindows": {}
@@ -23,6 +26,9 @@
     "backupWorkspaces": {
         "workspaces": [],
         "folders": [
+            {
+                "folderUri": "file:///Users/conner/Documents/GitHub/clean-lyon"
+            },
             {
                 "folderUri": "file:///Users/conner/Documents/GitHub/Reductions"
             }
@@ -64,8 +70,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -84,11 +89,11 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/LLM-Reductions",
+                                        "path": "/Users/conner/Documents/GitHub/clean-lyon",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/LLM-Reductions"
+                                    "label": "~/Documents/GitHub/clean-lyon"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -99,6 +104,36 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/GitHub/college-salary-rankings"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/acculynx-data-entry-tool",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/acculynx-data-entry-tool"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/LLM-Reductions",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/LLM-Reductions"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/college-salary-rankings-server",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/college-salary-rankings-server"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -134,16 +169,6 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/college-salary-rankings-server",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/college-salary-rankings-server"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "path": "/Users/conner/Library/Application Support/Cursor",
                                         "scheme": "file"
                                     },
@@ -151,27 +176,27 @@
                                     "label": "~/Library/Application Support/Cursor"
                                 },
                                 {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Library",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Library"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/SoftEng/assignment_5_tests",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/SoftEng/assignment_5_tests"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/clean-lyon-backup/svelte.config.js",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/clean-lyon-backup/svelte.config.js"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/clean-lyon-backup/.github/workflows/deploy.yml",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/clean-lyon-backup/.github/workflows/deploy.yml"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -252,16 +277,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/GitHub/dotfiles/install-links.sh"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/.zshrc",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.zshrc"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -749,6 +764,13 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
+                                    "id": "workbench.action.splitEditorInGroup",
+                                    "label": "Split in &&Group"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -825,6 +847,10 @@
                         "label": "E&&xtensions"
                     },
                     {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -849,7 +875,7 @@
                     {
                         "id": "editor.action.toggleWordWrap",
                         "label": "&&Word Wrap",
-                        "enabled": false
+                        "checked": true
                     }
                 ]
             },
@@ -866,8 +892,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1309,6 +1334,10 @@
                                     "label": "lua"
                                 },
                                 {
+                                    "id": "workbench.profiles.actions.profileEntry.-4bdb001a",
+                                    "label": "Python"
+                                },
+                                {
                                     "id": "workbench.profiles.actions.profileEntry.-17ee95f6",
                                     "label": "Rust"
                                 },
@@ -1591,6 +1620,11 @@
                 "isNative": false,
                 "userSettingsLabel": "cmd+r cmd+\\"
             },
+            "workbench.action.splitEditorInGroup": {
+                "label": "⌘R ⇧⌘\\",
+                "isNative": false,
+                "userSettingsLabel": "cmd+r shift+cmd+\\"
+            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "⌘R O",
                 "isNative": false,
@@ -1852,7 +1886,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 439,
+            "sideBarWidth": 415,
             "statusBarHeight": 22,
             "windowBorder": false
         }
@@ -1895,6 +1929,11 @@
             "location": "39b0872a",
             "name": "Fullstack",
             "icon": "server"
+        },
+        {
+            "location": "-4bdb001a",
+            "name": "Python",
+            "icon": "snake"
         }
     ]
 }

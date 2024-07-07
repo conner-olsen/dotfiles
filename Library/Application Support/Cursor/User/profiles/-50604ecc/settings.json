@@ -74,7 +74,19 @@
   "vim.easymotion": true,
   "jupyter.askForKernelRestart": false,
   "cSpell.userWords": [
+    "bincode",
+    "dataframe",
     "fuzzywuzzy",
-    "openai"
-  ]
+    "genai",
+    "generativeai",
+    "openai",
+    "openpyxl",
+    "thefuzz"
+  ],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.typeCheckingMode": "basic"
 }
