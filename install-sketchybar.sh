@@ -66,7 +66,7 @@ sed -i '' 's/apple = "􀣺"/apple = "󰣇"/g' $HOME/.config/sketchybar/icons.lua
 if [ -f "$HOME/.config/sketchybar/bar.lua" ]; then
   if ! grep -q "margin=10," "$HOME/.config/sketchybar/bar.lua"; then
     sed -i '' '/sbar.bar({/,/})/{/})/i\
-    margin=10,\
+    margin=6,\
     shadow=on,\
     border_color=colors.white,\
     corner_radius=9,\
