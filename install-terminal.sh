@@ -55,13 +55,13 @@ else
 fi
 
 ## CodeWhisperer
-echo "Installing CodeWhisperer"
-brew install codewhisperer
-cw integrations install input-method
-echo "Open CodeWhisperer and follow the setup instructions"
-echo 'If "cw integrations install input-method" fails, run the following command in default mac terminal, it is copied to your clipboard'
-echo "cw integrations install input-method" | pbcopy
-open /Applications/CodeWhisperer.app
+echo "Installing amazon-q"
+brew install --cask amazon-q
+q integrations install input-method
+echo "Open Amazon Q and follow the setup instructions"
+echo 'If "q integrations install input-method" fails, run the following command in default mac terminal, it is copied to your clipboard'
+echo "q integrations install input-method" | pbcopy
+open "/Applications/Amazon Q.app"
 echo "Press enter to continue..."
 read
 
@@ -82,6 +82,8 @@ echo "Installing lazyvim"
 # for lazyvim
 brew install node
 brew install python
+brew install lua
+brew install luarocks
 brew install neovim
 brew install lazygit
 brew install ripgrep
