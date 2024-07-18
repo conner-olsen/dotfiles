@@ -137,6 +137,10 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 
+# TODO: Figure out why these two are now needed
+export SDKROOT="$(xcrun --show-sdk-path)"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 
 # Add flags to existing aliases.
