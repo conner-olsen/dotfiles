@@ -23,9 +23,9 @@ brew install cursor
 brew install zed
 
 # Web
-# TODO: Add bun and node
+brew install oven-sh/bun/bun
+brew install postgresql@16
 
-# TODO: Add postgre
 
 # Python
 brew install pipenv
