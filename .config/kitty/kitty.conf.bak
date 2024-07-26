@@ -19,7 +19,7 @@ font_family      MesloLGS NF
 #: heavy. Setting them manually is useful for font families that have
 #: many weight variants like Book, Medium, Thick, etc. For example::
 
-#:     font_family      Operator Mono Book
+#:     font_family      MesloLGS NF
 #:     bold_font        Operator Mono Medium
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
@@ -1660,7 +1660,7 @@ hide_window_decorations titlebar-only
 #: background_opacity. If you want to use both, you are probably
 #: better off just hiding the titlebar with hide_window_decorations.
 
-# macos_option_as_alt no
+macos_option_as_alt right
 
 #: Use the Option key as an Alt key on macOS. With this set to no,
 #: kitty will use the macOS native Option+Key to enter Unicode
@@ -2139,6 +2139,16 @@ hide_window_decorations titlebar-only
 #:     map ctrl+alt+1 goto_tab 1
 #:     map ctrl+alt+2 goto_tab 2
 
+map cmd+1 goto_tab 1
+map cmd+2 goto_tab 2
+map cmd+3 goto_tab 3
+map cmd+4 goto_tab 4
+map cmd+5 goto_tab 5
+map cmd+6 goto_tab 6
+map cmd+7 goto_tab 7
+map cmd+8 goto_tab 8
+map cmd+9 goto_tab 9
+
 #: Just as with new_window above, you can also pass the name of
 #: arbitrary commands to run when using new_tab and new_tab_with_cwd.
 #: Finally, if you want the new tab to open next to the current tab
@@ -2285,7 +2295,7 @@ hide_window_decorations titlebar-only
 #: Toggle fullscreen
 
 # map kitty_mod+f11 toggle_fullscreen
-# map ctrl+cmd+f    toggle_fullscreen
+map ctrl+cmd+f    toggle_fullscreen
 
 #: Toggle maximized
 
@@ -2341,7 +2351,7 @@ hide_window_decorations titlebar-only
 #::      # Clear the terminal screen by erasing all contents
 #::      map f1 clear_terminal clear active
 #::      # Clear the terminal scrollback by erasing it
-#::      map f1 clear_terminal scrollback active
+      map f1 clear_terminal scrollback active
 #::      # Scroll the contents of the screen into the scrollback
 #::      map f1 clear_terminal scroll active
 #::      # Clear everything up to the line with the cursor or the start of the current prompt (needs shell integration)
@@ -2478,6 +2488,6 @@ hide_window_decorations titlebar-only
 
 
 # BEGIN_KITTY_THEME
-# Tokyo Night
+# Tokyo Night Moon
 include current-theme.conf
 # END_KITTY_THEME
