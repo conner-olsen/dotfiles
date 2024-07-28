@@ -37,6 +37,12 @@ prompt_user() {
     done
 }
 
+# Initialize variables to track user choices
+install_sketchybar=false
+install_karabiner=false
+install_raycast=false
+override_macos_settings=false
+
 # Prompt user for installation type
 clear_screen
 echo "Choose installation type:"
@@ -44,11 +50,18 @@ echo "1. Install everything"
 echo "2. Custom settings"
 read "installation_type?Enter your choice [1-2]: "
 
+# Set all options to true if "Install everything" is chosen
+if [[ $installation_type == 1 ]]; then
+    install_sketchybar=true
+    install_karabiner=true
+    install_raycast=true
+    override_macos_settings=true
+fi
+
 # Install essentials based on installation type
 if [[ $installation_type == 1 || $installation_type == 2 ]]; then
     clear_screen
     progress "Tapping Brew..."
-    brew tap homebrew/cask-fonts
     brew tap FelixKratz/formulae
     brew tap koekeishiya/formulae
 
@@ -71,6 +84,7 @@ success "Fonts installed"
 
 # Install Karabiner-Elements and custom bindings
 if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_user "Do you want to install Karabiner-Elements and custom bindings?" ); then
+    install_karabiner=true
     clear_screen
     if ! brew list karabiner-elements &> /dev/null; then
         progress "Installing Karabiner-Elements and custom bindings..."
@@ -89,6 +103,7 @@ fi
 
 # Install Raycast
 if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_user "Do you want to install Raycast?" ); then
+    install_raycast=true
     clear_screen
     if ! brew list raycast &> /dev/null; then
         progress "Installing Raycast..."
@@ -105,6 +120,7 @@ fi
 
 # Override macOS default settings
 if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_user "Do you want to override macOS default settings?" ); then
+    override_macos_settings=true
     clear_screen
     progress "Changing macOS defaults..."
     # Disable writing .DS_Store files on network and external volumes
@@ -163,6 +179,7 @@ fi
 
 # Install SketchyBar
 if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_user "Do you want to install SketchyBar?" ); then
+    install_sketchybar=true
     clear_screen
     progress "Installing SketchyBar..."
     curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh | zsh
@@ -220,11 +237,11 @@ success "Services started"
 clear_screen
 success "Installation Complete!"
 echo "Summary:"
-echo "- Installed essential packages: $([[ $installation_type == 1 || $installation_type == 2 ]] && echo "Yes" || echo "No")"
-echo "- Installed SketchyBar: $([[ $installation_type == 1 ]] && echo "Yes" || ([[ $installation_type == 2 ]] && prompt_user "Do you want to install SketchyBar?" && echo "Yes" || echo "No"))"
-echo "- Installed Karabiner-Elements and custom bindings: $([[ $installation_type == 1 ]] && echo "Yes" || ([[ $installation_type == 2 ]] && prompt_user "Do you want to install Karabiner-Elements and custom bindings?" && echo "Yes" || echo "No"))"
-echo "- Installed Raycast: $([[ $installation_type == 1 ]] && echo "Yes" || ([[ $installation_type == 2 ]] && prompt_user "Do you want to install Raycast?" && echo "Yes" || echo "No"))"
-echo "- Overridden macOS default settings: $([[ $installation_type == 1 ]] && echo "Yes" || ([[ $installation_type == 2 ]] && prompt_user "Do you want to override macOS default settings?" && echo "Yes" || echo "No"))"
+echo "- Installed essential packages: Yes"
+echo "- Installed SketchyBar: $([ "$install_sketchybar" = true ] && echo "Yes" || echo "No")"
+echo "- Installed Karabiner-Elements and custom bindings: $([ "$install_karabiner" = true ] && echo "Yes" || echo "No")"
+echo "- Installed Raycast: $([ "$install_raycast" = true ] && echo "Yes" || echo "No")"
+echo "- Overridden macOS default settings: $([ "$override_macos_settings" = true ] && echo "Yes" || echo "No")"
 echo "- Copied configuration files: Yes"
 echo "- Started services: Yes"
 echo ""
