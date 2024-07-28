@@ -2,6 +2,8 @@
 
 # install required font
 brew install font-meslo-for-powerlevel10k
+brew install font-sf-mono
+brew install font-sf-pro
 
 # install kitty
 if [[ -z "$KITTY_WINDOW_ID" ]]; then
@@ -80,7 +82,6 @@ curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME
 ## lazyvim install:
 echo "Installing lazyvim"
 # for lazyvim
-brew install node
 brew install python
 brew install lua
 brew install luarocks
