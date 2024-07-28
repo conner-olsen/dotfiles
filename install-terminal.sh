@@ -82,13 +82,19 @@ curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME
 ## lazyvim install:
 echo "Installing lazyvim"
 # for lazyvim
-brew install python
+brew install pipenv
+brew install pyenv
+brew install pyenv-virtualenv
 brew install lua
 brew install luarocks
 brew install neovim
 brew install lazygit
 brew install ripgrep
 brew install fd
+
+pyenv install 3.12.4
+pyenv global 3.12.4
+pyenv virtualenv 3.12.4 neovim
 
 # Remove existing backups and then move the current directories to backup locations
 rm -rf $HOME/.config/nvim.bak
