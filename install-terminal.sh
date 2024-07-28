@@ -74,6 +74,7 @@ brew install eza
 brew install nnn
 brew install gh
 brew install wget2
+brew install direnv
 
 ## dotfiles
 echo "Installing dotfiles"
