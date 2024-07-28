@@ -2,4 +2,4 @@
 require("config.lazy")
 
 -- Set Python 3 host program
-vim.g.python3_host_prog = "/Users/conner/.pyenv/versions/neovim3/bin/python"
+vim.g.python3_host_prog = "/Users/conner/.pyenv/versions/neovim/bin/python"
