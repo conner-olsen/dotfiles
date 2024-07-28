@@ -93,9 +93,16 @@ brew install lazygit
 brew install ripgrep
 brew install fd
 
+# setup python
 pyenv install 3.12.4
 pyenv global 3.12.4
 pyenv virtualenv 3.12.4 neovim
+
+# setup node
+brew install nvm
+nvm install --lts
+nvm use --lts
+brew install oven-sh/bun/bun
 
 # Remove existing backups and then move the current directories to backup locations
 rm -rf $HOME/.config/nvim.bak
