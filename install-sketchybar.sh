@@ -62,35 +62,13 @@ clear_screen
 progress "Customizing SketchyBar configuration..."
 # Change apple icon to the arch linux icon
 sed -i '' 's/apple = "􀣺"/apple = "󰣇"/g' $HOME/.config/sketchybar/icons.lua
+
 # Charge bar settings
 if [ -f "$HOME/.config/sketchybar/bar.lua" ]; then
-  if ! grep -q "margin=10," "$HOME/.config/sketchybar/bar.lua"; then
-    sed -i '' '/sbar.bar({/,/})/{/})/i\
-    margin=6,\
-    shadow=on,\
-    border_color=colors.white,\
-    corner_radius=9,\
-    border_width=2,
-  }' "$HOME/.config/sketchybar/bar.lua"
-  fi
+  sed -i '' 's/height = 40,/height = 32,/' "$HOME/.config/sketchybar/bar.lua"
 fi
 
-sed -i '' \
-    -e 's/\(black = \)0x[0-9a-fA-F]\{8\}/\10xff282828/' \
-    -e 's/\(white = \)0x[0-9a-fA-F]\{8\}/\10xffebdbb2/' \
-    -e 's/\(red = \)0x[0-9a-fA-F]\{8\}/\10xffcc241d/' \
-    -e 's/\(green = \)0x[0-9a-fA-F]\{8\}/\10xff98971a/' \
-    -e 's/\(blue = \)0x[0-9a-fA-F]\{8\}/\10xff458588/' \
-    -e 's/\(yellow = \)0x[0-9a-fA-F]\{8\}/\10xffd79921/' \
-    -e 's/\(orange = \)0x[0-9a-fA-F]\{8\}/\10xffd65d0e/' \
-    -e 's/\(magenta = \)0x[0-9a-fA-F]\{8\}/\10xffb16286/' \
-    -e 's/\(grey = \)0x[0-9a-fA-F]\{8\}/\10xff928374/' \
-    -e 's/\(transparent = \)0x[0-9a-fA-F]\{8\}/\10x00000000/' \
-    -e 's/\(bg = \)0xf02c2e34/\10xff282828/' \
-    -e 's/\(bg1 = \)0x[0-9a-fA-F]\{8\}/\10xff3c3836/' \
-    -e 's/\(bg2 = \)0x[0-9a-fA-F]\{8\}/\10xff504945/' \
-    $HOME/.config/sketchybar/colors.lua
-
+# Change to 12 hour format
 sed -i '' 's/os.date("%H:%M")/os.date("%I:%M")/' $HOME/.config/sketchybar/items/calendar.lua
 success "SketchyBar configuration customized"
 
