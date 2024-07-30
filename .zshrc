@@ -11,11 +11,50 @@ function suyabai () {
     fi
 }
 
-# Sketchybar interactivity overloads
+# Sketchybar interactivity overloads and overload add to install-apps.sh
 function brew() {
-  command brew "$@" 
+  local script_path="/Users/conner/Documents/GitHub/dotfiles/install-apps.sh"
 
-  if [[ $* =~ "upgrade" ]] || [[ $* =~ "update" ]] || [[ $* =~ "outdated" ]]; then
+  if [[ -f "$script_path" ]]; then
+    if [[ "$1" == "install" && $# -ge 2 ]]; then
+      local packages="${@:2}"
+      command brew install $packages
+      if [ $? -eq 0 ]; then
+        for package in $packages; do
+          if ! grep -q "brew install $package" "$script_path"; then
+            # Check if the Installations section exists
+            if grep -q "^$
+## Installations" "$script_path"; then
+              # Insert new package into the empty line before the Installations section
+              sed -i '' '/^$/{
+                  N
+                  /\n## Installations/i\
+brew install '"$package"'
+              }' "$script_path"
+            else
+              # If Installations section doesn't exist, append to the end
+              echo "brew install $package" >> "$script_path"
+              echo "" >> "$script_path"  # Add an empty line after
+            fi
+          fi
+        done
+      fi
+    elif [[ "$1" == "uninstall" && $# -ge 2 ]]; then
+      local packages="${@:2}"
+      command brew uninstall $packages
+      if [ $? -eq 0 ]; then
+        for package in $packages; do
+          sed -i '' "/brew install $package/d" "$script_path"
+        done
+      fi
+    else
+      command brew "$@"
+    fi
+  else
+    command brew "$@"
+  fi
+
+  if [[ $* =~ "upgrade" ]] || [[ $* =~ "update" ]] || [[ $* =~ "outdated" ]] || [[ "$1" == "install" ]] || [[ "$1" == "uninstall" ]]; then
     sketchybar --trigger brew_update
   fi
 }
