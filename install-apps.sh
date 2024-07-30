@@ -49,5 +49,8 @@ brew install git-lfs
 git lfs install
 brew install gitkraken
 
+## Unsorted
+brew install chatgpt
+
 ## Installations
 rustup-init
