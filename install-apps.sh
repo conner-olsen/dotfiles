@@ -25,15 +25,17 @@ brew install zed
 # Web
 brew install oven-sh/bun/bun
 brew install postgresql@16
+brew install nvm
+nvm  install --lts
 
 
 # Python
 brew install pipenv
 brew install pyenv
 brew install pyenv-virtualenv
-# TODO: Automate latest python setup
-# pyenv install 3.12.2
-# pyenv global 3.12.2
+# setup python
+pyenv install 3.12.4
+pyenv global 3.12.4
 # TODO: Check if needed:
 # brew install jupyterlab
 
@@ -51,6 +53,15 @@ brew install gitkraken
 
 ## Unsorted
 brew install chatgpt
+brew install nnn
+brew install rewind
+brew install zoom
+brew install latexindent
+brew install mactex
+brew install microsoft-edge@beta
+brew install limitless
+brew install fzf
+brew install orion
 
 ## Installations
 rustup-init
