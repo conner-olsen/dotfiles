@@ -15,7 +15,6 @@ brew install microsoft-word
 brew install microsoft-powerpoint
 
 ## Hardware
-brew install logi-options-plus
 
 ## Development
 # Generic IDEs
@@ -62,6 +61,11 @@ brew install microsoft-edge@beta
 brew install limitless
 brew install fzf
 brew install orion
+brew install yabai
+brew install microsoft-teams
+brew install whatsapp
+brew install parsify
+brew install logi-options+
 
 ## Installations
 rustup-init
