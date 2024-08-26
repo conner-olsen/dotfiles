@@ -169,6 +169,7 @@ alias pip="pip3"
 alias ..="cd .."
 # alias vim="nvim"
 alias vi="nvim"
+alias nnn="nnn -de"
 
 # Add environment variables.
 export PATH="/opt/homebrew/anaconda3/bin:$PATH"
