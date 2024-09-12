@@ -61,11 +61,14 @@ brew install microsoft-edge@beta
 brew install limitless
 brew install fzf
 brew install orion
-brew install yabai
 brew install microsoft-teams
 brew install whatsapp
-brew install parsify
 brew install logi-options+
+brew install yabai
+brew install parsify
+brew install texifier
+brew install microsoft-outlook
 
 ## Installations
 rustup-init
+rustup component add rust-analyzer
