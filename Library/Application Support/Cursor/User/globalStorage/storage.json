@@ -7,16 +7,18 @@
             "file:///Users/conner/.config": "__default__profile__",
             "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6",
             "file:///Users/conner/Documents/GitHub/dotfiles": "__default__profile__",
-            "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2",
             "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/Rbot": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/LLM-Reductions": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "-4bdb001a",
             "file:///Users/conner/Documents/GitHub/lyon-waste-management": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/clean-lyon": "-4bdb001a",
-            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc"
+            "file:///Users/conner/Documents/GitHub/LLM-Reductions": "-4bdb001a",
+            "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
+            "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "-4bdb001a",
+            "file:///Users/conner/Documents/WPI/CS525-RL/quiz2": "-50604ecc",
+            "file:///Users/conner/Documents/GitHub/polysolve": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2"
         },
         "emptyWindows": {}
     },
@@ -27,7 +29,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///Users/conner/Documents/GitHub/Reductions"
+                "folderUri": "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim"
             }
         ],
         "emptyWindows": []
@@ -103,10 +105,31 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/nvim",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/dotfiles/.config/nvim"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/polysolve",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/polysolve"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -122,6 +145,16 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/LLM-Reductions",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/LLM-Reductions"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "path": "/Users/conner/Documents/GitHub/clean-lyon",
                                         "scheme": "file"
                                     },
@@ -132,21 +165,11 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/college-salary-rankings",
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/college-salary-rankings"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/college-salary-rankings-server",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/college-salary-rankings-server"
+                                    "label": "~/Documents/GitHub/dotfiles"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -165,21 +188,41 @@
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Downloads/Gale's Spells Trinkets/info.json",
+                                        "path": "/Users/conner/Documents/GitHub/Reductions/main.tex",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Downloads/Gale's Spells Trinkets/info.json"
+                                    "label": "~/Documents/GitHub/Reductions/main.tex"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Library/Mobile Documents/com~apple~CloudDocs/windowRole.js",
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/nvim/init.lua",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Library/Mobile Documents/com~apple~CloudDocs/windowRole.js"
+                                    "label": "~/Documents/GitHub/dotfiles/.config/nvim/init.lua"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/borders/bordersrc",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/dotfiles/.config/borders/bordersrc"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles/install-desktop.sh",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/dotfiles/install-desktop.sh"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -238,15 +281,8 @@
                         "submenu": {
                             "items": [
                                 {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
                                     "id": "workbench.profiles.actions.exportProfile",
-                                    "label": "Export Profile (LaTeX)..."
+                                    "label": "Export Profile (lua)..."
                                 },
                                 {
                                     "id": "workbench.profiles.actions.importProfile",
@@ -464,7 +500,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
-                                    "label": "Secondary Si&&de Bar"
+                                    "label": "Secondary Si&&de Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -771,8 +808,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "checked": true
+                        "label": "&&Word Wrap"
                     }
                 ]
             },
@@ -858,45 +894,54 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3"
+                                    "label": "Group &&3",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4"
+                                    "label": "Group &&4",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5"
+                                    "label": "Group &&5",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group"
+                                    "label": "&&Next Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group"
+                                    "label": "&&Previous Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left"
+                                    "label": "Group &&Left",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right"
+                                    "label": "Group &&Right",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above"
+                                    "label": "Group &&Above",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below"
+                                    "label": "Group &&Below",
+                                    "enabled": false
                                 }
                             ]
                         }
@@ -1108,7 +1153,8 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal"
+                        "label": "&&Split Terminal",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1201,7 +1247,7 @@
                 "items": [
                     {
                         "id": "submenuitem.Profiles",
-                        "label": "Profile (LaTeX)",
+                        "label": "Profile (lua)",
                         "submenu": {
                             "items": [
                                 {
@@ -1214,12 +1260,12 @@
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-50604ecc",
-                                    "label": "LaTeX",
-                                    "checked": true
+                                    "label": "LaTeX"
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.3a3de5d2",
-                                    "label": "lua"
+                                    "label": "lua",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-4bdb001a",
@@ -1774,21 +1820,21 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 666,
+            "sideBarWidth": 300,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///Users/conner/Documents/GitHub/Reductions",
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/b6c261a04de4dbdce370d3d772136ae6",
+            "folder": "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/0a7937f3a12a4f18028689450642247f",
             "uiState": {
                 "mode": 1,
                 "x": 0,
                 "y": 32,
-                "width": 1728,
-                "height": 1085
+                "width": 2560,
+                "height": 1408
             }
         },
         "openedWindows": []

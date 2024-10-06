@@ -74,5 +74,11 @@
       ]
     }
   ],
-  "workbench.activityBar.orientation": "vertical"
+  "workbench.activityBar.orientation": "vertical",
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true,
+  "vim.highlightedyank.enable": true,
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "vim.replaceWithRegister": true
 }

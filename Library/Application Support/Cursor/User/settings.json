@@ -3,7 +3,8 @@
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, MesloLGS NF",
   "security.promptForLocalFileProtocolHandling": false,
   "terminal.integrated.env.osx": {
-    "CW_NEW_SESSION": "1"
+    "CW_NEW_SESSION": "1",
+    "Q_NEW_SESSION": "1"
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
