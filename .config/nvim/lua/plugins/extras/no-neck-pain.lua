@@ -12,4 +12,7 @@ return {
       },
     })
   end,
+  keys = {
+    { "<leader>mp", "<cmd>NoNeckPain<cr>", desc = "No Neck Pain" },
+  },
 }
