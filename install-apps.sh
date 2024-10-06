@@ -57,17 +57,24 @@ brew install rewind
 brew install zoom
 brew install latexindent
 brew install mactex
-brew install microsoft-edge@beta
-brew install limitless
 brew install fzf
-brew install orion
 brew install microsoft-teams
 brew install whatsapp
 brew install logi-options+
-brew install yabai
 brew install parsify
 brew install texifier
 brew install microsoft-outlook
+brew install zathura
+brew install zathura-pdf-poppler
+brew install qt@6
+brew install google-chrome
+brew install nordvpn
+brew install parallels
+brew install utm
+brew install crystalfetch
+brew install yabai
+brew install zotero@beta
+brew install affinity-designer
 
 ## Installations
 rustup-init
