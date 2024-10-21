@@ -27,7 +27,7 @@ sed -i '' \
     $HOME/.config/kitty/kitty.conf
 
 if [[ -z "$KITTY_WINDOW_ID" ]]; then
-  nohup kitty zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh)" > /dev/null 2>&1 &
+  nohup kitty zsh -c "$(curl -fsSL https://raw.githubusercontent.com/conner-olsen/dotfiles/main/install-terminal.sh)" > /dev/null 2>&1 &
   echo "Script restarted in kitty"
   exit 0
 fi
@@ -78,7 +78,7 @@ brew install direnv
 
 ## dotfiles
 echo "Installing dotfiles"
-curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.zshrc -o $HOME/.zshrc
+curl https://raw.githubusercontent.com/conner-olsen/dotfiles/main/.zshrc -o $HOME/.zshrc
 
 ## lazyvim install:
 echo "Installing lazyvim"

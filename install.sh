@@ -14,6 +14,6 @@ if ! command -v brew &> /dev/null; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-apps.sh)"
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-desktop.sh)"
-zsh -c "$(curl -fsSL https://raw.githubusercontent.com/arealconner/dotfiles/main/install-terminal.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/conner-olsen/dotfiles/main/install-apps.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/conner-olsen/dotfiles/main/install-desktop.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/conner-olsen/dotfiles/main/install-terminal.sh)"
