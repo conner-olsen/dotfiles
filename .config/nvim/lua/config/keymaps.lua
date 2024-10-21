@@ -6,4 +6,5 @@ local wk = require("which-key")
 
 wk.add({
   { "<leader>m", group = "Custom" },
+  { "<leader>mm", "<cmd>Telescope keymaps<cr>", desc = "Search Keymaps" },
 })

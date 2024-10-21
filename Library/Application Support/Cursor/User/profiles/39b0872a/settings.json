@@ -95,5 +95,16 @@
   },
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
-  }
+  },
+  "workbench.colorTheme": "Monokai",
+  "rust-analyzer.testExplorer": true,
+  "rust-analyzer.diagnostics.styleLints.enable": true,
+  "rust-analyzer.diagnostics.experimental.enable": true,
+  "python.analysis.typeCheckingMode": "strict",
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.hover.actions.references.enable": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "pythonTestExplorer.testFramework": "pytest"
 }

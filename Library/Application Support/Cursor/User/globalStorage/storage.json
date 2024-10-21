@@ -17,8 +17,9 @@
             "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
             "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "-4bdb001a",
             "file:///Users/conner/Documents/WPI/CS525-RL/quiz2": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/polysolve": "7bd2dca7",
-            "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2"
+            "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2",
+            "file:///Users/conner/Documents/GitHub/MA4635-Final-Project": "39b0872a",
+            "file:///Users/conner/Documents/GitHub/polysolve": "39b0872a"
         },
         "emptyWindows": {}
     },
@@ -29,7 +30,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim"
+                "folderUri": "file:///Users/conner/Documents/GitHub/polysolve"
             }
         ],
         "emptyWindows": []
@@ -53,15 +54,15 @@
                         "submenu": {
                             "items": [
                                 {
-                                    "id": "workbench.action.openProfile.default",
+                                    "id": "workbench.action.openProfile.Default",
                                     "label": "Default"
                                 },
                                 {
-                                    "id": "workbench.action.openProfile.fullstack",
+                                    "id": "workbench.action.openProfile.Fullstack",
                                     "label": "Fullstack"
                                 },
                                 {
-                                    "id": "workbench.action.openProfile.latex",
+                                    "id": "workbench.action.openProfile.LaTeX",
                                     "label": "LaTeX"
                                 },
                                 {
@@ -69,16 +70,23 @@
                                     "label": "lua"
                                 },
                                 {
-                                    "id": "workbench.action.openProfile.python",
+                                    "id": "workbench.action.openProfile.Python",
                                     "label": "Python"
                                 },
                                 {
-                                    "id": "workbench.action.openProfile.rust",
+                                    "id": "workbench.action.openProfile.Rust",
                                     "label": "Rust"
                                 },
                                 {
-                                    "id": "workbench.action.openProfile.svelte",
+                                    "id": "workbench.action.openProfile.Svelte",
                                     "label": "Svelte"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.createProfile",
+                                    "label": "New Profile..."
                                 }
                             ]
                         }
@@ -115,21 +123,21 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/nvim",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/dotfiles/.config/nvim"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
                                         "path": "/Users/conner/Documents/GitHub/polysolve",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/GitHub/polysolve"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/nvim",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/dotfiles/.config/nvim"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -281,12 +289,15 @@
                         "submenu": {
                             "items": [
                                 {
-                                    "id": "workbench.profiles.actions.exportProfile",
-                                    "label": "Export Profile (lua)..."
+                                    "id": "github.copyVscodeDevLinkFile",
+                                    "label": "Copy vscode.dev Link"
                                 },
                                 {
-                                    "id": "workbench.profiles.actions.importProfile",
-                                    "label": "Import Profile..."
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.exportProfile",
+                                    "label": "Export Profile (Fullstack)..."
                                 }
                             ]
                         }
@@ -510,7 +521,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "&&Panel"
+                                    "label": "&&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -550,9 +562,8 @@
                                     "submenu": {
                                         "items": [
                                             {
-                                                "id": "workbench.action.positionPanelBottom",
-                                                "label": "Bottom",
-                                                "checked": true
+                                                "id": "workbench.action.positionPanelTop",
+                                                "label": "Top"
                                             },
                                             {
                                                 "id": "workbench.action.positionPanelLeft",
@@ -561,6 +572,11 @@
                                             {
                                                 "id": "workbench.action.positionPanelRight",
                                                 "label": "Right"
+                                            },
+                                            {
+                                                "id": "workbench.action.positionPanelBottom",
+                                                "label": "Bottom",
+                                                "checked": true
                                             }
                                         ]
                                     }
@@ -785,6 +801,10 @@
                         "label": "E&&xtensions"
                     },
                     {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -816,7 +836,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -825,7 +846,8 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location"
+                        "label": "&&Last Edit Location",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1153,8 +1175,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1246,74 +1267,8 @@
             "Preferences": {
                 "items": [
                     {
-                        "id": "submenuitem.Profiles",
-                        "label": "Profile (lua)",
-                        "submenu": {
-                            "items": [
-                                {
-                                    "id": "workbench.profiles.actions.profileEntry.__default__profile__",
-                                    "label": "Default"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.profileEntry.39b0872a",
-                                    "label": "Fullstack"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.profileEntry.-50604ecc",
-                                    "label": "LaTeX"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.profileEntry.3a3de5d2",
-                                    "label": "lua",
-                                    "checked": true
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.profileEntry.-4bdb001a",
-                                    "label": "Python"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.profileEntry.-17ee95f6",
-                                    "label": "Rust"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.profileEntry.7bd2dca7",
-                                    "label": "Svelte"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.editCurrentProfile",
-                                    "label": "Edit Profile..."
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.showProfileContents",
-                                    "label": "Show Profile Contents"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.createProfile",
-                                    "label": "Create Profile..."
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.deleteProfile",
-                                    "label": "Delete Profile..."
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.exportProfile",
-                                    "label": "Export Profile..."
-                                },
-                                {
-                                    "id": "workbench.profiles.actions.importProfile",
-                                    "label": "Import Profile..."
-                                }
-                            ]
-                        }
+                        "id": "workbench.profiles.actions.manageProfiles",
+                        "label": "&&Profiles"
                     },
                     {
                         "id": "aiSettings.action.openhidden",
@@ -1333,11 +1288,11 @@
                     },
                     {
                         "id": "workbench.action.openSnippets",
-                        "label": "Configure User Snippets"
+                        "label": "Configure Snippets"
                     },
                     {
                         "id": "workbench.action.tasks.openUserTasks",
-                        "label": "User Tasks"
+                        "label": "Tasks"
                     },
                     {
                         "id": "submenuitem.ThemesSubMenu",
@@ -1801,40 +1756,40 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#181818",
+    "themeBackground": "#272822",
     "windowSplash": {
         "zoomLevel": 0,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#d6d6dd",
-            "background": "#181818",
-            "editorBackground": "#181818",
-            "titleBarBackground": "#181818",
-            "activityBarBackground": "#181818",
-            "sideBarBackground": "#181818",
-            "statusBarBackground": "#181818",
-            "statusBarNoFolderBackground": "#181818"
+            "foreground": "#cccccc",
+            "background": "#272822",
+            "editorBackground": "#272822",
+            "titleBarBackground": "#1e1f1c",
+            "activityBarBackground": "#272822",
+            "sideBarBackground": "#1e1f1c",
+            "statusBarBackground": "#414339",
+            "statusBarNoFolderBackground": "#414339"
         },
         "layoutInfo": {
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 300,
+            "sideBarWidth": 320,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim",
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/0a7937f3a12a4f18028689450642247f",
+            "folder": "file:///Users/conner/Documents/GitHub/polysolve",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/cb42a5cbf68fdd8945efcef2948ee957",
             "uiState": {
                 "mode": 1,
-                "x": 0,
-                "y": 32,
-                "width": 2560,
-                "height": 1408
+                "x": 2560,
+                "y": 392,
+                "width": 1920,
+                "height": 1048
             }
         },
         "openedWindows": []
@@ -1870,5 +1825,6 @@
             "icon": "snake"
         }
     ],
-    "telemetry.devDeviceId": "1deec0fe-f608-4ed6-9c93-6991fe068c59"
+    "telemetry.devDeviceId": "1deec0fe-f608-4ed6-9c93-6991fe068c59",
+    "telemetry.macMachineId": "366d8d5780e5ef5f4348c47ce1dda00e7f5b3d42a6b9a6c8d44fefa9c76e028e"
 }

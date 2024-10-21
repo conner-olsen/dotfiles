@@ -68,13 +68,12 @@ brew install zathura
 brew install zathura-pdf-poppler
 brew install qt@6
 brew install google-chrome
-brew install nordvpn
 brew install parallels
-brew install utm
-brew install crystalfetch
 brew install yabai
 brew install zotero@beta
 brew install affinity-designer
+brew install adobe-creative-cloud
+brew install pycharm
 
 ## Installations
 rustup-init
