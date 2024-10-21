@@ -25,6 +25,8 @@ link_config() {
 ## Folders
 link_folder ".ssh"
 link_folder "Library/Application Support/Cursor/User/profiles"
+link_folder "Library/Application Support/Cursor/databases"
+link_folder "Library/Application Support/Cursor/Local Storage"
 
 ## Files
 link_file ".gitconfig"
@@ -35,6 +37,7 @@ link_file ".zshrc"
 link_file ".ideavimrc"
 link_file "Library/Application Support/Cursor/User/settings.json"
 link_file "Library/Application Support/Cursor/User/globalStorage/storage.json"
+link_file "Library/Application Support/Cursor/User/globalStorage/state.vscdb"
 
 ## Configs
 link_config "borders"
