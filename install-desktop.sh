@@ -94,7 +94,7 @@ if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_us
         success "Karabiner-Elements is already installed"
     fi
     mkdir -p $HOME/.config/karabiner/assets/complex_modifications
-    curl https://raw.githubusercontent.com/ARealConner/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
+    curl https://raw.githubusercontent.com/conner-olsen/dotfiles/main/.config/karabiner/assets/complex_modifications/custom-remappings.json -o $HOME/.config/karabiner/assets/complex_modifications/custom-remappings.json
     open /Applications/Karabiner-Elements.app
     instruction "Open Karabiner-Elements, go to 'Complex Modifications' and click 'Add Predefined Rule' to install the keybindings"
     instruction "INSTALL NOT YET COMPLETE: Press enter to continue"
@@ -182,7 +182,7 @@ if [[ $installation_type == 1 ]] || ( [[ $installation_type == 2 ]] && prompt_us
     install_sketchybar=true
     clear_screen
     progress "Installing SketchyBar..."
-    curl -L https://raw.githubusercontent.com/arealconner/dotfiles/main/install-sketchybar.sh | zsh
+    curl -L https://raw.githubusercontent.com/conner-olsen/dotfiles/main/install-sketchybar.sh | zsh
     success "SketchyBar installation complete"
 fi
 
@@ -190,7 +190,7 @@ fi
 clear_screen
 progress "Planting Configuration Files..."
 rm -rf "$HOME/temp-dotfiles"
-git clone https://github.com/ARealConner/dotfiles.git "$HOME/temp-dotfiles"
+git clone https://github.com/conner-olsen/dotfiles.git "$HOME/temp-dotfiles"
 
 mkdir -p "$HOME/.config/backups"
 timestamp=$(date +%Y%m%d%H%M%S)
