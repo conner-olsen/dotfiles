@@ -86,6 +86,7 @@
                     },
                     {
                         "description": "quote to HYPER (SHIFT+COMMAND+OPTION+CONTROL) or quote (If Alone)",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
