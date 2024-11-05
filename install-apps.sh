@@ -42,7 +42,6 @@ pyenv global 3.12.4
 brew install tesseract
 
 # Rust
-brew install rustrover
 brew install rustup-init
 
 # Git
@@ -69,11 +68,15 @@ brew install zathura-pdf-poppler
 brew install qt@6
 brew install google-chrome
 brew install parallels
-brew install yabai
 brew install zotero@beta
 brew install affinity-designer
-brew install adobe-creative-cloud
 brew install pycharm
+brew install rustrover
+brew install visual-studio-code@insiders
+brew install cargo-udeps
+brew install yabai
+brew install yarn
+brew install --cask docker
 
 ## Installations
 rustup-init
