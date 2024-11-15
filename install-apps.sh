@@ -74,9 +74,12 @@ brew install pycharm
 brew install rustrover
 brew install visual-studio-code@insiders
 brew install cargo-udeps
-brew install yabai
 brew install yarn
 brew install --cask docker
+brew install heroku
+brew install adobe-acrobat-pro
+brew install yabai
+brew install adobe-creative-cloud
 
 ## Installations
 rustup-init
