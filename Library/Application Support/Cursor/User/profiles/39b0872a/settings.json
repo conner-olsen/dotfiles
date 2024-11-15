@@ -106,5 +106,30 @@
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.inlayHints.variableTypes": true,
-  "pythonTestExplorer.testFramework": "pytest"
+  "pythonTestExplorer.testFramework": "pytest",
+  "rust-analyzer.check.extraArgs": [
+    "--",
+    "-W",
+    "clippy::pedantic",
+    "-W",
+    "clippy::nursery",
+    "-W",
+    "clippy::cargo",
+    "-A",
+    "clippy::cast_possible_truncation",
+    "-A",
+    "clippy::cast_sign_loss",
+    "-A",
+    "clippy::cast_precision_loss",
+    "-A",
+    "clippy::cast_possible_wrap",
+    "-A",
+    "clippy::multiple_crate_versions",
+    "-A",
+    "clippy::unsafe_derive_deserialize"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "explorer.confirmDragAndDrop": false
 }
