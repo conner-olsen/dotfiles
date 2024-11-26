@@ -1,6 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.ai.copilot-chat",
+    "lazyvim.plugins.extras.ai.supermaven",
     "lazyvim.plugins.extras.coding.mini-surround",
     "lazyvim.plugins.extras.coding.neogen",
     "lazyvim.plugins.extras.coding.yanky",
@@ -38,11 +39,10 @@
     "plugins.extras.no-neck-pain",
     "plugins.extras.rainbow-delimiters",
     "plugins.extras.rainbow_csv",
-    "plugins.extras.supermaven",
     "plugins.extras.venv-selector"
   ],
   "news": {
-    "NEWS.md": "7107"
+    "NEWS.md": "7429"
   },
   "version": 7
 }
