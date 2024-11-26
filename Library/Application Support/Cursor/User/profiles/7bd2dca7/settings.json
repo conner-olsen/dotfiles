@@ -110,5 +110,6 @@
     "editor.defaultFormatter": "vscode.css-language-features"
   },
   "explorer.confirmDragAndDrop": false,
-  "cursor.chat.showSuggestedFiles": true
+  "cursor.chat.showSuggestedFiles": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
