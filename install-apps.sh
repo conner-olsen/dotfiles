@@ -80,6 +80,9 @@ brew install heroku
 brew install adobe-acrobat-pro
 brew install yabai
 brew install adobe-creative-cloud
+brew install raspberry-pi-imager
+brew install pipx
+brew install webstorm
 
 ## Installations
 rustup-init
