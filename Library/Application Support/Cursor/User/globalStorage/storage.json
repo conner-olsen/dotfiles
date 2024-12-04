@@ -22,9 +22,9 @@
             "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/polysolve": "39b0872a",
             "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "-4bdb001a",
-            "file:///Users/conner/Documents/GitHub/karp-dataset": "-4bdb001a",
             "file:///Users/conner/Documents/GitHub/karp-dataset/web": "39b0872a",
-            "file:///Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System": "7bd2dca7"
+            "file:///Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/karp-dataset": "-4bdb001a"
         },
         "emptyWindows": {}
     },
@@ -32,15 +32,13 @@
     "telemetry.sqmId": "",
     "telemetry.machineId": "890f5e900031a01603cea4989d7fd24dcc1d0ff10ce936e4f27c94facea419d4",
     "backupWorkspaces": {
-        "workspaces": [
-            {
-                "id": "3d885fae68e41e2015696bd8207cadbe",
-                "configURIPath": "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1732517881016/workspace.json"
-            }
-        ],
+        "workspaces": [],
         "folders": [
             {
                 "folderUri": "file:///Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System"
+            },
+            {
+                "folderUri": "file:///Users/conner/Documents/GitHub/karp-dataset"
             }
         ],
         "emptyWindows": []
@@ -132,6 +130,16 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/karp-dataset",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/karp-dataset"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "path": "/Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System",
                                         "scheme": "file"
                                     },
@@ -147,16 +155,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/GitHub/karp-dataset/web"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/karp-dataset",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/karp-dataset"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -346,7 +344,7 @@
                                 },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
-                                    "label": "Export Profile (Svelte)..."
+                                    "label": "Export Profile (Python)..."
                                 }
                             ]
                         }
@@ -848,6 +846,10 @@
                     {
                         "id": "workbench.view.extensions",
                         "label": "E&&xtensions"
+                    },
+                    {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1818,15 +1820,15 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 604,
+            "sideBarWidth": 267,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System",
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/a54d776598ca8cddeeead792802d6f4d",
+            "folder": "file:///Users/conner/Documents/GitHub/karp-dataset",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/2a30e73639a286b22b327fa9a3604456",
             "uiState": {
                 "mode": 1,
                 "x": 0,
