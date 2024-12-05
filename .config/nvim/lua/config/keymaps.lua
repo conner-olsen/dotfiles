@@ -8,3 +8,5 @@ wk.add({
   { "<leader>m", group = "Custom" },
   { "<leader>mm", "<cmd>Telescope keymaps<cr>", desc = "Search Keymaps" },
 })
+
+vim.keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { desc = "Correct previous spelling error", expr = false })
