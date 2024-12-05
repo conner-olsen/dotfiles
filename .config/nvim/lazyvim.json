@@ -36,6 +36,7 @@
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.mini-hipatterns",
     "lazyvim.plugins.extras.util.octo",
+    "plugins.extras.latex-snippets",
     "plugins.extras.lsp-lens",
     "plugins.extras.no-neck-pain",
     "plugins.extras.rainbow-delimiters",
