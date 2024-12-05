@@ -1,6 +1,5 @@
 return {
   "iurimateus/luasnip-latex-snippets.nvim",
-  branch = "experimental-sympy",
   -- vimtex isn't required if using treesitter
   dependencies = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
   config = function()
