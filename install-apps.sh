@@ -83,6 +83,7 @@ brew install adobe-creative-cloud
 brew install raspberry-pi-imager
 brew install pipx
 brew install webstorm
+brew install claude
 
 ## Installations
 rustup-init
