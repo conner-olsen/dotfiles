@@ -58,3 +58,11 @@ step
 env
 step
 TODO
+tex
+pdf
+MDP
+preprocessed
+np
+CUDA
+MPS
+Hyperparameters
