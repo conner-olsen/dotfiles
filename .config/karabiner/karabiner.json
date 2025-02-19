@@ -40,6 +40,7 @@
                     },
                     {
                         "description": "ESCAPE to HYPER (SHIFT+COMMAND+OPTION+CONTROL) or ESCAPE (If Alone)",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -402,6 +403,19 @@
                         "vendor_id": 1452
                     },
                     "ignore": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 24926,
+                        "vendor_id": 7504
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "end" },
+                            "to": [{ "key_code": "escape" }]
+                        }
+                    ]
                 }
             ],
             "name": "Default profile",
