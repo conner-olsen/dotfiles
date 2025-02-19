@@ -5,30 +5,29 @@
             "file:///Users/conner/.cursor-tutor": "__default__profile__",
             "file:///Users/conner/.config/sketchybar": "__default__profile__",
             "file:///Users/conner/.config": "__default__profile__",
-            "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6",
             "file:///Users/conner/Documents/GitHub/dotfiles": "__default__profile__",
-            "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7",
+            "file:///Users/conner/Library/Application%20Support/Cursor": "-17ee95f6",
+            "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-17ee95f6",
             "file:///Users/conner/Documents/GitHub/Rbot": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/lyon-waste-management": "7bd2dca7",
-            "file:///Users/conner/Documents/GitHub/clean-lyon": "-4bdb001a",
-            "file:///Users/conner/Documents/GitHub/LLM-Reductions": "-4bdb001a",
             "file:///Users/conner/Documents/GitHub/Reductions": "-50604ecc",
             "file:///Users/conner/Documents/WPI/CS525-RL/quiz2": "-50604ecc",
-            "file:///Users/conner/Documents/GitHub/MA4635-Final-Project": "39b0872a",
+            "file:///Users/conner/Documents/GitHub/svelte-demo": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/lyon-waste-management": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
+            "file:///Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/dotfiles/.config/nvim": "3a3de5d2",
-            "file:///Users/conner/Documents/GitHub/college-salary-rankings-server": "-17ee95f6",
+            "file:///Users/conner/Documents/GitHub/MA4635-Final-Project": "39b0872a",
             "file:///Users/conner/Documents/GitHub/college-salary-rankings-server/college-salary-rankings-server.code-workspace": "39b0872a",
             "file:///Users/conner/Library/Application%20Support/Cursor/Workspaces/1730443354027/workspace.json": "39b0872a",
-            "file:///Users/conner/Documents/GitHub/college-salary-rankings": "7bd2dca7",
             "file:///Users/conner/Documents/GitHub/polysolve": "39b0872a",
-            "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "-4bdb001a",
             "file:///Users/conner/Documents/GitHub/karp-dataset/web": "39b0872a",
-            "file:///Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System": "7bd2dca7",
-            "file:///Users/conner/Documents/GitHub/karp-dataset": "-4bdb001a"
+            "file:///Users/conner/Documents/GitHub/clean-lyon": "-4bdb001a",
+            "file:///Users/conner/Documents/GitHub/LLM-Reductions": "-4bdb001a",
+            "file:///Users/conner/Documents/GitHub/acculynx-data-entry-tool": "-4bdb001a",
+            "file:///Users/conner/Documents/GitHub/karp-dataset": "-4bdb001a",
+            "file:///Users/conner/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran": "-4bdb001a"
         },
-        "emptyWindows": {
-            "1733434074100": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "profileAssociationsMigration": true,
     "telemetry.sqmId": "",
@@ -37,12 +36,12 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///Users/conner/Documents/GitHub/karp-dataset"
+                "folderUri": "file:///Users/conner/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran"
             }
         ],
         "emptyWindows": [
             {
-                "backupFolder": "1733434074100"
+                "backupFolder": "1736462035247"
             }
         ]
     },
@@ -134,31 +133,11 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/karp-dataset",
+                                        "path": "/Users/conner/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/karp-dataset"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/SoftEng/BWH-Navigation-Management-System"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/karp-dataset/web",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/karp-dataset/web"
+                                    "label": "~/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -189,6 +168,16 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/GitHub/college-salary-rankings"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/SoftEng/BWH-Navigation-Management-System"
                                 },
                                 {
                                     "id": "openRecentWorkspace",
@@ -231,7 +220,37 @@
                                     "label": "~/Documents/GitHub/Reductions"
                                 },
                                 {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/LLM-Reductions",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/LLM-Reductions"
+                                },
+                                {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Downloads/AI_Projects_1_P1/MiniMax_AI_Project_1_Part_1.py",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Downloads/AI_Projects_1_P1/MiniMax_AI_Project_1_Part_1.py"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Volumes/NO NAME/Conner O/adfasgasdg/src/adfasgasdg/Adfasgasdg.java",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/Volumes/NO NAME/Conner O/adfasgasdg/src/adfasgasdg/Adfasgasdg.java"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -320,13 +339,11 @@
                     },
                     {
                         "id": "workbench.action.files.save",
-                        "label": "&&Save",
-                        "enabled": false
+                        "label": "&&Save"
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As...",
-                        "enabled": false
+                        "label": "Save &&As..."
                     },
                     {
                         "id": "saveAll",
@@ -360,13 +377,15 @@
                     },
                     {
                         "id": "workbench.action.files.revert",
-                        "label": "Re&&vert File",
-                        "enabled": false
+                        "label": "Re&&vert File"
                     },
                     {
                         "id": "workbench.action.closeActiveEditor",
-                        "label": "&&Close Editor",
-                        "enabled": false
+                        "label": "&&Close Editor"
+                    },
+                    {
+                        "id": "workbench.action.closeFolder",
+                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -404,13 +423,11 @@
                     },
                     {
                         "id": "actions.find",
-                        "label": "&&Find",
-                        "enabled": false
+                        "label": "&&Find"
                     },
                     {
                         "id": "editor.action.startFindReplaceAction",
-                        "label": "&&Replace",
-                        "enabled": false
+                        "label": "&&Replace"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -557,7 +574,8 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
-                                    "label": "Secondary Si&&de Bar"
+                                    "label": "Secondary Si&&de Bar",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -845,6 +863,10 @@
                         "label": "E&&xtensions"
                     },
                     {
+                        "id": "workbench.view.extension.test",
+                        "label": "T&&esting"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -868,8 +890,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "enabled": false
+                        "label": "&&Word Wrap"
                     }
                 ]
             },
@@ -877,8 +898,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1048,12 +1068,20 @@
                         "label": "Add Symbol to Current Chat"
                     },
                     {
+                        "id": "editor.action.addSymbolToComposer",
+                        "label": "Add Symbol to Current Composer"
+                    },
+                    {
                         "id": "editor.action.goToReferences",
                         "label": "Go to &&References"
                     },
                     {
                         "id": "editor.action.addSymbolToNewChat",
                         "label": "Add Symbol to New Chat"
+                    },
+                    {
+                        "id": "editor.action.addSymbolToNewComposer",
+                        "label": "Add Symbol to New Composer"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1280,6 +1308,10 @@
                         "label": "Editor Playgrou&&nd"
                     },
                     {
+                        "id": "workbench.action.getStartedWithAccessibilityFeatures",
+                        "label": "Get Started with Accessibility Features"
+                    },
+                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -1309,8 +1341,48 @@
             "Preferences": {
                 "items": [
                     {
-                        "id": "workbench.profiles.actions.manageProfiles",
-                        "label": "&&Profiles"
+                        "id": "submenuitem.Profiles",
+                        "label": "Profile (Python)",
+                        "submenu": {
+                            "items": [
+                                {
+                                    "id": "workbench.profiles.actions.profileEntry.__default__profile__",
+                                    "label": "Default"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.profileEntry.39b0872a",
+                                    "label": "Fullstack"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.profileEntry.-50604ecc",
+                                    "label": "LaTeX"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.profileEntry.3a3de5d2",
+                                    "label": "lua"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.profileEntry.-4bdb001a",
+                                    "label": "Python",
+                                    "checked": true
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.profileEntry.-17ee95f6",
+                                    "label": "Rust"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.profileEntry.7bd2dca7",
+                                    "label": "Svelte"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "workbench.profiles.actions.manageProfiles",
+                                    "label": "&&Profiles"
+                                }
+                            ]
+                        }
                     },
                     {
                         "id": "aiSettings.action.openhidden",
@@ -1407,9 +1479,14 @@
                 "label": "Cmd+W",
                 "userSettingsLabel": "cmd+w"
             },
+            "workbench.action.closeFolder": {
+                "label": "⌘R F",
+                "isNative": false,
+                "userSettingsLabel": "cmd+r f"
+            },
             "workbench.action.closeWindow": {
-                "label": "Cmd+W",
-                "userSettingsLabel": "cmd+w"
+                "label": "Shift+Cmd+W",
+                "userSettingsLabel": "shift+cmd+w"
             },
             "undo": {
                 "label": "Cmd+Z",
@@ -1793,19 +1870,19 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#181818",
+    "themeBackground": "#272822",
     "windowSplash": {
         "zoomLevel": 0,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#d6d6dd",
-            "background": "#181818",
-            "editorBackground": "#181818",
-            "titleBarBackground": "#181818",
-            "activityBarBackground": "#181818",
-            "sideBarBackground": "#181818",
-            "statusBarBackground": "#181818",
-            "statusBarNoFolderBackground": "#181818"
+            "foreground": "#cccccc",
+            "background": "#272822",
+            "editorBackground": "#272822",
+            "titleBarBackground": "#1e1f1c",
+            "activityBarBackground": "#272822",
+            "sideBarBackground": "#1e1f1c",
+            "statusBarBackground": "#414339",
+            "statusBarNoFolderBackground": "#414339"
         },
         "layoutInfo": {
             "sideBarSide": "left",
@@ -1819,13 +1896,14 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/1733434074100",
+            "folder": "file:///Users/conner/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/4898b7545857cef7a00ebfb148e71452",
             "uiState": {
                 "mode": 1,
                 "x": 0,
-                "y": 736,
-                "width": 1280,
-                "height": 704
+                "y": 32,
+                "width": 1728,
+                "height": 1085
             }
         },
         "openedWindows": []
@@ -1861,6 +1939,6 @@
             "icon": "snake"
         }
     ],
-    "telemetry.devDeviceId": "1deec0fe-f608-4ed6-9c93-6991fe068c59",
+    "telemetry.devDeviceId": "3785c2ef-514a-4087-8301-c500598fdcbd",
     "telemetry.macMachineId": "366d8d5780e5ef5f4348c47ce1dda00e7f5b3d42a6b9a6c8d44fefa9c76e028e"
 }
