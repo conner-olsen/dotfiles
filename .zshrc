@@ -197,6 +197,9 @@ zstyle ':z4h:zsh-syntax-highlighting' channel 'none'
 # Use fast-syntax-highlighting instead
 z4h install zdharma-continuum/fast-syntax-highlighting || return
 
+# Add z command.
+z4h install agkozak/zsh-z || return
+
 z4h init || return
 
 # Extend PATH.
@@ -215,6 +218,7 @@ z4h source ~/.env.zsh
 # z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
 # z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
 z4h load zdharma-continuum/fast-syntax-highlighting
+z4h load agkozak/zsh-z
 
 # Define key bindings.
 z4h bindkey undo Ctrl+/   Shift+Tab  # undo the last command line change
