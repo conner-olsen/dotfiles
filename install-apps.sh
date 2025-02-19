@@ -1,6 +1,5 @@
 #!/bin/zsh
 ## Password Manager
-brew install 1password
 
 ## Browsers
 brew install --cask arc
@@ -47,7 +46,6 @@ brew install rustup-init
 # Git
 brew install git-lfs
 git lfs install
-brew install gitkraken
 
 ## Unsorted
 brew install chatgpt
@@ -58,8 +56,6 @@ brew install latexindent
 brew install mactex
 brew install fzf
 brew install microsoft-teams
-brew install whatsapp
-brew install logi-options+
 brew install parsify
 brew install texifier
 brew install microsoft-outlook
@@ -67,23 +63,30 @@ brew install zathura
 brew install zathura-pdf-poppler
 brew install qt@6
 brew install google-chrome
-brew install parallels
 brew install zotero@beta
 brew install affinity-designer
-brew install pycharm
-brew install rustrover
 brew install visual-studio-code@insiders
 brew install cargo-udeps
-brew install yarn
 brew install --cask docker
 brew install heroku
-brew install adobe-acrobat-pro
-brew install yabai
-brew install adobe-creative-cloud
 brew install raspberry-pi-imager
 brew install pipx
-brew install webstorm
-brew install claude
+brew install ffmpeg
+brew install corretto@11
+brew install obsidian
+brew install john-jumbo
+brew install utm
+brew install pearcleaner
+brew install hammerspoon
+brew install crystalfetch
+brew install windows-app
+brew install whatsapp
+brew install openjdk@17
+brew install grip
+brew install postman
+brew install yabai
+brew install wget2
+brew install imagemagick
 
 ## Installations
 rustup-init
