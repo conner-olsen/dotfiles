@@ -34,14 +34,10 @@
     "telemetry.machineId": "890f5e900031a01603cea4989d7fd24dcc1d0ff10ce936e4f27c94facea419d4",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [
-            {
-                "folderUri": "file:///Users/conner/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran"
-            }
-        ],
+        "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1736462035247"
+                "backupFolder": "1741201712391"
             }
         ]
     },
@@ -133,11 +129,31 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran",
+                                        "path": "/Users/conner/Documents/GitHub/karp-dataset",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran"
+                                    "label": "~/Documents/GitHub/karp-dataset"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/SoftEng/BWH-Navigation-Management-System"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/GitHub/karp-dataset/web",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/GitHub/karp-dataset/web"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -168,16 +184,6 @@
                                     },
                                     "enabled": true,
                                     "label": "~/Documents/GitHub/college-salary-rankings"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/SoftEng/BWH-Navigation-Management-System",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/SoftEng/BWH-Navigation-Management-System"
                                 },
                                 {
                                     "id": "openRecentWorkspace",
@@ -220,87 +226,107 @@
                                     "label": "~/Documents/GitHub/Reductions"
                                 },
                                 {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/LLM-Reductions",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Documents/GitHub/LLM-Reductions"
-                                },
-                                {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Downloads/AI_Projects_1_P1/MiniMax_AI_Project_1_Part_1.py",
+                                        "path": "/Users/conner/Library/Application Support/sioyek/prefs_user.config",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Downloads/AI_Projects_1_P1/MiniMax_AI_Project_1_Part_1.py"
+                                    "label": "~/Library/Application Support/sioyek/prefs_user.config"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Volumes/NO NAME/Conner O/adfasgasdg/src/adfasgasdg/Adfasgasdg.java",
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/Pytorch_tutorial.ipynb.txt",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/Volumes/NO NAME/Conner O/adfasgasdg/src/adfasgasdg/Adfasgasdg.java"
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/Pytorch_tutorial.ipynb.txt"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/college-salary-rankings-server/.codiumai.toml",
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/job.sh.txt",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/college-salary-rankings-server/.codiumai.toml"
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/job.sh.txt"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/Reductions/main.tex",
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/main.py.txt",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/Reductions/main.tex"
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/main.py.txt"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/nvim/init.lua",
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/environment.py.txt",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/dotfiles/.config/nvim/init.lua"
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/environment.py.txt"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/dotfiles/.config/borders/bordersrc",
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/dqn_model.py.txt",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/dotfiles/.config/borders/bordersrc"
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/dqn_model.py.txt"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/Users/conner/Documents/GitHub/dotfiles/install-desktop.sh",
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/atari_wrapper.py.txt",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/GitHub/dotfiles/install-desktop.sh"
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/atari_wrapper.py.txt"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/argument.py.txt",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/argument.py.txt"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/agent.py.txt",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/agent.py.txt"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "path": "/Users/conner/Documents/WPI/CS525-RL/projects/project3/temp/agent_dqn.py.txt",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Documents/WPI/CS525-RL/projects/project3/temp/agent_dqn.py.txt"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -382,10 +408,6 @@
                     {
                         "id": "workbench.action.closeActiveEditor",
                         "label": "&&Close Editor"
-                    },
-                    {
-                        "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -569,13 +591,11 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
-                                    "label": "Secondary Si&&de Bar",
-                                    "checked": true
+                                    "label": "Secondary Si&&de Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -863,10 +883,6 @@
                         "label": "E&&xtensions"
                     },
                     {
-                        "id": "workbench.view.extension.test",
-                        "label": "T&&esting"
-                    },
-                    {
                         "id": "vscode.menubar.separator"
                     },
                     {
@@ -898,7 +914,8 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back"
+                        "label": "&&Back",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1308,6 +1325,10 @@
                         "label": "Editor Playgrou&&nd"
                     },
                     {
+                        "id": "update.showCurrentReleaseNotes",
+                        "label": "Show &&Release Notes"
+                    },
+                    {
                         "id": "workbench.action.getStartedWithAccessibilityFeatures",
                         "label": "Get Started with Accessibility Features"
                     },
@@ -1342,12 +1363,13 @@
                 "items": [
                     {
                         "id": "submenuitem.Profiles",
-                        "label": "Profile (Python)",
+                        "label": "Profile (Default)",
                         "submenu": {
                             "items": [
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.__default__profile__",
-                                    "label": "Default"
+                                    "label": "Default",
+                                    "checked": true
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.39b0872a",
@@ -1363,8 +1385,7 @@
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-4bdb001a",
-                                    "label": "Python",
-                                    "checked": true
+                                    "label": "Python"
                                 },
                                 {
                                     "id": "workbench.profiles.actions.profileEntry.-17ee95f6",
@@ -1478,11 +1499,6 @@
             "workbench.action.closeActiveEditor": {
                 "label": "Cmd+W",
                 "userSettingsLabel": "cmd+w"
-            },
-            "workbench.action.closeFolder": {
-                "label": "⌘R F",
-                "isNative": false,
-                "userSettingsLabel": "cmd+r f"
             },
             "workbench.action.closeWindow": {
                 "label": "Shift+Cmd+W",
@@ -1870,40 +1886,43 @@
         }
     },
     "theme": "vs-dark",
-    "themeBackground": "#272822",
+    "themeBackground": "#181818",
     "windowSplash": {
         "zoomLevel": 0,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#cccccc",
-            "background": "#272822",
-            "editorBackground": "#272822",
-            "titleBarBackground": "#1e1f1c",
-            "activityBarBackground": "#272822",
-            "sideBarBackground": "#1e1f1c",
-            "statusBarBackground": "#414339",
-            "statusBarNoFolderBackground": "#414339"
+            "foreground": "#d6d6dd",
+            "background": "#181818",
+            "editorBackground": "#181818",
+            "titleBarBackground": "#181818",
+            "titleBarBorder": "#383838",
+            "activityBarBackground": "#181818",
+            "activityBarBorder": "#383838",
+            "sideBarBackground": "#181818",
+            "sideBarBorder": "#383838",
+            "statusBarBackground": "#181818",
+            "statusBarBorder": "#383838",
+            "statusBarNoFolderBackground": "#181818"
         },
         "layoutInfo": {
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 256,
+            "sideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///Users/conner/Documents/WPI/CS4341-IAI/grading/project1-part1-submissions/xueyuran",
-            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/4898b7545857cef7a00ebfb148e71452",
+            "backupPath": "/Users/conner/Library/Application Support/Cursor/Backups/1741201712391",
             "uiState": {
                 "mode": 1,
                 "x": 0,
-                "y": 32,
-                "width": 1728,
-                "height": 1085
+                "y": 736,
+                "width": 1280,
+                "height": 704
             }
         },
         "openedWindows": []
@@ -1939,6 +1958,6 @@
             "icon": "snake"
         }
     ],
-    "telemetry.devDeviceId": "3785c2ef-514a-4087-8301-c500598fdcbd",
+    "telemetry.devDeviceId": "1deec0fe-f608-4ed6-9c93-6991fe068c59",
     "telemetry.macMachineId": "366d8d5780e5ef5f4348c47ce1dda00e7f5b3d42a6b9a6c8d44fefa9c76e028e"
 }
