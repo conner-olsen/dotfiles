@@ -84,9 +84,15 @@ brew install whatsapp
 brew install openjdk@17
 brew install grip
 brew install postman
-brew install yabai
 brew install wget2
 brew install imagemagick
+brew install logi-options+
+brew install yabai
+brew install rustrover
+brew install maven
+brew install intellij-idea
+brew install glow
+brew install --cask corretto@11
 
 ## Installations
 rustup-init
