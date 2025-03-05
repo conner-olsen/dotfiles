@@ -38,6 +38,7 @@ link_file ".ideavimrc"
 link_file "Library/Application Support/Cursor/User/settings.json"
 link_file "Library/Application Support/Cursor/User/globalStorage/storage.json"
 link_file "Library/Application Support/Cursor/User/globalStorage/state.vscdb"
+link_file "Library/Application Support/sioyek/prefs_user.config"
 
 ## Configs
 link_config "borders"
