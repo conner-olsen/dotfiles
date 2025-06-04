@@ -2,46 +2,43 @@
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # Q pre block. Keep at the top of this file.
 ## Functions
+# Update sudoer file for yabai, run each time yabai updates.
 function suyabai () {
-    SHA256=$(shasum -a 256 /opt/homebrew/bin/yabai | awk "{print \$1;}")
-    if [ -f "/private/etc/sudoers.d/yabai" ]; then
-        sudo sed -i '' -e 's/sha256:[[:alnum:]]*/sha256:'${SHA256}'/' /private/etc/sudoers.d/yabai
-    else
-        echo "sudoers file does not exist yet"
-    fi
+    YABAI_BIN=$(which yabai)
+    SHA256=$(shasum -a 256 "$YABAI_BIN" | awk '{print $1}')
+    LINE="$(whoami) ALL=(root) NOPASSWD: sha256:${SHA256} ${YABAI_BIN} --load-sa"
+
+    echo "$LINE" | sudo tee /private/etc/sudoers.d/yabai > /dev/null
 }
 
 # Sketchybar interactivity overloads and overload add to install-apps.sh
 function brew() {
   local script_path="/Users/conner/Documents/GitHub/dotfiles/install-apps.sh"
+  
   if [[ -f "$script_path" ]]; then
     if [[ "$1" == "install" && $# -ge 2 ]]; then
-      local packages=""
-      local cask_packages=""
+      # Use arrays to preserve argument boundaries
+      local -a packages=()
+      local -a cask_packages=()
       local is_cask=false
       
-      # Parse arguments
-      shift  # Remove 'install' from arguments
+      shift  # Remove 'install'
       while [[ $# -gt 0 ]]; do
         if [[ "$1" == "--cask" ]]; then
           is_cask=true
         elif $is_cask; then
-          cask_packages="$cask_packages $1"
+          cask_packages+=("$1")
         else
-          packages="$packages $1"
+          packages+=("$1")
         fi
         shift
       done
       
-      # Trim leading spaces
-      packages="${packages## }"
-      cask_packages="${cask_packages## }"
-      
       # Install regular packages
-      if [[ -n "$packages" ]]; then
-        command brew install $packages
+      if [[ ${#packages[@]} -gt 0 ]]; then
+        command brew install "${packages[@]}"
         if [ $? -eq 0 ]; then
-          for package in $packages; do
+          for package in "${packages[@]}"; do
             if ! grep -q "brew install $package" "$script_path"; then
               if grep -q "^$
 ## Installations" "$script_path"; then
@@ -60,10 +57,10 @@ brew install '"$package"'
       fi
       
       # Install cask packages
-      if [[ -n "$cask_packages" ]]; then
-        command brew install --cask $cask_packages
+      if [[ ${#cask_packages[@]} -gt 0 ]]; then
+        command brew install --cask "${cask_packages[@]}"
         if [ $? -eq 0 ]; then
-          for package in $cask_packages; do
+          for package in "${cask_packages[@]}"; do
             if ! grep -q "brew install --cask $package" "$script_path"; then
               if grep -q "^$
 ## Installations" "$script_path"; then
@@ -82,42 +79,37 @@ brew install --cask '"$package"'
       fi
       
     elif [[ "$1" == "uninstall" && $# -ge 2 ]]; then
-      local packages=""
-      local cask_packages=""
+      local -a packages=()
+      local -a cask_packages=()
       local is_cask=false
       
-      # Parse arguments
-      shift  # Remove 'uninstall' from arguments
+      shift  # Remove 'uninstall'
       while [[ $# -gt 0 ]]; do
         if [[ "$1" == "--cask" ]]; then
           is_cask=true
         elif $is_cask; then
-          cask_packages="$cask_packages $1"
+          cask_packages+=("$1")
         else
-          packages="$packages $1"
+          packages+=("$1")
         fi
         shift
       done
       
-      # Trim leading spaces
-      packages="${packages## }"
-      cask_packages="${cask_packages## }"
-      
       # Uninstall regular packages
-      if [[ -n "$packages" ]]; then
-        command brew uninstall $packages
+      if [[ ${#packages[@]} -gt 0 ]]; then
+        command brew uninstall "${packages[@]}"
         if [ $? -eq 0 ]; then
-          for package in $packages; do
+          for package in "${packages[@]}"; do
             sed -i '' "/brew install $package/d" "$script_path"
           done
         fi
       fi
       
       # Uninstall cask packages
-      if [[ -n "$cask_packages" ]]; then
-        command brew uninstall --cask $cask_packages
+      if [[ ${#cask_packages[@]} -gt 0 ]]; then
+        command brew uninstall --cask "${cask_packages[@]}"
         if [ $? -eq 0 ]; then
-          for package in $cask_packages; do
+          for package in "${cask_packages[@]}"; do
             sed -i '' "/brew install --cask $package/d" "$script_path"
           done
         fi
@@ -129,6 +121,7 @@ brew install --cask '"$package"'
   else
     command brew "$@"
   fi
+  
   if [[ $* =~ "upgrade" ]] || [[ $* =~ "update" ]] || [[ $* =~ "outdated" ]] || [[ "$1" == "install" ]] || [[ "$1" == "uninstall" ]]; then
     sketchybar --trigger brew_update
   fi
@@ -261,6 +254,9 @@ export SDKROOT="$(xcrun --show-sdk-path)"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+
+# Make mac use brew installed ruby: 
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # Add flags to existing aliases.
 alias tree='tree -a -I .git'
