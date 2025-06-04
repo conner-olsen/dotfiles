@@ -23,7 +23,6 @@ link_config() {
 }
 
 ## Folders
-link_folder ".ssh"
 link_folder "Library/Application Support/Cursor/User/profiles"
 link_folder "Library/Application Support/Cursor/databases"
 link_folder "Library/Application Support/Cursor/Local Storage"
