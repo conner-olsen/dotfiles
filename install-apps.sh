@@ -78,7 +78,6 @@ brew install logi-options+
 brew install maven
 brew install glow
 brew install --cask corretto@11
-brew install yabai
 brew install texifier
 brew install gitkraken
 brew install rar
@@ -94,6 +93,7 @@ brew install adobe-acrobat-pro
 brew install pdf2svg
 brew install adobe-creative-cloud
 brew install tree
+brew install yabai
 
 ## Installations
 rustup-init
