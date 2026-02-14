@@ -1,0 +1,14 @@
+{
+  "title": "Swap Scroll Axes",
+  "rules": [
+    {
+      "description": "Swap Vertical and Horizontal Scroll Wheels",
+      "manipulators": [
+        {
+          "type": "mouse_basic",
+          "swap": ["wheels"]
+        }
+      ]
+    }
+  ]
+}

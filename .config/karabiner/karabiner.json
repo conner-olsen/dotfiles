@@ -4,6 +4,15 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Swap Vertical and Horizontal Scroll Wheels",
+                        "manipulators": [
+                            {
+                                "swap": ["wheels"],
+                                "type": "mouse_basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Swap Command and Control (preserving Neovim shortcuts)",
                         "enabled": false,
                         "manipulators": [
@@ -395,16 +404,6 @@
             },
             "devices": [
                 {
-                    "disable_built_in_keyboard_if_exists": true,
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 591,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false
-                },
-                {
                     "identifiers": {
                         "is_keyboard": true,
                         "product_id": 24926,
@@ -416,6 +415,15 @@
                             "to": [{ "key_code": "escape" }]
                         }
                     ]
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 45108,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false,
+                    "ignore_vendor_events": true
                 }
             ],
             "name": "Default profile",
