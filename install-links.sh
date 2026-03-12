@@ -34,9 +34,6 @@ link_file ".zprofile"
 link_file ".zshenv"
 link_file ".zshrc"
 link_file ".ideavimrc"
-link_file "Library/Application Support/Cursor/User/settings.json"
-link_file "Library/Application Support/Cursor/User/globalStorage/storage.json"
-link_file "Library/Application Support/Cursor/User/globalStorage/state.vscdb"
 link_file "Library/Application Support/sioyek/prefs_user.config"
 
 ## Configs
