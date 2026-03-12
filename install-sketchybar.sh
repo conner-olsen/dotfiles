@@ -15,6 +15,18 @@ clear_screen() {
     echo "\033[2J\033[H"
 }
 
+write_sbarlua_build_info() {
+    local target_dir="$HOME/.local/share/sketchybar_lua"
+    mkdir -p "$target_dir"
+    {
+        printf 'lua_version=%s\n' "$(lua -v 2>&1 | head -n 1)"
+        printf 'lua_path=%s\n' "$(command -v lua)"
+        printf 'sketchybar_version=%s\n' "$(sketchybar --version)"
+        printf 'sketchybar_path=%s\n' "$(command -v sketchybar)"
+        printf 'built_at=%s\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+    } > "$target_dir/build-info"
+}
+
 # Install SketchyBar
 clear_screen
 progress "Installing SketchyBar..."
@@ -32,7 +44,10 @@ success "Additional fonts installed"
 # Install SbarLua Plugin to use lua scripts in sketchybar
 clear_screen
 progress "Installing SbarLua Plugin..."
-(git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/) 2>&1
+tmp_sbarlua_dir=$(mktemp -d /tmp/SbarLua.XXXXXX)
+(git clone https://github.com/FelixKratz/SbarLua.git "$tmp_sbarlua_dir/SbarLua" && cd "$tmp_sbarlua_dir/SbarLua/" && make install) 2>&1
+write_sbarlua_build_info
+rm -rf "$tmp_sbarlua_dir"
 success "SbarLua Plugin installed"
 
 # Clone FelixKratz dotfiles

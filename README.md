@@ -41,6 +41,18 @@ Installs SketchyBar and my configuration. I used <https://github.com/FelixKratz/
 zsh -c "$(curl -fsSL https://raw.githubusercontent.com/conner-olsen/dotfiles/main/install-sketchybar.sh)"
 ```
 
+If SketchyBar ever goes blank after a `brew upgrade`, rebuild the Lua bridge that connects the config to SketchyBar:
+
+```zsh
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/conner-olsen/dotfiles/main/repair-sketchybar.sh)"
+```
+
+To just check whether SbarLua is stale without rebuilding it:
+
+```zsh
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/conner-olsen/dotfiles/main/repair-sketchybar.sh)" -- --check
+```
+
 ### Terminal Setup
 
 Sets up the terminal environment with tools like Kitty, zsh4humans, Amazon Q, neovim, and my .zshrc.
