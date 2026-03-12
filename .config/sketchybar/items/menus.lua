@@ -33,7 +33,7 @@ for i = 1, max_items, 1 do
   menu_items[i] = menu
 end
 
-sbar.add("bracket", "menus.bracket", { '/menu\\..*/' }, {
+sbar.add("bracket", { '/menu\\..*/' }, {
   background = { color = colors.bg1 }
 })
 
