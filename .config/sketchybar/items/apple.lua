@@ -24,7 +24,7 @@ local apple = sbar.add("item", {
 })
 
 -- Double border for apple using a single item bracket
-sbar.add("bracket", { apple.name }, {
+sbar.add("bracket", "apple.bracket", { apple.name }, {
   background = {
     color = colors.transparent,
     height = 30,
