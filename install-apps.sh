@@ -70,6 +70,8 @@ brew install handbrake-app
 brew install commandpost
 brew install sketchybar
 brew install github
+brew install visual-studio-code
+brew install codex-app
 
 ## Installations
 rustup-init
