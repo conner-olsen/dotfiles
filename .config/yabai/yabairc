@@ -6,7 +6,6 @@ yabai -m signal --add event=window_focused action="sketchybar --trigger window_f
 yabai -m config external_bar all:32:0 \
   focus_follows_mouse off \
   window_zoom_persist off \
-  window_topmost off \
   window_shadow float \
   window_opacity on \
   window_opacity_duration 0.2 \
@@ -15,8 +14,7 @@ yabai -m config external_bar all:32:0 \
   window_animation_duration 0.0 \
   insert_feedback_color 0xff9dd274 \
   split_ratio 0.50 \
-  auto_balance off \
-  auto_padding on
+  auto_balance off
 # Exclude problematic apps from being managed:
 yabai -m rule --add label="System Apps" app="^(Calculator|Software Update|Dictionary|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|Python|App Store|Activity Monitor)$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
@@ -36,9 +34,6 @@ yabai -m config left_padding 0
 yabai -m config right_padding 0
 yabai -m config window_gap 0
 
-# Square corners
-yabai -m config window_border_radius 0
-
 # center mouse on window with focus
 yabai -m config mouse_follows_focus on
 
@@ -50,7 +45,7 @@ yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
 
 # when window is dropped in center of another window, swap them (on edges it will split it)
-yabai -m mouse_drop_action swap@
+yabai -m config mouse_drop_action swap
 
 # borders active_color=0xffe1e3e4 inactive_color=0xff494d64 hidpi=true width=2.0 &
 echo "yabai configuration loaded.."

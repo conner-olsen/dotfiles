@@ -48,7 +48,7 @@ ctrl + alt - h : yabai -m window --warp west
 ctrl + alt - l : yabai -m window --warp east
 
 # move window to display left and right
-cmd + alt + ctrl + shift - s : yabai -  m window --display west; yabai -m display --focus west;
+cmd + alt + ctrl + shift - s : yabai -m window --display west; yabai -m display --focus west;
 cmd + alt + ctrl + shift - g : yabai -m window --display east; yabai -m display --focus east;
     
 
@@ -86,6 +86,6 @@ ctrl + alt + cmd - l : yabai -m window --resize right:10:0 || yabai -m window --
 # -- Starting/Stopping/Restarting Yabai --
 
 # stop/start/restart yabai
-ctrl + alt - q : brew services stop yabai
-ctrl + alt - s : brew services start yabai
-ctrl + alt - r : brew services restart yabai
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service

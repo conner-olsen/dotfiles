@@ -42,7 +42,6 @@ brew install mactex
 brew install fzf
 brew install parsify
 brew install cargo-udeps
-brew install heroku
 brew install pipx
 brew install obsidian
 brew install hammerspoon
@@ -52,26 +51,30 @@ brew install wget2
 brew install logi-options+
 brew install maven
 brew install glow
-brew install gitkraken
-brew install rar
 brew install ruby@3.2
 brew install exiftool
 brew install tree
-brew install skhd
 brew install koekeishiya/formulae/yabai
 brew install raycast
-brew install zotero
 brew install microsoft-word
 brew install google-chrome
 brew install amazon-q
 brew install graphviz
 brew install retrace
 brew install handbrake-app
-brew install commandpost
-brew install sketchybar
 brew install github
 brew install visual-studio-code
-brew install codex-app
+brew install --cask claude
+brew install sshpass
+brew install gcc
+brew install felixkratz/formulae/sketchybar
+brew install yabai
+brew install borders
+brew install skhd
+brew install libomp
+brew install rclone
+brew install --cask antigravity-cli
+brew install --cask claude-code
 
 ## Installations
 rustup-init
