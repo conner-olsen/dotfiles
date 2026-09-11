@@ -12,6 +12,9 @@ if [ -n "${ZSH_VERSION-}" ]; then
   #
   #   export GOPATH=$HOME/go
   #
+  # edgelab (2026-09-10): headless Claude Code and Homebrew CLIs for SSH logins; token file is owner-only
+  export CLAUDE_CODE_OAUTH_TOKEN="$(cat ~/.edgelab/claude-oauth-token 2>/dev/null)"
+  export PATH="/opt/homebrew/bin:$PATH"
   # Do not change anything else in this file.
 
   : ${ZDOTDIR:=~}
@@ -43,4 +46,5 @@ fi
 . "$Z4H"/z4h.zsh || return
 
 setopt rcs
-. "$HOME/.cargo/env"
+# cargo-installed crates live in ~/.cargo/bin; the toolchain itself is Homebrew's `rust` (2026-09-03)
+export PATH="$HOME/.cargo/bin:$PATH"
