@@ -49,6 +49,13 @@ func numberFont(_ size: CGFloat, _ width: NSFont.Width) -> NSFont {
 let font = numberFont(9.5, .standard)
 let percentGap: CGFloat = 1.5
 
+// The pressure color mixed toward white on a dark menu bar (toward black on a light one), so red and yellow stay legible as text.
+func readable(_ c: NSColor) -> NSColor {
+    NSColor(name: nil) { a in
+        let dark = a.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+        return c.usingColorSpace(.sRGB)!.blended(withFraction: 0.35, of: dark ? .white : .black)!
+    }
+}
 
 struct Metric {
     let symbol: String
@@ -93,7 +100,10 @@ func draw(_ m: Metric, x left: CGFloat, height h: CGFloat) {
     }
 
     let text = NSMutableAttributedString(string: m.text, attributes: [.font: font, .foregroundColor: ink()])
-    text.addAttribute(.kern, value: percentGap, range: (m.text as NSString).range(of: " "))  // widens the space before the percent
+    let space = (m.text as NSString).range(of: " ")
+    text.addAttribute(.kern, value: percentGap, range: space)  // widens the space before the percent
+    let percentRange = NSRange(location: space.location + 1, length: m.text.utf16.count - space.location - 1)
+    text.addAttribute(.foregroundColor, value: readable(m.color), range: percentRange)  // the percent takes the graph's color
     let t = text.size(), ty = h - t.height - 1.5
     // The graph tops out just under the digits (which have no descenders), so it never covers the text.
     let gx = x + iconSize + iconGap, gy: CGFloat = 3.5, gh = ty - font.descender - 1 - gy
