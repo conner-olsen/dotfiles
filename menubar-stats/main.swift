@@ -8,7 +8,7 @@ let interval: TimeInterval = 5
 let totalPages = Double(ProcessInfo.processInfo.physicalMemory) / Double(vm_kernel_page_size)
 var prevUsed: UInt32 = 0, prevTotal: UInt32 = 0
 
-func cpuPercent() -> Int {
+func cpuFraction() -> Double {
     var load = host_cpu_load_info_data_t()
     var count = mach_msg_type_number_t(MemoryLayout<host_cpu_load_info_data_t>.size / MemoryLayout<integer_t>.size)
     guard withUnsafeMutablePointer(to: &load, {
@@ -20,7 +20,7 @@ func cpuPercent() -> Int {
     let total = used &+ load.cpu_ticks.2                                 // + idle
     defer { prevUsed = used; prevTotal = total }
     let dt = total &- prevTotal
-    return dt == 0 ? 0 : Int((Double(used &- prevUsed) / Double(dt) * 100).rounded())
+    return dt == 0 ? 0 : Double(used &- prevUsed) / Double(dt)
 }
 
 func ramUsedPages() -> Double {
@@ -40,23 +40,31 @@ func ink(_ alpha: CGFloat = 1) -> NSColor {
         a.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua ? NSColor(white: 1, alpha: alpha) : NSColor(white: 0, alpha: alpha * 0.85)
     }
 }
-let labelFont = NSFont.systemFont(ofSize: 7.5, weight: .medium)
-let valueFont = NSFont.monospacedDigitSystemFont(ofSize: 9.5, weight: .semibold)
+// SF with digits of equal width, so the text doesn't shift as the numbers change.
+func numberFont(_ size: CGFloat, _ width: NSFont.Width) -> NSFont {
+    let f = NSFont.systemFont(ofSize: size, weight: .semibold, width: width)
+    return NSFont(descriptor: f.fontDescriptor.addingAttributes([.featureSettings: [[NSFontDescriptor.FeatureKey.typeIdentifier: kNumberSpacingType,
+        .selectorIdentifier: kMonospacedNumbersSelector]]]), size: size)!
+}
+let font = numberFont(9.5, .standard)
+let percentGap: CGFloat = 1.5
+
 
 struct Metric {
-    let symbol: String, name: String
+    let symbol: String
     let graphWidth: CGFloat
     let thresholds: (Double, Double, Double)  // the graph is cyan, then yellow, orange, red above these percents
     var history: [Double]             // 0...1, oldest first, one sample per point of graph width
-    var value = ""
+    var text = ""
 
-    init(symbol: String, name: String, graphWidth: CGFloat, thresholds: (Double, Double, Double)) {
-        self.symbol = symbol; self.name = name; self.graphWidth = graphWidth; self.thresholds = thresholds
+    init(symbol: String, graphWidth: CGFloat, thresholds: (Double, Double, Double)) {
+        self.symbol = symbol; self.graphWidth = graphWidth; self.thresholds = thresholds
         history = Array(repeating: 0, count: Int(graphWidth))
     }
 
-    mutating func push(_ fraction: Double, value: String) {
-        history.removeFirst(); history.append(fraction); self.value = value
+    mutating func push(_ fraction: Double, used: Double, total: String) {
+        history.removeFirst(); history.append(fraction)
+        text = String(format: "%.0f/%@ %.0f%%", used, total, fraction * 100)
     }
 
     var color: NSColor {
@@ -65,11 +73,10 @@ struct Metric {
     }
 }
 
-let iconSize: CGFloat = 16, iconGap: CGFloat = 4, gap: CGFloat = 5
+let iconSize: CGFloat = 14, iconGap: CGFloat = 3, gap: CGFloat = 5
+let inset: CGFloat = 6, endInset: CGFloat = 5
 
-let inset: CGFloat = 6
-
-func width(_ m: Metric) -> CGFloat { inset + iconSize + iconGap + m.graphWidth + inset }
+func width(_ m: Metric) -> CGFloat { inset + iconSize + iconGap + m.graphWidth + endInset }
 
 // Draws one metric at x: icon, then the label and value over a small history graph.
 func draw(_ m: Metric, x left: CGFloat, height h: CGFloat) {
@@ -85,7 +92,11 @@ func draw(_ m: Metric, x left: CGFloat, height h: CGFloat) {
         icon.draw(in: NSRect(x: x + (iconSize - s.width) / 2, y: (h - s.height) / 2, width: s.width, height: s.height))
     }
 
-    let gx = x + iconSize + iconGap, gy: CGFloat = 3.5, gh: CGFloat = 9.5
+    let text = NSMutableAttributedString(string: m.text, attributes: [.font: font, .foregroundColor: ink()])
+    text.addAttribute(.kern, value: percentGap, range: (m.text as NSString).range(of: " "))  // widens the space before the percent
+    let t = text.size(), ty = h - t.height - 1.5
+    // The graph tops out just under the digits (which have no descenders), so it never covers the text.
+    let gx = x + iconSize + iconGap, gy: CGFloat = 3.5, gh = ty - font.descender - 1 - gy
     let line = NSBezierPath()
     for (i, v) in m.history.enumerated() {
         let p = NSPoint(x: gx + CGFloat(i), y: gy + CGFloat(min(max(v, 0), 1)) * gh)
@@ -96,16 +107,14 @@ func draw(_ m: Metric, x left: CGFloat, height h: CGFloat) {
     m.color.withAlphaComponent(0.3).setFill(); area.fill()
     m.color.setStroke(); line.lineWidth = 1; line.stroke()
 
-    let text = NSMutableAttributedString(string: m.name.isEmpty ? "" : m.name + " ", attributes: [.font: labelFont, .foregroundColor: ink(0.7)])
-    text.append(NSAttributedString(string: m.value, attributes: [.font: valueFont, .foregroundColor: ink()]))
-    let t = text.size()
-    text.draw(at: NSPoint(x: gx + m.graphWidth - t.width, y: h - t.height - 1.5))
+    text.draw(at: NSPoint(x: gx + m.graphWidth - t.width, y: ty))
 }
 
 final class App: NSObject, NSApplicationDelegate {
     let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    var cpu = Metric(symbol: "cpu", name: "CPU", graphWidth: 42, thresholds: (30, 60, 80))
-    var ram = Metric(symbol: "memorychip", name: "", graphWidth: 56, thresholds: (60, 75, 85))
+    var cpu = Metric(symbol: "cpu", graphWidth: 60, thresholds: (30, 60, 80))
+    var ram = Metric(symbol: "memorychip", graphWidth: 60, thresholds: (60, 75, 85))
+    let cores = ProcessInfo.processInfo.activeProcessorCount
     let totalGB = Double(ProcessInfo.processInfo.physicalMemory) / 1_073_741_824
 
     func applicationDidFinishLaunching(_ note: Notification) {
@@ -119,9 +128,9 @@ final class App: NSObject, NSApplicationDelegate {
     }
 
     func tick() {
-        let c = cpuPercent(), used = ramUsedPages()
-        cpu.push(Double(c) / 100, value: "\(c)%")
-        ram.push(used / totalPages, value: String(format: "%.1f/%.0fGB", used / totalPages * totalGB, totalGB))
+        let c = cpuFraction(), used = ramUsedPages() / totalPages
+        cpu.push(c, used: c * Double(cores), total: "\(cores)")
+        ram.push(used, used: used * totalGB, total: String(format: "%.0f", totalGB))
         let h = NSStatusBar.system.thickness
         let w = width(cpu) + gap + width(ram)
         let (c1, r1) = (cpu, ram)
