@@ -48,7 +48,7 @@ func styledTitle(cpu: Int, ram: Int) -> NSAttributedString {
     let value: [NSAttributedString.Key: Any] = [.font: NSFont.monospacedDigitSystemFont(ofSize: 12, weight: .semibold),
                                                 .foregroundColor: NSColor.labelColor]
     let s = NSMutableAttributedString()
-    for (name, pct, gap) in [("CPU", cpu, "   "), ("RAM", ram, "")] {
+    for (name, pct, gap) in [("CPU", cpu, ""), ("RAM", ram, "")] {
         s.append(NSAttributedString(string: name + " ", attributes: label))
         s.append(NSAttributedString(string: "\(pct)%" + (pct < 10 ? "\u{2007}" : "") + gap, attributes: value))
     }
