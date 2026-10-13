@@ -40,17 +40,20 @@ let labelColor = NSColor(name: nil) { a in
     a.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua ? NSColor(white: 1, alpha: 0.7) : NSColor(white: 0, alpha: 0.6)
 }
 
-// Small dimmed label, then a bold value. A single digit gets a digit-wide space after the % (not before
-// the number), so the label-to-number gap stays the same and the item doesn't shift width.
+// Small dimmed label, then a bold value, with a fixed gap between the CPU and RAM pairs. Each
+// single-digit value adds a digit-wide space at the very start instead, so the item keeps one width
+// and every gap inside it stays the same.
 func styledTitle(cpu: Int, ram: Int) -> NSAttributedString {
     let label: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 9, weight: .medium),
                                                 .foregroundColor: labelColor]
     let value: [NSAttributedString.Key: Any] = [.font: NSFont.monospacedDigitSystemFont(ofSize: 12, weight: .semibold),
                                                 .foregroundColor: NSColor.labelColor]
-    let s = NSMutableAttributedString()
-    for (name, pct, gap) in [("CPU", cpu, ""), ("RAM", ram, "")] {
+    let pad = String(repeating: "\u{2007}", count: [cpu, ram].filter { $0 < 10 }.count)
+    let s = NSMutableAttributedString(string: pad, attributes: value)
+    for (name, pct, gap) in [("CPU", cpu, 5.0), ("RAM", ram, 0.0)] {
         s.append(NSAttributedString(string: name + " ", attributes: label))
-        s.append(NSAttributedString(string: "\(pct)%" + (pct < 10 ? "\u{2007}" : "") + gap, attributes: value))
+        s.append(NSAttributedString(string: "\(pct)", attributes: value))
+        s.append(NSAttributedString(string: "%", attributes: value.merging([.kern: gap]) { $1 }))  // gap in points
     }
     return s
 }
