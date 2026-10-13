@@ -34,13 +34,26 @@ func ramPercent() -> Int {
     return Int((used / totalPages * 100).rounded())
 }
 
+// Small dimmed label, then a bold value padded to two digits so the item doesn't shift width.
+func styledTitle(cpu: Int, ram: Int) -> NSAttributedString {
+    let label: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 10, weight: .medium),
+                                                .foregroundColor: NSColor.secondaryLabelColor]
+    let value: [NSAttributedString.Key: Any] = [.font: NSFont.monospacedDigitSystemFont(ofSize: 13, weight: .semibold),
+                                                .foregroundColor: NSColor.labelColor]
+    let s = NSMutableAttributedString()
+    for (name, pct, gap) in [("CPU", cpu, "   "), ("RAM", ram, "")] {
+        s.append(NSAttributedString(string: name + " ", attributes: label))
+        s.append(NSAttributedString(string: (pct < 10 ? "\u{2007}" : "") + "\(pct)%" + gap, attributes: value))
+    }
+    return s
+}
+
 final class App: NSObject, NSApplicationDelegate {
     let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    var title = ""
+    var last = (cpu: -1, ram: -1)
 
     func applicationDidFinishLaunching(_ note: Notification) {
         let button = item.button!
-        button.font = .monospacedDigitSystemFont(ofSize: NSFont.systemFontSize, weight: .regular)
         button.target = self
         button.action = #selector(openActivityMonitor)
         tick()
@@ -50,8 +63,8 @@ final class App: NSObject, NSApplicationDelegate {
     }
 
     func tick() {
-        let new = "cpu \(cpuPercent())%  ram \(ramPercent())%"
-        if new != title { title = new; item.button!.title = new }
+        let new = (cpu: cpuPercent(), ram: ramPercent())
+        if new != last { last = new; item.button!.attributedTitle = styledTitle(cpu: new.cpu, ram: new.ram) }
     }
 
     @objc func openActivityMonitor() {
