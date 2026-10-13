@@ -34,16 +34,23 @@ func ramPercent() -> Int {
     return Int((used / totalPages * 100).rounded())
 }
 
-// Small dimmed label, then a bold value padded to two digits so the item doesn't shift width.
+// Dimmed label as a plain fixed color: the system's dimmed (secondary) color fades out when the
+// menu bar's tint turns lighter, a plain color doesn't.
+let labelColor = NSColor(name: nil) { a in
+    a.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua ? NSColor(white: 1, alpha: 0.7) : NSColor(white: 0, alpha: 0.6)
+}
+
+// Small dimmed label, then a bold value. A single digit gets a digit-wide space after the % (not before
+// the number), so the label-to-number gap stays the same and the item doesn't shift width.
 func styledTitle(cpu: Int, ram: Int) -> NSAttributedString {
-    let label: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 10, weight: .medium),
-                                                .foregroundColor: NSColor.secondaryLabelColor]
-    let value: [NSAttributedString.Key: Any] = [.font: NSFont.monospacedDigitSystemFont(ofSize: 13, weight: .semibold),
+    let label: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 9, weight: .medium),
+                                                .foregroundColor: labelColor]
+    let value: [NSAttributedString.Key: Any] = [.font: NSFont.monospacedDigitSystemFont(ofSize: 12, weight: .semibold),
                                                 .foregroundColor: NSColor.labelColor]
     let s = NSMutableAttributedString()
     for (name, pct, gap) in [("CPU", cpu, "   "), ("RAM", ram, "")] {
         s.append(NSAttributedString(string: name + " ", attributes: label))
-        s.append(NSAttributedString(string: (pct < 10 ? "\u{2007}" : "") + "\(pct)%" + gap, attributes: value))
+        s.append(NSAttributedString(string: "\(pct)%" + (pct < 10 ? "\u{2007}" : "") + gap, attributes: value))
     }
     return s
 }
