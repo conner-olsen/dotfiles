@@ -49,10 +49,14 @@ func numberFont(_ size: CGFloat, _ width: NSFont.Width, _ weight: NSFont.Weight 
 let font = numberFont(9.5, .standard), percentFont = numberFont(9.5, .standard, .bold)
 let percentGap: CGFloat = 1.5
 
+// A deeper red than the system's, which leans orange; it is used as is, not mixed.
+let red = NSColor(srgbRed: 0.85, green: 0.05, blue: 0.1, alpha: 1)
+
 // The pressure color mixed slightly toward white on a dark menu bar (toward black on a light one), so it stays legible
 // as text. The graph uses the same color, so the two match.
 func readable(_ c: NSColor) -> NSColor {
-    NSColor(name: nil) { a in
+    if c == red { return red }
+    return NSColor(name: nil) { a in
         let dark = a.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
         return c.usingColorSpace(.sRGB)!.blended(withFraction: 0.15, of: dark ? .white : .black)!
     }
@@ -77,7 +81,7 @@ struct Metric {
 
     var color: NSColor {
         let p = history.last! * 100
-        return p > thresholds.2 ? .systemRed : p > thresholds.1 ? .systemOrange : p > thresholds.0 ? .systemYellow : .systemCyan
+        return p > thresholds.2 ? red : p > thresholds.1 ? .systemOrange : p > thresholds.0 ? .systemYellow : .systemCyan
     }
 }
 
