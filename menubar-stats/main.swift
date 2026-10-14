@@ -41,19 +41,20 @@ func ink(_ alpha: CGFloat = 1) -> NSColor {
     }
 }
 // SF with digits of equal width, so the text doesn't shift as the numbers change.
-func numberFont(_ size: CGFloat, _ width: NSFont.Width) -> NSFont {
-    let f = NSFont.systemFont(ofSize: size, weight: .semibold, width: width)
+func numberFont(_ size: CGFloat, _ width: NSFont.Width, _ weight: NSFont.Weight = .semibold) -> NSFont {
+    let f = NSFont.systemFont(ofSize: size, weight: weight, width: width)
     return NSFont(descriptor: f.fontDescriptor.addingAttributes([.featureSettings: [[NSFontDescriptor.FeatureKey.typeIdentifier: kNumberSpacingType,
         .selectorIdentifier: kMonospacedNumbersSelector]]]), size: size)!
 }
-let font = numberFont(9.5, .standard)
+let font = numberFont(9.5, .standard), percentFont = numberFont(9.5, .standard, .bold)
 let percentGap: CGFloat = 1.5
 
-// The pressure color mixed toward white on a dark menu bar (toward black on a light one), so red and yellow stay legible as text.
+// The pressure color mixed slightly toward white on a dark menu bar (toward black on a light one), so it stays legible
+// as text. The graph uses the same color, so the two match.
 func readable(_ c: NSColor) -> NSColor {
     NSColor(name: nil) { a in
         let dark = a.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
-        return c.usingColorSpace(.sRGB)!.blended(withFraction: 0.35, of: dark ? .white : .black)!
+        return c.usingColorSpace(.sRGB)!.blended(withFraction: 0.15, of: dark ? .white : .black)!
     }
 }
 
@@ -103,7 +104,7 @@ func draw(_ m: Metric, x left: CGFloat, height h: CGFloat) {
     let space = (m.text as NSString).range(of: " ")
     text.addAttribute(.kern, value: percentGap, range: space)  // widens the space before the percent
     let percentRange = NSRange(location: space.location + 1, length: m.text.utf16.count - space.location - 1)
-    text.addAttribute(.foregroundColor, value: readable(m.color), range: percentRange)  // the percent takes the graph's color
+    text.addAttributes([.foregroundColor: readable(m.color), .font: percentFont], range: percentRange)  // the percent takes the graph's color
     let t = text.size(), ty = h - t.height - 1.5
     // The graph tops out just under the digits (which have no descenders), so it never covers the text.
     let gx = x + iconSize + iconGap, gy: CGFloat = 3.5, gh = ty - font.descender - 1 - gy
@@ -114,8 +115,9 @@ func draw(_ m: Metric, x left: CGFloat, height h: CGFloat) {
     }
     let area = line.copy() as! NSBezierPath
     area.line(to: NSPoint(x: gx + m.graphWidth - 1, y: gy)); area.line(to: NSPoint(x: gx, y: gy)); area.close()
-    m.color.withAlphaComponent(0.3).setFill(); area.fill()
-    m.color.setStroke(); line.lineWidth = 1; line.stroke()
+    let gc = readable(m.color)
+    gc.withAlphaComponent(0.3).setFill(); area.fill()
+    gc.setStroke(); line.lineWidth = 1; line.stroke()
 
     text.draw(at: NSPoint(x: gx + m.graphWidth - t.width, y: ty))
 }
