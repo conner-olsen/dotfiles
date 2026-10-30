@@ -1,7 +1,9 @@
-// Swaps vertical and horizontal scroll wheel axes via a scroll-only CGEventTap.
-// Unlike Karabiner-Elements' mouse_basic "swap": ["wheels"], this only subscribes to
-// kCGEventScrollWheel (leaving all 133 Hz cursor movement and window dragging on macOS's
-// direct real-time hardware cursor path).
+// Physical mouse (HID, source PID 0): swaps vertical and horizontal scroll wheel axes.
+// Jump Desktop iPad touchscreen (non-zero source PID, cursor warps to touch point per tick):
+// negates scroll deltas so two-finger touch drag matches natural trackpad scrolling.
+//
+// Only subscribes to kCGEventScrollWheel, leaving all cursor movement and window dragging
+// on macOS's direct real-time hardware cursor path.
 //
 // Sign note: in macOS HIDDriverKit (IOUserHIDEventDriver), raw Wheel (vertical) maps to
 // +Axis1 while raw ACPan (horizontal) maps to -Axis2. Swapping raw Wheel and ACPan before
@@ -9,6 +11,8 @@
 import ApplicationServices
 
 nonisolated(unsafe) var tapPort: CFMachPort?
+nonisolated(unsafe) var touchLoc = CGPoint.zero
+nonisolated(unsafe) var touchTime: CGEventTimestamp = 0
 
 let callback: CGEventTapCallBack = { _, type, event, _ in
     if type == .tapDisabledByTimeout || type == .tapDisabledByUserInput {
@@ -25,13 +29,30 @@ let callback: CGEventTapCallBack = { _, type, event, _ in
     let pt2 = event.getIntegerValueField(.scrollWheelEventPointDeltaAxis2)
     let cont = event.getIntegerValueField(.scrollWheelEventIsContinuous)
 
-    event.setIntegerValueField(.scrollWheelEventDeltaAxis1, value: -d2)
-    event.setIntegerValueField(.scrollWheelEventDeltaAxis2, value: -d1)
-    event.setDoubleValueField(.scrollWheelEventFixedPtDeltaAxis1, value: -fp2)
-    event.setDoubleValueField(.scrollWheelEventFixedPtDeltaAxis2, value: -fp1)
-    event.setIntegerValueField(.scrollWheelEventPointDeltaAxis1, value: -pt2)
-    event.setIntegerValueField(.scrollWheelEventPointDeltaAxis2, value: -pt1)
-    event.setIntegerValueField(.scrollWheelEventIsContinuous, value: cont)
+    if event.getIntegerValueField(.eventSourceUnixProcessID) == 0 {
+        event.setIntegerValueField(.scrollWheelEventDeltaAxis1, value: -d2)
+        event.setIntegerValueField(.scrollWheelEventDeltaAxis2, value: -d1)
+        event.setDoubleValueField(.scrollWheelEventFixedPtDeltaAxis1, value: -fp2)
+        event.setDoubleValueField(.scrollWheelEventFixedPtDeltaAxis2, value: -fp1)
+        event.setIntegerValueField(.scrollWheelEventPointDeltaAxis1, value: -pt2)
+        event.setIntegerValueField(.scrollWheelEventPointDeltaAxis2, value: -pt1)
+        event.setIntegerValueField(.scrollWheelEventIsContinuous, value: cont)
+    } else {
+        let now = event.timestamp
+        let loc = event.location
+        let cur = CGEvent(source: nil)?.location ?? loc
+        if cur != loc || (cur == touchLoc && now &- touchTime < 150_000_000) {
+            touchLoc = cur
+            touchTime = now
+            event.setIntegerValueField(.scrollWheelEventDeltaAxis1, value: -d1)
+            event.setIntegerValueField(.scrollWheelEventDeltaAxis2, value: -d2)
+            event.setDoubleValueField(.scrollWheelEventFixedPtDeltaAxis1, value: -fp1)
+            event.setDoubleValueField(.scrollWheelEventFixedPtDeltaAxis2, value: -fp2)
+            event.setIntegerValueField(.scrollWheelEventPointDeltaAxis1, value: -pt1)
+            event.setIntegerValueField(.scrollWheelEventPointDeltaAxis2, value: -pt2)
+            event.setIntegerValueField(.scrollWheelEventIsContinuous, value: cont)
+        }
+    }
 
     return Unmanaged.passUnretained(event)
 }
@@ -41,7 +62,7 @@ var prompted = false
 
 while tapPort == nil {
     tapPort = CGEvent.tapCreate(
-        tap: .cghidEventTap,
+        tap: .cgSessionEventTap,
         place: .headInsertEventTap,
         options: .defaultTap,
         eventsOfInterest: mask,

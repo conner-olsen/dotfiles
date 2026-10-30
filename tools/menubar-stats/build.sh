@@ -8,7 +8,7 @@ agent=~/Library/LaunchAgents/local.menubar-stats.plist
 mkdir -p ~/.local/bin ~/Library/LaunchAgents
 swiftc -Osize -o $bin main.swift
 strip $bin
-codesign -s - --force $bin
+../sign.sh $bin
 cat > $agent <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

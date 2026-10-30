@@ -4,7 +4,72 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Codex: block repeated Escape for 2.1 seconds to prevent accidental Stop",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none"
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.openai\\.codex$"
+                                        ]
+                                    },
+                                    {
+                                        "type": "expression_if",
+                                        "expression": "codex_escape_until > system.now.milliseconds"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "codex_escape_until",
+                                            "expression": "system.now.milliseconds + 2100"
+                                        }
+                                    },
+                                    {
+                                        "key_code": "escape",
+                                        "repeat": false
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.openai\\.codex$"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "description": "Swap Vertical and Horizontal Scroll Wheels",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "swap": ["wheels"],
@@ -186,7 +251,52 @@
                                         "modifiers": ["left_command", "left_control", "left_option"]
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "escape" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape",
+                                        "conditions": [
+                                            {
+                                                "type": "frontmost_application_unless",
+                                                "bundle_identifiers": [
+                                                    "^com\\.openai\\.codex$"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "escape",
+                                        "conditions": [
+                                            {
+                                                "type": "frontmost_application_if",
+                                                "bundle_identifiers": [
+                                                    "^com\\.openai\\.codex$"
+                                                ]
+                                            },
+                                            {
+                                                "type": "expression_unless",
+                                                "expression": "codex_escape_until > system.now.milliseconds"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "codex_escape_until",
+                                            "expression": "system.now.milliseconds + 2100"
+                                        },
+                                        "conditions": [
+                                            {
+                                                "type": "frontmost_application_if",
+                                                "bundle_identifiers": [
+                                                    "^com\\.openai\\.codex$"
+                                                ]
+                                            },
+                                            {
+                                                "type": "expression_unless",
+                                                "expression": "codex_escape_until > system.now.milliseconds"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -422,7 +532,7 @@
                         "product_id": 45108,
                         "vendor_id": 1133
                     },
-                    "ignore": false,
+                    "ignore": true,
                     "ignore_vendor_events": true
                 }
             ],
